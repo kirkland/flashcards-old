@@ -1,0 +1,18 @@
+<p>
+  <b>Front:</b>
+  <%=h @card.front %>
+</p>
+
+<p>
+  <b>Back:</b>
+  <%=h @card.back %>
+</p>
+
+<p>
+  <b>Deck:</b>
+  <%=h @card.deck_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_card_path(@card) %> |
+<%= link_to 'Back', cards_path %>
