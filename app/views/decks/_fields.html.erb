@@ -1,0 +1,8 @@
+<%= error_messages_for :deck %>
+<p>
+  Name: <%= f.text_field :name %>
+</p>
+<div id="cards">
+  <%= render :partial => 'card', :collection => @deck.cards %>
+</div>
+<%= add_card_link "Add a Card" %>

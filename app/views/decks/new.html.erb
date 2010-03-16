@@ -3,20 +3,8 @@
 <% form_for(@deck) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-
-  <div id="cards">
-    <%= render :partial => 'card', :collection => @deck.cards %>
-  </div>
-
-  <%= add_card_link "Add a Card" %>
-
-  <p>
-    <%= f.submit "Create" %>
-  </p>
+  <%= render :partial => 'fields', :locals => { :f => f } %>
+  <p><%= f.submit "Create" %></p>
 <% end %>
 
 <%= link_to 'Back', decks_path %>
