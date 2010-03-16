@@ -1,0 +1,8 @@
+<div class="card">
+<% fields_for "deck[card_attributes][]", card do |card_form| %>
+  <p>Card: <%= card_form.text_field :front, :size => 20 %>
+           <%= card_form.text_field :back, :size => 20 %>
+     <%= link_to_function "remove", "this.up('.card').remove()" %>
+  </p>
+<% end %>
+</div>

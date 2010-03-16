@@ -8,12 +8,11 @@
     <%= f.text_field :name %>
   </p>
 
-  <% for card in @deck.cards %>
-    <% fields_for "deck[card_attributes][]", card do |card_form| %>
-      <p>Card: <%= card_form.text_field :front, :size => 20 %>
-	       <%= card_form.text_field :back, :size => 20 %>
-    <% end %>
-  <% end %>
+  <div id="cards">
+    <%= render :partial => 'card', :collection => @deck.cards %>
+  </div>
+
+  <%= add_card_link "Add a Card" %>
 
   <p>
     <%= f.submit "Create" %>
