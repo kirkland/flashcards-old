@@ -1,0 +1,8 @@
+<h1>Quizzing on <%= @deck.name %></h1>
+
+<p>Front:</p> 
+<blockquote><div class="card-front"><%= @deck.cards[0].front %></div></blockquote>
+<p>Back:</p> 
+<blockquote><div class="card-back"> </div></blockquote>
+
+<p><%= button_to_remote 'Reveal Answer' %></p>

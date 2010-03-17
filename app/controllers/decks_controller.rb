@@ -83,4 +83,8 @@ class DecksController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def quiz
+    @deck = Deck.find(params[:id])
+  end
 end

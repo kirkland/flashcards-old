@@ -1,0 +1,19 @@
+2010-03-11
+==========
+
+Goal: Make a Rails app for creating and reviewing flashcards.
+
+2010-03-17
+==========
+
+Basic Deck and Card models are set up. Now, I'd like to have a very simple way
+of 'quizzing' the user on a deck.
+
+I guess the best way would be to have one static page, and then use JavaScript
+to update it as we go. Let's walk through the user experience:
+
+-- Display front of first card. 
+-- Click the 'Reveal' button.
+-- Display back of first card.
+-- Ask if correct? Clicking Yes or No will reveal next card, or summary if at
+the end.

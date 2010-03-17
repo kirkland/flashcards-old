@@ -1,6 +1,7 @@
 class Deck < ActiveRecord::Base
   has_many :cards
   after_update :save_cards
+  validates_associated :cards
 
   def card_attributes=(card_attributes)
     card_attributes.each do |attributes|
