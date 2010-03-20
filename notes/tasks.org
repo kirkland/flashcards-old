@@ -7,4 +7,4 @@
 * Tasks 3/15
 ** DONE apply complex forms part 3 to flashcards2		       :comp:
 * Tasks 3/17
-** TODO test myself on a deck... some new deck action 		       :comp:
+** TODO How do i reveal back of a card? 						:comp:

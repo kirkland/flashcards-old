@@ -6,11 +6,11 @@ function mark_for_destroy(element) {
     $(element).up('.card').hide();
 }
 
-function reveal_back() {
+function reveal_back(new_text) {
     //    $(element).hide()
     //    $(element).up().up('div').hide()
     //    $(element).up().up('div').down('div').hide()
     //    $('cardback').hide()
     //    $('cardback').replace(@deck.cards[0].back) // doesn't work, no such variable. 
-    $('cardback').replace("this is the new text")
+    $('cardback').replace(new_text);
 }
