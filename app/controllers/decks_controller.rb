@@ -87,7 +87,8 @@ class DecksController < ApplicationController
   def quiz
     @offset = params[:offset].to_i
     @deck = Deck.find(params[:id])
-    if @offset + 1 > @deck.cards.size
+    if @offset + 1 > @deck.cards.size # no more cards left
+      flash[:notice] = "Quiz Finished"
       redirect_to :action => 'index'
     else
       @card = @deck.cards[0+@offset]
