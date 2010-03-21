@@ -83,12 +83,8 @@ class DecksController < ApplicationController
       format.xml  { head :ok }
     end
   end
-  
-  def quiz
-    @deck = Deck.find(params[:id])
-  end
 
-  def quiz2
+  def quiz
     @offset = params[:offset].to_i
     @deck = Deck.find(params[:id])
     @card = @deck.cards[0+@offset]
