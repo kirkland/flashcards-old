@@ -87,6 +87,10 @@ class DecksController < ApplicationController
   def quiz
     @offset = params[:offset].to_i
     @deck = Deck.find(params[:id])
-    @card = @deck.cards[0+@offset]
+    if @offset + 1 > @deck.cards.size
+      redirect_to :action => 'index'
+    else
+      @card = @deck.cards[0+@offset]
+    end
   end
 end
