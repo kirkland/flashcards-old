@@ -8,6 +8,7 @@
 <% for deck in @decks %>
   <tr>
     <td><%= link_to 'Quiz', :id => deck, :action => 'quiz' %>
+    <td><%= link_to 'Quiz2', :id => deck, :action => 'quiz2' %>
     <td><%=h deck.name %></td>
     <td><%= link_to 'Show', deck %></td>
     <td><%= link_to 'Edit', edit_deck_path(deck) %></td>

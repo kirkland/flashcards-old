@@ -7,4 +7,6 @@
 * Tasks 3/15
 ** DONE apply complex forms part 3 to flashcards2		       :comp:
 * Tasks 3/17
-** TODO How do i reveal back of a card? 						:comp:
+** DONE How do i reveal back of a card?				       :comp:
+* Tasks 3/20
+** DONE test on each card in a deck				       :comp:

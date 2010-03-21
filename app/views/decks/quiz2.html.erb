@@ -1,0 +1,10 @@
+<div>
+<p>Front:</p> 
+<blockquote><div id="cardfront"><%= @card.front %></div></blockquote>
+<p>Back:</p> 
+<blockquote><div id="cardback"></div></blockquote>
+
+<p><%= button_to_function 'Reveal Answer', "reveal_back('#{@card.back}')" %></p>
+</div>
+
+<p><%= button_to 'Next', :offset => (@offset + 1) %>

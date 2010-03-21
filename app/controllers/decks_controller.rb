@@ -87,4 +87,10 @@ class DecksController < ApplicationController
   def quiz
     @deck = Deck.find(params[:id])
   end
+
+  def quiz2
+    @offset = params[:offset].to_i
+    @deck = Deck.find(params[:id])
+    @card = @deck.cards[0+@offset]
+  end
 end
