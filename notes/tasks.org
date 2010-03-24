@@ -10,3 +10,9 @@
 ** DONE How do i reveal back of a card?				       :comp:
 * Tasks 3/20
 ** DONE test on each card in a deck				       :comp:
+* Tasks 3/21
+** TODO model for a quiz session?
+* Tasks 3/22
+** TODO quiz.rb in lib
+** TODO github
+
