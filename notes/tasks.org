@@ -13,6 +13,7 @@
 * Tasks 3/21
 ** TODO model for a quiz session?
 * Tasks 3/22
-** TODO quiz.rb in lib
+** DONE quiz.rb in lib
 ** TODO github
-
+* Tasks 3/24
+** TODO clean up quiz stuff 					       :comp:
