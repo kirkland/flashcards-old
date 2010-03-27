@@ -89,10 +89,8 @@ class DecksController < ApplicationController
 
     if session[:quiz].has_more?
       @card = session[:quiz].next
-      @offset = session[:quiz].offset
-      flash[:notice] = session[:quiz].deck.cards.length()
     else
-      flash[:notice] = session[:quiz].deck.cards.length()
+      session[:quiz] = Quiz.new(Deck.find(params[:id]))
       redirect_to :action => 'index'
     end
   end
