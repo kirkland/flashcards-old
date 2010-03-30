@@ -1,6 +1,8 @@
 * Functionality
-** TODO users							       :comp:
+** DONE users							       :comp:
 ** TODO users own a deck 					       :comp:
+** DONE login/logout links on every page (application layout)	       :comp:
+** TODO destroy cards on destroy deck 				       :comp:
 * Pretty
 ** TODO quiz: bigger font, make buttons not move 		       :comp:
 
