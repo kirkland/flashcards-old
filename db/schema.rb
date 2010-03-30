@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100329232541) do
+ActiveRecord::Schema.define(:version => 20100330102824) do
 
   create_table "cards", :force => true do |t|
     t.string   "front"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20100329232541) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   create_table "sessions", :force => true do |t|

@@ -9,6 +9,7 @@
   <tr>
     <td><%= link_to 'Quiz', :id => deck, :action => 'quiz' %>
     <td><%=h deck.name %></td>
+    <td><%=h deck.user.username %></td>
     <td><%= link_to 'Show', deck %></td>
     <td><%= link_to 'Edit', edit_deck_path(deck) %></td>
     <td><%= link_to 'Destroy', deck, :confirm => 'Are you sure?', :method => :delete %></td>

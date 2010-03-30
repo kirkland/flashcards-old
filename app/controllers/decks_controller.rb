@@ -14,6 +14,7 @@ class DecksController < ApplicationController
   # GET /decks/1.xml
   def show
     @deck = Deck.find(params[:id])
+    @owner = @deck.user.username
 
     respond_to do |format|
       format.html # show.html.erb

@@ -2,7 +2,7 @@
   <b>Name:</b>
   <%=h @deck.name %>
 </p>
-
+<p><b>Owner:</b> <%=h @owner %></p>
 <% for card in @deck.cards %>
   <p><%= card.front %> | <%= card.back %></p>
 <% end %>

@@ -2,6 +2,10 @@
 <p>
   Name: <%= f.text_field :name %>
 </p>
+<p>
+  user_id: <%= f.text_field :user_id %>
+</p>
+
 <div id="cards">
   <%= render :partial => 'card', :collection => @deck.cards %>
 </div>

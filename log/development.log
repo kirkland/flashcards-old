@@ -22601,3 +22601,42 @@ Rendering template within layouts/application
 Rendering cards/index
   [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
 Completed in 112ms (View: 102, DB: 3) | 200 OK [http://localhost/cards]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCards (20100315232432)
+Migrating to CreateDecks (20100315232444)
+Migrating to CreateSessions (20100324221513)
+Migrating to CreateUsers (20100329232541)
+Migrating to AddUserToDecks (20100330102824)
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCards (20100315232432)
+Migrating to CreateDecks (20100315232444)
+Migrating to CreateSessions (20100324221513)
+Migrating to CreateUsers (20100329232541)
+Migrating to AddUserToDecks (20100330102824)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (83.4ms)[0m   [0mALTER TABLE "decks" ADD "user_id" integer[0m
+  [4;36;1mSQL (156.2ms)[0m   [0;1mVACUUM[0m
+  [4;35;1mSQL (56.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100330102824')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("cards")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("decks")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("sessions")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_sessions_on_updated_at')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_sessions_on_session_id')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("users")[0m
