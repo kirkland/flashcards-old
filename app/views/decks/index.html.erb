@@ -9,14 +9,14 @@
   <tr>
     <td><%= link_to 'Quiz', :id => deck, :action => 'quiz' %>
     <td><%=h deck.name %></td>
-    <td><%=h deck.user.username %></td>
-    <td><%= link_to 'Show', deck %></td>
-    <td><%= link_to 'Edit', edit_deck_path(deck) %></td>
-    <td><%= link_to 'Destroy', deck, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%=h(deck.user.username) unless deck.user.username.nil? %></td>
+    <td><%= link_to 'Show', user_deck_path(@user, deck) %></td>
+    <td><%= link_to 'Edit', edit_user_deck_path(@user, deck) %></td>
+    <td><%= link_to 'Destroy', user_deck_path(@user, deck), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New deck', new_deck_path %>
+<%= link_to 'New deck', new_user_deck_path %>

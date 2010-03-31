@@ -3,7 +3,8 @@ class DecksController < ApplicationController
   # GET /decks.xml
   def index
     @decks = Deck.find(:all)
-
+    @user = User.find(params[:user_id])
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @decks }
@@ -13,6 +14,7 @@ class DecksController < ApplicationController
   # GET /decks/1
   # GET /decks/1.xml
   def show
+    @user = params[:user_id]
     @deck = Deck.find(params[:id])
     @owner = @deck.user.username
 
@@ -25,6 +27,7 @@ class DecksController < ApplicationController
   # GET /decks/new
   # GET /decks/new.xml
   def new
+    @user = User.find(params[:user_id])
     @deck = Deck.new
     3.times { @deck.cards.build }
 
@@ -37,17 +40,19 @@ class DecksController < ApplicationController
   # GET /decks/1/edit
   def edit
     @deck = Deck.find(params[:id])
+    @user = @deck.user
   end
 
   # POST /decks
   # POST /decks.xml
   def create
     @deck = Deck.new(params[:deck])
+    @user = User.find(params[:user_id])
 
     respond_to do |format|
       if @deck.save
         flash[:notice] = 'Deck was successfully created.'
-        format.html { redirect_to(@deck) }
+        format.html { redirect_to([@user, @deck]) }
         format.xml  { render :xml => @deck, :status => :created, :location => @deck }
       else
         format.html { render :action => "new" }
@@ -60,11 +65,12 @@ class DecksController < ApplicationController
   # PUT /decks/1.xml
   def update
     @deck = Deck.find(params[:id])
+    @user = User.find(params[:user_id])
 
     respond_to do |format|
       if @deck.update_attributes(params[:deck])
         flash[:notice] = 'Deck was successfully updated.'
-        format.html { redirect_to(@deck) }
+        format.html { redirect_to([@user, @deck]) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -80,19 +86,22 @@ class DecksController < ApplicationController
     @deck.destroy
 
     respond_to do |format|
-      format.html { redirect_to(decks_url) }
+      format.html { redirect_to(user_decks_url) }
       format.xml  { head :ok }
     end
   end
 
   def quiz
+    @deck = Deck.find(params[:id])
+    @user = @deck.user
+
     session[:quiz] ||= Quiz.new(Deck.find(params[:id]))
 
     if session[:quiz].has_more?
       @card = session[:quiz].next
     else
       session[:quiz] = Quiz.new(Deck.find(params[:id]))
-      redirect_to :action => 'index'
+      redirect_to [@user, @deck]
     end
   end
 end

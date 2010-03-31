@@ -8,7 +8,7 @@ ActionController::Routing::Routes.draw do |map|
     user.resources :decks
   end
 
-  map.resources :decks
+#  map.resources :decks
 
   map.resources :cards
 
