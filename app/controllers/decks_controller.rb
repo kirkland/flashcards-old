@@ -2,13 +2,17 @@ class DecksController < ApplicationController
   # GET /decks
   # GET /decks.xml
   def index
-    @decks = Deck.find(:all)
     @user = User.find(params[:user_id])
+    @decks = Deck.find(:all, :conditions => { :user_id => params[:user_id] })
     
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @decks }
     end
+  end
+
+  def all_decks
+    @decks = Deck.find(:all)
   end
 
   # GET /decks/1
@@ -47,6 +51,7 @@ class DecksController < ApplicationController
   # POST /decks.xml
   def create
     @deck = Deck.new(params[:deck])
+    @deck.user_id = current_user.id
     @user = User.find(params[:user_id])
 
     respond_to do |format|

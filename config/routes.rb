@@ -12,6 +12,10 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :cards
 
+  map.connect 'decks', :controller => 'decks', :action => 'all_decks'
+
+  map.root :controller => 'decks', :action => 'all_decks'
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
