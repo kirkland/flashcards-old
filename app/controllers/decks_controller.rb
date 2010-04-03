@@ -1,22 +1,13 @@
 class DecksController < ApplicationController
-  # GET /decks
-  # GET /decks.xml
   def index
-    @user = User.find(params[:user_id])
-    @decks = Deck.find(:all, :conditions => { :user_id => params[:user_id] })
-    
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @decks }
+    if params[:user_id]
+      @user = User.find(params[:user_id])
+      @decks = Deck.find(:all, :conditions => { :user_id => params[:user_id] })
+    else
+      @decks = Deck.find(:all)
     end
   end
 
-  def all_decks
-    @decks = Deck.find(:all)
-  end
-
-  # GET /decks/1
-  # GET /decks/1.xml
   def show
     @user = params[:user_id]
     @deck = Deck.find(params[:id])
