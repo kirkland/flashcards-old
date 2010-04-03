@@ -1,18 +1,9 @@
-<h1>Listing decks</h1>
+<h1>Kirkland's Flashcards</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-  </tr>
+<p>Quiz Yourself on one of these Decks</p>
 
+<ul>
 <% for deck in @decks %>
-  <tr>
-    <td><%= link_to 'Quiz', :id => deck, :action => 'quiz' %>
-    <td><%=h deck.name %></td>
-    <td><%=h(deck.user.username) unless deck.user.username.nil? %></td>
-    <td><%= link_to 'Show', user_deck_path(deck.user, deck) %></td>
-  </tr>
+  <li><%= link_to h(deck.name + " by " + deck.user.username), :id => deck, :action => 'quiz' %></li>
 <% end %>
-</table>
-
-<br />
+</ul>

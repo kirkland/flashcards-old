@@ -1,5 +1,5 @@
 class Deck < ActiveRecord::Base
-  has_many :cards
+  has_many :cards, :dependent => :destroy
   belongs_to :user
   after_update :save_cards
   validates_associated :cards

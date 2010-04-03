@@ -2,10 +2,10 @@
 ** DONE users							       :comp:
 ** DONE users own a deck					       :comp:
 ** DONE login/logout links on every page (application layout)	       :comp:
-** TODO destroy cards on destroy deck 				       :comp:
+** DONE destroy cards on destroy deck				       :comp:
 ** DONE in users/#/decks show only owned decks			       :comp:
 ** DONE page to show all decks					       :comp:
-** TODO only logged in can create new deck			       :comp:
+** TODO only logged in can create edit anything 		       :comp:
 ** TODO view for 'my' decks					       :comp:
 ** DONE users view to each of their decks			       :comp:
 ** DONE in quiz, a way to escape				       :comp:

@@ -34,3 +34,19 @@ Front page should have list of users, to see their decks.
 After consideration, I decided that the quiz should have register/login
 links, but they should be at the bottom. In fact, these links should always
 be at the bottom.
+
+Part 2
+======
+
+Need to clean up access for logged-in versus anonymous users.
+
+If logged in, should have a navigation bar (at top?), with links to:
+   - All Decks
+   - My Decks
+   - Edit Profile
+   - Logout
+
+If not logged in, should have navigation area with:
+   - All Decks
+   - Register
+   - Login

@@ -1,4 +1,6 @@
 class QuizController < ApplicationController
+  skip_before_filter :authorized
+
   def index
     @decks = Deck.find(:all)
   end

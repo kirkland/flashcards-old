@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  skip_before_filter :authorized
+
   def index
     @users = User.find(:all)
   end
