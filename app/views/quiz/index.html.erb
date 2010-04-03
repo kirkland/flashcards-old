@@ -11,8 +11,6 @@
     <td><%=h deck.name %></td>
     <td><%=h(deck.user.username) unless deck.user.username.nil? %></td>
     <td><%= link_to 'Show', user_deck_path(deck.user, deck) %></td>
-    <td><%= link_to 'Edit', edit_user_deck_path(deck.user, deck) %></td>
-    <td><%= link_to 'Destroy', user_deck_path(deck.user, deck), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
