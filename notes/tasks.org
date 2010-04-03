@@ -12,6 +12,8 @@
 ** TODO escape user html 					       :comp:
 ** DONE front page should link to quiz controller		       :comp:
 ** TODO fix up quiz controller, need to create new quiz more often     :comp:
+** TODO home page should show quiz/index			       :comp:
+** TODO revert deck index action 				       :comp:
 * Pretty
 ** TODO quiz: bigger font, make buttons not move 		       :comp:
 

@@ -8,7 +8,7 @@ ActionController::Routing::Routes.draw do |map|
     user.resources :decks
   end
 
-#  map.resources :decks
+  map.resources :decks
 
   map.resources :cards
 
@@ -18,7 +18,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.connect 'quiz/:id', :controller => 'quiz', :action => 'quiz'
 
-  map.root :controller => 'decks', :action => 'all_decks'
+  map.root :controller => 'quiz', :action => 'index'
 
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
