@@ -17,3 +17,20 @@ to update it as we go. Let's walk through the user experience:
 -- Display back of first card.
 -- Ask if correct? Clicking Yes or No will reveal next card, or summary if at
 the end.
+
+2010-04-03
+==========
+
+Quiz should have a way to exit. Also doesn't need Register / Login buttons.
+After quiz, should be redirected back to home, or somewhere else.
+
+If not logged in, should have access only to quiz, not scaffolding for 
+decks/cards, etc. 
+
+Front page should have list of users, to see their decks.
+
+...
+
+After consideration, I decided that the quiz should have register/login
+links, but they should be at the bottom. In fact, these links should always
+be at the bottom.

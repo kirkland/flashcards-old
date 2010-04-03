@@ -7,7 +7,7 @@
 
 <% for deck in @decks %>
   <tr>
-    <td><%= link_to 'Quiz', :id => deck, :action => 'quiz' %>
+    <td><%= link_to 'Quiz', :id => deck, :controller => 'quiz', :action => 'quiz' %>
     <td><%=h deck.name %></td>
     <td><%=h(deck.user.username) unless deck.user.username.nil? %></td>
   </tr>

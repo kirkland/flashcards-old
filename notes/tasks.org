@@ -4,33 +4,16 @@
 ** DONE login/logout links on every page (application layout)	       :comp:
 ** TODO destroy cards on destroy deck 				       :comp:
 ** DONE in users/#/decks show only owned decks			       :comp:
-** TODO page to show all decks 					       :comp:
+** DONE page to show all decks					       :comp:
 ** TODO only logged in can create new deck			       :comp:
 ** TODO view for 'my' decks					       :comp:
 ** DONE users view to each of their decks			       :comp:
-** TODO in quiz, a way to escape 				       :comp:
+** DONE in quiz, a way to escape				       :comp:
+** TODO escape user html 					       :comp:
+** DONE front page should link to quiz controller		       :comp:
+** TODO fix up quiz controller, need to create new quiz more often     :comp:
 * Pretty
 ** TODO quiz: bigger font, make buttons not move 		       :comp:
 
 * Other
 ** TODO automate database creation, data import 		       :comp:
-* Tasks 3/11
-** DONE can i input thai characters in to the database?		       :comp:
-** DONE bigger input box					       :comp:
-** DONE make a 'deck' with many cards				       :comp:
-* Tasks 3/13
-  
-** DONE watch complex forms part 3				       :comp:
-* Tasks 3/15
-** DONE apply complex forms part 3 to flashcards2		       :comp:
-* Tasks 3/17
-** DONE How do i reveal back of a card?				       :comp:
-* Tasks 3/20
-** DONE test on each card in a deck				       :comp:
-* Tasks 3/21
-** DONE model for a quiz session?
-* Tasks 3/22
-** DONE quiz.rb in lib
-** DONE github
-* Tasks 3/24
-** DONE clean up quiz stuff					       :comp:

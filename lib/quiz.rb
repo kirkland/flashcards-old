@@ -1,5 +1,3 @@
-# somehow put code in here to randomize order of quiz
-
 class Quiz
   attr_reader :deck
 

@@ -95,18 +95,4 @@ class DecksController < ApplicationController
       format.xml  { head :ok }
     end
   end
-
-  def quiz
-    @deck = Deck.find(params[:id])
-    @user = @deck.user
-
-    session[:quiz] ||= Quiz.new(Deck.find(params[:id]))
-
-    if session[:quiz].has_more?
-      @card = session[:quiz].next
-    else
-      session[:quiz] = Quiz.new(Deck.find(params[:id]))
-      redirect_to [@user, @deck]
-    end
-  end
 end
