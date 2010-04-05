@@ -1,28 +1,15 @@
 class DecksController < ApplicationController
+  before_filter :is_owner?, :except => [:index, :show, :new, :create]
+
   def index
-    if params[:user_id]
-      @user = User.find(params[:user_id])
-      @decks = Deck.find(:all, :conditions => { :user_id => params[:user_id] })
-    else
-      @decks = Deck.find(:all)
-    end
+    @decks = Deck.find(:all, :conditions => { :user_id => current_user.id })
   end
 
   def show
-    @user = params[:user_id]
     @deck = Deck.find(params[:id])
-    @owner = @deck.user.username
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @deck }
-    end
   end
 
-  # GET /decks/new
-  # GET /decks/new.xml
   def new
-    @user = User.find(params[:user_id])
     @deck = Deck.new
     3.times { @deck.cards.build }
 
@@ -32,23 +19,18 @@ class DecksController < ApplicationController
     end
   end
 
-  # GET /decks/1/edit
   def edit
     @deck = Deck.find(params[:id])
-    @user = @deck.user
   end
 
-  # POST /decks
-  # POST /decks.xml
   def create
     @deck = Deck.new(params[:deck])
     @deck.user_id = current_user.id
-    @user = User.find(params[:user_id])
 
     respond_to do |format|
       if @deck.save
         flash[:notice] = 'Deck was successfully created.'
-        format.html { redirect_to([@user, @deck]) }
+        format.html { redirect_to(@deck) }
         format.xml  { render :xml => @deck, :status => :created, :location => @deck }
       else
         format.html { render :action => "new" }
@@ -57,16 +39,13 @@ class DecksController < ApplicationController
     end
   end
 
-  # PUT /decks/1
-  # PUT /decks/1.xml
   def update
     @deck = Deck.find(params[:id])
-    @user = User.find(params[:user_id])
 
     respond_to do |format|
       if @deck.update_attributes(params[:deck])
         flash[:notice] = 'Deck was successfully updated.'
-        format.html { redirect_to([@user, @deck]) }
+        format.html { redirect_to(@deck) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -75,15 +54,20 @@ class DecksController < ApplicationController
     end
   end
 
-  # DELETE /decks/1
-  # DELETE /decks/1.xml
   def destroy
     @deck = Deck.find(params[:id])
     @deck.destroy
 
     respond_to do |format|
-      format.html { redirect_to(user_decks_url) }
+      format.html { redirect_to(decks_url) }
       format.xml  { head :ok }
+    end
+  end
+  
+  def is_owner?
+    if Deck.find(params[:id]).user_id != current_user.id
+      flash[:notice] = "Not Authorized"
+      redirect_to :decks
     end
   end
 end

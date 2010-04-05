@@ -2,10 +2,10 @@
   <b>Name:</b>
   <%=h @deck.name %>
 </p>
-<p><b>Owner:</b> <%=h @owner %></p>
+<p><b>Owner:</b> <%=h @deck.user.username %></p>
 <% for card in @deck.cards %>
   <p><%= card.front %> | <%= card.back %></p>
 <% end %>
 
-<%= link_to 'Edit', edit_user_deck_path(@user, @deck) %> |
-<%= link_to 'Back', user_decks_path %>
+<%= link_to 'Edit', edit_deck_path(@deck) %> |
+<%= link_to 'Back', decks_path %>

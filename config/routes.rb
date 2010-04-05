@@ -4,15 +4,14 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :user_sessions
 
-  map.resources :users do |user|
-    user.resources :decks
-  end
+  map.resources :users
+  # map.resources :users do |user|
+  #   user.resources :decks
+  # end
 
   map.resources :decks
 
   map.resources :cards
-
-  map.connect 'decks', :controller => 'decks', :action => 'all_decks'
 
   map.connect 'quiz/quiz_card', :controller => 'quiz', :action => 'quiz_card'
 
