@@ -5,7 +5,7 @@
 ** DONE destroy cards on destroy deck				       :comp:
 ** DONE in users/#/decks show only owned decks			       :comp:
 ** DONE page to show all decks					       :comp:
-** TODO only logged in can create edit anything 		       :comp:
+** DONE only logged in can create edit anything			       :comp:
 ** TODO view for 'my' decks					       :comp:
 ** DONE users view to each of their decks			       :comp:
 ** DONE in quiz, a way to escape				       :comp:
@@ -14,8 +14,12 @@
 ** DONE fix up quiz controller, need to create new quiz more often     :comp:
 ** DONE home page should show quiz/index			       :comp:
 ** DONE revert deck index action				       :comp:
+** TODO differentiate between admin(me)/non-admin users		       :comp:
+** TODO authorization for users to edit their own decks only 	       :comp:
 * Pretty
 ** TODO quiz: bigger font, make buttons not move 		       :comp:
 
 * Other
 ** TODO automate database creation, data import 		       :comp:
+** TODO add thai consonants part 1/2/3/4 			       :comp:
+** TODO play with an emacs rails package 			       :comp:

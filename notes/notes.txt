@@ -41,12 +41,12 @@ Part 2
 Need to clean up access for logged-in versus anonymous users.
 
 If logged in, should have a navigation bar (at top?), with links to:
-   - All Decks
+   - Home
    - My Decks
    - Edit Profile
    - Logout
 
 If not logged in, should have navigation area with:
-   - All Decks
+   - Home
    - Register
    - Login
