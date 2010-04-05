@@ -4,6 +4,7 @@
 <% for deck in @decks %>
 <tr>
   <td><%= h(deck.name) %></td>
+  <td><%= link_to 'Quiz', :controller => :quiz, :id => deck.id, :action => :quiz %></td>
   <td><%= link_to 'View', deck_path(deck) %></td>
   <td><%= link_to 'Edit', edit_deck_path(deck) %></td>
   <td><%= link_to 'Destroy', deck, :confirm => 'Are you sure?', :method => :delete %></td>

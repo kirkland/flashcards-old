@@ -17,6 +17,7 @@
 <div id="user_nav">
   <% if current_user %>
     <%= link_to 'Home', root_url %> |
+    <%= link_to 'My Decks', decks_url %> |
     <%= link_to "Edit Profile", edit_user_path(:current) %> |
     <%= link_to "Logout", logout_path %>
   <% else %>
