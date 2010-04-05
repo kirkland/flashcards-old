@@ -8,8 +8,6 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :decks
 
-  map.resources :cards
-
   map.connect 'quiz/quiz_card', :controller => 'quiz', :action => 'quiz_card'
 
   map.connect 'quiz/:id', :controller => 'quiz', :action => 'quiz'
