@@ -20,6 +20,9 @@
 * Pretty
 ** TODO quiz: bigger font, make buttons not move 		       :comp:
 
+** TODO both cols. should be same height			       :comp:
+
+** TODO make user-nav nicer 					       :comp:
 * Other
 ** TODO automate database creation, data import 		       :comp:
 ** TODO add thai consonants part 2/3/4 				       :comp:
