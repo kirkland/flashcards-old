@@ -2,7 +2,8 @@ html, body {
     background-color:#A7791C;
     padding:0;
     width:750px;
-    margin:0 auto;
+    margin:auto;
+    margin-top:10px;
 }
 
 div#wrapper {
