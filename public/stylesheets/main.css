@@ -15,18 +15,23 @@ div#wrapper {
 
 div#header {
     padding-left:10px;
-    height:100px;
     font-size:30px;
-    line-height:100px; /* must be same as height */
+    text-align: center;
+    padding-top:10px;
 }
 
 div#sidebar {
-    float:left;
-    width:200px;
+    text-align:center;
+
+}
+
+div#sidebar li {
+    display:inline;
+    list-style-type:none;
 }
 
 div#content {
-    width:545px;
+    width:745px;
     float:right;
 }
 
