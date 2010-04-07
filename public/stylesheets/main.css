@@ -31,8 +31,9 @@ div#sidebar li {
 }
 
 div#content {
-    width:745px;
+    width:715px;
     float:right;
+    padding:15px;
 }
 
 /* div { */
