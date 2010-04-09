@@ -1,10 +1,7 @@
-<div>
-<p>Front:</p> 
-<blockquote><div id="cardfront"><%= @card.front %></div></blockquote>
-<p>Back:</p> 
-<blockquote><div id="cardback"></div></blockquote>
+<div class="card" id="cardfront"><%= @card.front %></div>
+<div class="card" id="cardback"></div>
 
-<p><%= button_to_function 'Reveal Answer', "reveal_back('#{@card.back}')" %></p>
+<div id="card-navigation">
+<%= button_to_function 'Reveal Answer', "reveal_back('#{@card.back}')" %>
+<%= button_to 'Next' %>
 </div>
-
-<p><%= button_to 'Next' %>

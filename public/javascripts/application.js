@@ -7,10 +7,6 @@ function mark_for_destroy(element) {
 }
 
 function reveal_back(new_text) {
-    //    $(element).hide()
-    //    $(element).up().up('div').hide()
-    //    $(element).up().up('div').down('div').hide()
-    //    $('cardback').hide()
-    //    $('cardback').replace(@deck.cards[0].back) // doesn't work, no such variable. 
     $('cardback').replace(new_text);
+    //    new Insertion.top($('cardback'),new_text)
 }

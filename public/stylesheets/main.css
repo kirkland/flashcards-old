@@ -36,7 +36,18 @@ div#content {
     padding:15px;
 }
 
-/* div { */
-/*     border:solid; */
-/*     border-width:1px; */
-/* } */
+.card {
+    float:left;
+    width:330px;
+    min-height:150px;
+    border:solid;
+    border-width:1px;
+    text-align:center;
+    margin:10px;
+    background-color:white;
+    font-size:50px;
+}
+
+#card-navigation {
+ 
+}

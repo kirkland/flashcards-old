@@ -17,12 +17,20 @@
 ** DONE differentiate between admin(me)/non-admin users		       :comp:
 ** DONE authorization for users to edit their own decks only	       :comp:
 ** DONE make sure no one can edit cards model directly 		       :comp:
+** TODO quiz: refreshing page should not go to next card 	       :comp:
 * Pretty
-** TODO quiz: bigger font, make buttons not move 		       :comp:
+** DONE quiz: bigger font, make buttons not move		       :comp:
 
-** TODO both cols. should be same height			       :comp:
+** DONE both cols. should be same height			       :comp:
 
-** TODO make user-nav nicer 					       :comp:
+** DONE make user-nav nicer					       :comp:
+
+** TODO quiz: reveal answer button should disappear after click        :comp:
+
+
+** TODO quiz: size of font should depend on length		       :comp:
+
+** TODO center text inside of card div 				       :comp:
 * Other
 ** TODO automate database creation, data import 		       :comp:
 ** TODO add thai consonants part 2/3/4 				       :comp:
