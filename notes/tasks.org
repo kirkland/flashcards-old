@@ -33,5 +33,5 @@
 ** TODO center text inside of card div 				       :comp:
 * Other
 ** TODO automate database creation, data import 		       :comp:
-** TODO add thai consonants part 2/3/4 				       :comp:
+** DONE add thai consonants part 2/3/4				       :comp:
 ** TODO play with an emacs rails package 			       :comp:
