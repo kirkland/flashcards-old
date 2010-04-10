@@ -30,7 +30,7 @@
 
 ** TODO quiz: size of font should depend on length		       :comp:
 
-** TODO center text inside of card div 				       :comp:
+** DONE center text inside of card div				       :comp:
 * Other
 ** TODO automate database creation, data import 		       :comp:
 ** DONE add thai consonants part 2/3/4				       :comp:

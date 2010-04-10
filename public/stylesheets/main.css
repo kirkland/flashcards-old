@@ -37,18 +37,30 @@ div#content {
     padding:15px;
 }
 
+/* .card { */
+/*     background-color:white; */
+/*     float:left; */
+/*     font-size:50px; */
+/*     width:330px; */
+/*     text-align:center; */
+/*     padding-top:50px; */
+/*     padding-bottom:40px; */
+/*     max-height:100px; */
+/*     min-height:100px;  */
+/*     border:1px solid; */
+/*     margin:10px; */
+/* } */
+
 .card {
     background-color:white;
     float:left;
     font-size:50px;
     width:330px;
     text-align:center;
-    padding-top:50px;
-    padding-bottom:40px;
-    max-height:100px;
-    min-height:100px; 
     border:1px solid;
     margin:10px;
+    height:150px;
+    line-height:150px;
 }
 
 #card-navigation {
