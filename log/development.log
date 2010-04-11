@@ -43733,3 +43733,760 @@ Rendering template within layouts/application
 Rendering quiz/quiz_card
   [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
 Completed in 27ms (View: 22, DB: 1) | 200 OK [http://localhost/quiz/quiz_card]
+
+
+Processing QuizController#quiz_card (for 127.0.0.1 at 2010-04-11 08:52:29) [POST]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"authenticity_token"=>"97c985cfe3c8114482cf30bdbf57e5ed1ae74b9d"}
+Rendering template within layouts/application
+Rendering quiz/quiz_card
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 101ms (View: 96, DB: 1) | 200 OK [http://localhost/quiz/quiz_card]
+
+
+Processing QuizController#quiz_card (for 127.0.0.1 at 2010-04-11 08:52:58) [POST]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"authenticity_token"=>"97c985cfe3c8114482cf30bdbf57e5ed1ae74b9d"}
+Rendering template within layouts/application
+Rendering quiz/quiz_card
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 31ms (View: 26, DB: 2) | 200 OK [http://localhost/quiz/quiz_card]
+
+
+Processing QuizController#quiz_card (for 127.0.0.1 at 2010-04-11 08:53:07) [POST]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"authenticity_token"=>"97c985cfe3c8114482cf30bdbf57e5ed1ae74b9d"}
+Rendering template within layouts/application
+Rendering quiz/quiz_card
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 28ms (View: 23, DB: 2) | 200 OK [http://localhost/quiz/quiz_card]
+
+
+Processing QuizController#quiz_card (for 127.0.0.1 at 2010-04-11 08:53:13) [POST]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"authenticity_token"=>"97c985cfe3c8114482cf30bdbf57e5ed1ae74b9d"}
+Rendering template within layouts/application
+Rendering quiz/quiz_card
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 30ms (View: 25, DB: 2) | 200 OK [http://localhost/quiz/quiz_card]
+
+
+Processing QuizController#quiz_card (for 127.0.0.1 at 2010-04-11 08:53:37) [POST]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"authenticity_token"=>"97c985cfe3c8114482cf30bdbf57e5ed1ae74b9d"}
+Rendering template within layouts/application
+Rendering quiz/quiz_card
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 28ms (View: 23, DB: 2) | 200 OK [http://localhost/quiz/quiz_card]
+
+
+Processing QuizController#quiz_card (for 127.0.0.1 at 2010-04-11 09:02:53) [POST]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"authenticity_token"=>"97c985cfe3c8114482cf30bdbf57e5ed1ae74b9d"}
+Rendering template within layouts/application
+Rendering quiz/quiz_card
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 28ms (View: 24, DB: 1) | 200 OK [http://localhost/quiz/quiz_card]
+
+
+Processing QuizController#quiz_card (for 127.0.0.1 at 2010-04-11 09:02:59) [POST]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"authenticity_token"=>"97c985cfe3c8114482cf30bdbf57e5ed1ae74b9d"}
+Rendering template within layouts/application
+Rendering quiz/quiz_card
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 29ms (View: 24, DB: 2) | 200 OK [http://localhost/quiz/quiz_card]
+
+
+Processing QuizController#quiz_card (for 127.0.0.1 at 2010-04-11 09:03:06) [POST]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"authenticity_token"=>"97c985cfe3c8114482cf30bdbf57e5ed1ae74b9d"}
+Rendering template within layouts/application
+Rendering quiz/quiz_card
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 28ms (View: 23, DB: 2) | 200 OK [http://localhost/quiz/quiz_card]
+
+
+Processing QuizController#quiz_card (for 127.0.0.1 at 2010-04-11 09:03:58) [POST]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"authenticity_token"=>"97c985cfe3c8114482cf30bdbf57e5ed1ae74b9d"}
+Rendering template within layouts/application
+Rendering quiz/quiz_card
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 92ms (View: 88, DB: 2) | 200 OK [http://localhost/quiz/quiz_card]
+
+
+Processing QuizController#quiz_card (for 127.0.0.1 at 2010-04-11 09:04:10) [POST]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"authenticity_token"=>"97c985cfe3c8114482cf30bdbf57e5ed1ae74b9d"}
+Redirected to http://localhost:3000/
+Completed in 3ms (DB: 2) | 302 Found [http://localhost/quiz/quiz_card]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:04:10) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 30ms (View: 27, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#quiz_card (for 127.0.0.1 at 2010-04-11 09:04:21) [POST]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"authenticity_token"=>"97c985cfe3c8114482cf30bdbf57e5ed1ae74b9d"}
+Redirected to http://localhost:3000/
+Completed in 3ms (DB: 22) | 302 Found [http://localhost/quiz/quiz_card]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:04:21) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 33ms (View: 30, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#quiz_card (for 127.0.0.1 at 2010-04-11 09:05:03) [POST]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"authenticity_token"=>"97c985cfe3c8114482cf30bdbf57e5ed1ae74b9d"}
+Redirected to http://localhost:3000/
+Completed in 3ms (DB: 2) | 302 Found [http://localhost/quiz/quiz_card]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:05:03) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 31ms (View: 26, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#quiz_card (for 127.0.0.1 at 2010-04-11 09:05:10) [POST]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"authenticity_token"=>"97c985cfe3c8114482cf30bdbf57e5ed1ae74b9d"}
+Redirected to http://localhost:3000/
+Completed in 3ms (DB: 1) | 302 Found [http://localhost/quiz/quiz_card]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:05:10) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 31ms (View: 28, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#quiz_card (for 127.0.0.1 at 2010-04-11 09:05:32) [POST]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"authenticity_token"=>"97c985cfe3c8114482cf30bdbf57e5ed1ae74b9d"}
+Redirected to http://localhost:3000/
+Completed in 3ms (DB: 2) | 302 Found [http://localhost/quiz/quiz_card]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:05:32) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 29ms (View: 26, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#quiz_card (for 127.0.0.1 at 2010-04-11 09:05:40) [POST]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"authenticity_token"=>"97c985cfe3c8114482cf30bdbf57e5ed1ae74b9d"}
+Redirected to http://localhost:3000/
+Completed in 3ms (DB: 2) | 302 Found [http://localhost/quiz/quiz_card]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:05:40) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 30ms (View: 27, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#quiz_card (for 127.0.0.1 at 2010-04-11 09:07:21) [POST]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"authenticity_token"=>"97c985cfe3c8114482cf30bdbf57e5ed1ae74b9d"}
+Redirected to http://localhost:3000/
+Completed in 3ms (DB: 2) | 302 Found [http://localhost/quiz/quiz_card]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:07:21) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.6ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 105ms (View: 34, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#quiz_card (for 127.0.0.1 at 2010-04-11 09:07:33) [POST]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"authenticity_token"=>"97c985cfe3c8114482cf30bdbf57e5ed1ae74b9d"}
+Redirected to http://localhost:3000/
+Completed in 3ms (DB: 2) | 302 Found [http://localhost/quiz/quiz_card]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:07:34) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 29ms (View: 26, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#quiz_card (for 127.0.0.1 at 2010-04-11 09:08:00) [POST]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"authenticity_token"=>"97c985cfe3c8114482cf30bdbf57e5ed1ae74b9d"}
+Redirected to http://localhost:3000/
+Completed in 3ms (DB: 1) | 302 Found [http://localhost/quiz/quiz_card]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:08:00) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.6ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 34ms (View: 30, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#quiz_card (for 127.0.0.1 at 2010-04-11 09:08:18) [POST]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"authenticity_token"=>"97c985cfe3c8114482cf30bdbf57e5ed1ae74b9d"}
+Redirected to http://localhost:3000/
+Completed in 3ms (DB: 1) | 302 Found [http://localhost/quiz/quiz_card]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:08:18) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 29ms (View: 26, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#quiz_card (for 127.0.0.1 at 2010-04-11 09:08:26) [POST]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"authenticity_token"=>"97c985cfe3c8114482cf30bdbf57e5ed1ae74b9d"}
+Redirected to http://localhost:3000/
+Completed in 3ms (DB: 2) | 302 Found [http://localhost/quiz/quiz_card]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:08:26) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 35ms (View: 32, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#quiz_card (for 127.0.0.1 at 2010-04-11 09:09:10) [POST]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"authenticity_token"=>"97c985cfe3c8114482cf30bdbf57e5ed1ae74b9d"}
+Redirected to http://localhost:3000/
+Completed in 3ms (DB: 2) | 302 Found [http://localhost/quiz/quiz_card]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:09:11) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 98ms (View: 94, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#quiz_card (for 127.0.0.1 at 2010-04-11 09:09:17) [POST]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"authenticity_token"=>"97c985cfe3c8114482cf30bdbf57e5ed1ae74b9d"}
+Redirected to http://localhost:3000/
+Completed in 3ms (DB: 2) | 302 Found [http://localhost/quiz/quiz_card]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:09:17) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 29ms (View: 26, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:09:20) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 96ms (View: 92, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:09:21) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 31ms (View: 27, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:09:34) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.6ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 33ms (View: 29, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:09:39) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 100ms (View: 96, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:09:43) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 30ms (View: 26, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:09:56) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 30ms (View: 26, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:10:09) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 33ms (View: 29, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:11:04) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 30ms (View: 26, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:11:11) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 29ms (View: 26, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:11:29) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 32ms (View: 28, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:12:50) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 29ms (View: 26, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:13:14) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 95ms (View: 91, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#quiz (for 127.0.0.1 at 2010-04-11 09:13:18) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"id"=>"23"}
+  [4;36;1mDeck Load (0.2ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."id" = 23) [0m
+Redirected to actionquiz_card
+Completed in 4ms (DB: 2) | 302 Found [http://localhost/quiz/23]
+
+
+Processing QuizController#quiz_card (for 127.0.0.1 at 2010-04-11 09:13:18) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;35;1mCard Load (1.2ms)[0m   [0mSELECT * FROM "cards" WHERE ("cards".deck_id = 23) [0m
+Rendering template within layouts/application
+Rendering quiz/quiz_card
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 39ms (View: 23, DB: 2) | 200 OK [http://localhost/quiz/quiz_card]
+
+
+Processing QuizController#quiz_card (for 127.0.0.1 at 2010-04-11 09:13:21) [POST]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"authenticity_token"=>"97c985cfe3c8114482cf30bdbf57e5ed1ae74b9d"}
+Rendering template within layouts/application
+Rendering quiz/quiz_card
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 92ms (View: 87, DB: 1) | 200 OK [http://localhost/quiz/quiz_card]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:13:23) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 31ms (View: 28, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:13:24) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 30ms (View: 26, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:16:11) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 101ms (View: 97, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:16:29) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 31ms (View: 27, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:16:41) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 31ms (View: 27, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:16:59) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 33ms (View: 29, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:17:57) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.6ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 30ms (View: 26, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:18:06) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 30ms (View: 26, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:18:15) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 32ms (View: 28, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:18:23) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 30ms (View: 26, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:18:40) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 98ms (View: 95, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:19:02) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 30ms (View: 27, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:19:09) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 30ms (View: 26, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:19:14) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 33ms (View: 30, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:19:22) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 29ms (View: 26, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:21:15) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 99ms (View: 96, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:21:23) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 31ms (View: 27, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-11 09:21:28) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 31ms (View: 28, DB: 2) | 200 OK [http://localhost/]

@@ -26,7 +26,7 @@
 
 ** DONE make user-nav nicer					       :comp:
 
-** TODO quiz: reveal answer button should disappear after click        :comp:
+** DONE quiz: reveal answer button should disappear after click	       :comp:
 
 
 ** DONE quiz: size of font should depend on length		       :comp:
@@ -34,6 +34,8 @@
 ** DONE center text inside of card div				       :comp:
 
 ** DONE play w/ various length cards, see how well they work	       :comp:
+
+** TODO title and navigation don't seem to be centered together        :comp:
 * Other
 ** TODO automate database creation, data import 		       :comp:
 ** DONE add thai consonants part 2/3/4				       :comp:
