@@ -8,5 +8,8 @@ function mark_for_destroy(element) {
 
 function reveal_back(new_text) {
     $('cardback').update(new_text);
-    //    new Insertion.top($('cardback'),new_text)
+    
+    $('reveal-button').setStyle({
+	    visibility: 'hidden',
+		});
 }

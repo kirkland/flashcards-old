@@ -18,6 +18,7 @@
 ** DONE authorization for users to edit their own decks only	       :comp:
 ** DONE make sure no one can edit cards model directly 		       :comp:
 ** TODO quiz: refreshing page should not go to next card 	       :comp:
+** TODO let users opt to share or not share their decks 	       :comp:
 * Pretty
 ** DONE quiz: bigger font, make buttons not move		       :comp:
 
@@ -28,9 +29,11 @@
 ** TODO quiz: reveal answer button should disappear after click        :comp:
 
 
-** TODO quiz: size of font should depend on length		       :comp:
+** DONE quiz: size of font should depend on length		       :comp:
 
 ** DONE center text inside of card div				       :comp:
+
+** DONE play w/ various length cards, see how well they work	       :comp:
 * Other
 ** TODO automate database creation, data import 		       :comp:
 ** DONE add thai consonants part 2/3/4				       :comp:
