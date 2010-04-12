@@ -2,7 +2,7 @@ class QuizController < ApplicationController
   skip_before_filter :authorized
 
   def index
-    @decks = Deck.find(:all)
+    @decks = Deck.find(:all, :conditions => { :share => true })  # for some reason, only true and 0 work
   end
 
   def quiz

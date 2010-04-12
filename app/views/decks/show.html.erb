@@ -3,6 +3,7 @@
   <%=h @deck.name %>
 </p>
 <p><b>Owner:</b> <%=h @deck.user.username %></p>
+<p><b>Sharing:</b> <%= @deck.share %></p>
 <% for card in @deck.cards %>
   <p><%= card.front %> | <%= card.back %></p>
 <% end %>

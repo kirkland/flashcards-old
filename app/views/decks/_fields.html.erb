@@ -1,8 +1,6 @@
 <%= error_messages_for :deck %>
-<p>
-  Name: <%= f.text_field :name %>
-</p>
-
+<p>Name: <%= f.text_field :name %></p>
+<p>Share: <%= f.check_box :share %></p>
 <div id="cards">
   <%= render :partial => 'card', :collection => @deck.cards %>
 </div>
