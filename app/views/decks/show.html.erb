@@ -5,7 +5,7 @@
 <p><b>Owner:</b> <%=h @deck.user.username %></p>
 <p><b>Sharing:</b> <%= @deck.share %></p>
 <% for card in @deck.cards %>
-  <p><%= card.front %> | <%= card.back %></p>
+  <p><%=h card.front %> | <%=h card.back %></p>
 <% end %>
 
 <%= link_to 'Edit', edit_deck_path(@deck) %> |
