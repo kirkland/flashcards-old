@@ -41,9 +41,16 @@
 ** DONE title and navigation don't seem to be centered together	       :comp:
 
 ** DONE fix deck editing view					       :comp:
+
+** TODO make nicer navigation buttons 				       :comp:
 * Other
 ** TODO automate database creation, data import 		       :comp:
 ** DONE add thai consonants part 2/3/4				       :comp:
 ** TODO play with an emacs rails package 			       :comp:
 ** TODO ask ben: why does my find only work w/ true and 0? 	       :comp:
 ** TODO register domain 					       :comp:
+** TODO make news page 						       :comp:
+** TODO enter vowels						       :comp:
+** TODO resources page to learningthai.com: pronounciation	       :comp:
+** TODO how to add audio?! 					       :comp:
+** TODO make about page 					       :comp:

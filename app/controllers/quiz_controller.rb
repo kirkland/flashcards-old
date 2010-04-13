@@ -24,7 +24,7 @@ class QuizController < ApplicationController
       else
         @backsize = "20px"
       end
-      if @card.front.length < 5
+      if @card.front.length < 10
         @frontsize = "80px"
       else
         @frontsize = "20px"
