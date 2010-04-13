@@ -3,6 +3,11 @@ class QuizController < ApplicationController
 
   def index
     @decks = Deck.find(:all, :conditions => { :share => true })  # for some reason, only true and 0 work
+    @users = User.find(:all)
+
+    @users = @users.find_all do |user|
+      user.decks.size > 0
+    end
   end
 
   def quiz

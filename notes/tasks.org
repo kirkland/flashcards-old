@@ -20,7 +20,8 @@
 ** DONE quiz: refreshing page should not go to next card	       :comp:
 ** DONE let users opt to share or not share their decks		       :comp:
 ** TODO quiz view update should be AJAX				       :comp:
-** TODO front page lists decks BY user, first 5 or so only, and a link to more  :comp:
+** DONE front page lists decks BY user, first 5 or so only, and a link to more :comp:
+** DONE fix 'remove' options on edit/create deck		       :comp:
 * Pretty
 ** DONE quiz: bigger font, make buttons not move		       :comp:
 

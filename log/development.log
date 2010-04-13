@@ -47562,3 +47562,1297 @@ Rendering quiz/index
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
   [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
 Completed in 30ms (View: 26, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#quiz (for 127.0.0.1 at 2010-04-12 19:47:30) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"id"=>"6"}
+  [4;36;1mDeck Load (0.8ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."id" = 6) [0m
+Redirected to actionquiz_card
+Completed in 13ms (DB: 5) | 302 Found [http://localhost/quiz/6]
+
+
+Processing QuizController#quiz_card (for 127.0.0.1 at 2010-04-12 19:47:30) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;35;1mCard Load (3.6ms)[0m   [0mSELECT * FROM "cards" WHERE ("cards".deck_id = 6) [0m
+Rendering template within layouts/application
+Rendering quiz/quiz_card
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 344ms (View: 274, DB: 5) | 200 OK [http://localhost/quiz/quiz_card]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-04-12 19:47:47) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Cookie set: user_credentials=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to http://localhost:3000/
+Completed in 19ms (DB: 3) | 302 Found [http://localhost/logout]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-12 19:47:47) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.6ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 48ms (View: 45, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-12 19:47:49) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;35;1mDeck Load (0.5ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 29ms (View: 25, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-04-12 19:47:56) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 85ms (View: 45, DB: 2) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-04-12 19:47:59) [POST]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"rob", "password"=>"dare"}, "authenticity_token"=>"97c985cfe3c8114482cf30bdbf57e5ed1ae74b9d"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'rob') LIMIT 1[0m
+Cookie set: user_credentials=c7397351e6ad49bfcc0669e33cece88e96da365e5dc520a02577c278a4791c4950efaffa2c03b40bc1189eb53307eab89db93fb25ad7aaeb738988690cb09df3%3A%3A1; path=/
+Redirected to http://localhost:3000/
+Completed in 565ms (DB: 2) | 302 Found [http://localhost/user_sessions]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-12 19:48:00) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;35;1mDeck Load (0.6ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 32ms (View: 28, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-12 19:59:08) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;35;1mDeck Load (0.6ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 35ms (View: 19, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-12 19:59:11) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.6ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 40ms (View: 18, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-12 19:59:33) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;35;1mDeck Load (0.5ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+ERROR: compiling _run_erb_app47views47quiz47index46html46erb RAISED compile error
+/home/rob/code/flashcards/app/views/quiz/index.html.erb:9: syntax error, unexpected ')', expecting kDO_COND or ':' or '\n' or ';'
+....concat(( for user in @users ).to_s); @output_buffer.concat ...
+                              ^
+/home/rob/code/flashcards/app/views/quiz/index.html.erb:13: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47quiz47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<p>Quiz Yourself on one of these Decks</p>\n\n<ul>\n"
+
+
+;  for deck in @decks ; @output_buffer.concat "\n  <li>"
+; @output_buffer.concat(( link_to h(deck.name + " by " + deck.user.username), :id => deck, :action => 'quiz' ).to_s); @output_buffer.concat "</li>\n"
+;  end ; @output_buffer.concat "\n</ul>\n\n"
+
+
+; @output_buffer.concat(( for user in @users ).to_s); @output_buffer.concat "\n"
+; @output_buffer.concat(( user.name ).to_s); @output_buffer.concat "\n"
+;  end ; @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/rob/code/flashcards/app/views/quiz/index.html.erb:13:in `compile!'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/base.rb:896:in `render_without_benchmark'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/rob/code/flashcards/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/base.rb:868:in `render_without_benchmark'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/rob/code/flashcards/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/base.rb:1251:in `default_render'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/base.rb:1257:in `perform_action_without_filters'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+/home/rob/code/flashcards/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/rob/code/flashcards/vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+/home/rob/code/flashcards/vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+/home/rob/code/flashcards/vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+/home/rob/code/flashcards/vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+/home/rob/code/flashcards/vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+/home/rob/code/flashcards/vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/home/rob/code/flashcards/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/home/rob/code/flashcards/vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+/home/rob/code/flashcards/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/home/rob/code/flashcards/vendor/rails/railties/lib/commands/server.rb:49
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+
+ActionView::TemplateError (compile error
+/home/rob/code/flashcards/app/views/quiz/index.html.erb:9: syntax error, unexpected ')', expecting kDO_COND or ':' or '\n' or ';'
+....concat(( for user in @users ).to_s); @output_buffer.concat ...
+                              ^
+/home/rob/code/flashcards/app/views/quiz/index.html.erb:13: syntax error, unexpected kENSURE, expecting $end) on line #9 of app/views/quiz/index.html.erb:
+6: <% end %>
+7: </ul>
+8: 
+9: <%= for user in @users %>
+10: <%= user.name %>
+11: <% end %>
+
+    app/views/quiz/index.html.erb:13:in `compile!'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:896:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:868:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1251:in `default_render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1257:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (35.3ms)
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (89.0ms)
+Rendering /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-12 19:59:40) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;35;1mDeck Load (0.6ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+ERROR: compiling _run_erb_app47views47quiz47index46html46erb RAISED compile error
+/home/rob/code/flashcards/app/views/quiz/index.html.erb:9: syntax error, unexpected ')', expecting kDO_COND or ':' or '\n' or ';'
+....concat(( for user in @users ).to_s); @output_buffer.concat ...
+                              ^
+/home/rob/code/flashcards/app/views/quiz/index.html.erb:13: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47quiz47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<p>Quiz Yourself on one of these Decks</p>\n\n<ul>\n"
+
+
+;  for deck in @decks ; @output_buffer.concat "\n  <li>"
+; @output_buffer.concat(( link_to h(deck.name + " by " + deck.user.username), :id => deck, :action => 'quiz' ).to_s); @output_buffer.concat "</li>\n"
+;  end ; @output_buffer.concat "\n</ul>\n\n"
+
+
+; @output_buffer.concat(( for user in @users ).to_s); @output_buffer.concat "\n"
+; @output_buffer.concat(( user.username ).to_s); @output_buffer.concat "\n"
+;  end ; @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/rob/code/flashcards/app/views/quiz/index.html.erb:13:in `compile!'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/base.rb:896:in `render_without_benchmark'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/rob/code/flashcards/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/base.rb:868:in `render_without_benchmark'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/rob/code/flashcards/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/base.rb:1251:in `default_render'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/base.rb:1257:in `perform_action_without_filters'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+/home/rob/code/flashcards/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/rob/code/flashcards/vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+/home/rob/code/flashcards/vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+/home/rob/code/flashcards/vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+/home/rob/code/flashcards/vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+/home/rob/code/flashcards/vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+/home/rob/code/flashcards/vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/home/rob/code/flashcards/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/home/rob/code/flashcards/vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+/home/rob/code/flashcards/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/home/rob/code/flashcards/vendor/rails/railties/lib/commands/server.rb:49
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+
+ActionView::TemplateError (compile error
+/home/rob/code/flashcards/app/views/quiz/index.html.erb:9: syntax error, unexpected ')', expecting kDO_COND or ':' or '\n' or ';'
+....concat(( for user in @users ).to_s); @output_buffer.concat ...
+                              ^
+/home/rob/code/flashcards/app/views/quiz/index.html.erb:13: syntax error, unexpected kENSURE, expecting $end) on line #9 of app/views/quiz/index.html.erb:
+6: <% end %>
+7: </ul>
+8: 
+9: <%= for user in @users %>
+10: <%= user.username %>
+11: <% end %>
+
+    app/views/quiz/index.html.erb:13:in `compile!'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:896:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:868:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1251:in `default_render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1257:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (30.6ms)
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (85.1ms)
+Rendering /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-12 19:59:55) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;35;1mDeck Load (0.6ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 35ms (View: 17, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-12 20:00:08) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 101ms (View: 85, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-12 20:00:31) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+
+
+SyntaxError (/home/rob/code/flashcards/app/controllers/quiz_controller.rb:35: syntax error, unexpected kEND, expecting $end):
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:382:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:382:in `load_file'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:381:in `load_file'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:256:in `require_or_load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:427:in `load_missing_constant'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:77:in `const_missing'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:89:in `const_missing'
+    /vendor/rails/activesupport/lib/active_support/inflector.rb:352:in `constantize'
+    /vendor/rails/activesupport/lib/active_support/inflector.rb:351:in `each'
+    /vendor/rails/activesupport/lib/active_support/inflector.rb:351:in `constantize'
+    /vendor/rails/activesupport/lib/active_support/core_ext/string/inflections.rb:162:in `constantize'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:392:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (32.5ms)
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (17.5ms)
+Rendering /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-12 20:00:44) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;35;1mDeck Load (0.5ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 102ms (View: 19, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-12 20:01:57) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.6ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+ERROR: compiling _run_erb_app47views47quiz47index46html46erb RAISED compile error
+/home/rob/code/flashcards/app/views/quiz/index.html.erb:15: syntax error, unexpected kENSURE, expecting kEND
+/home/rob/code/flashcards/app/views/quiz/index.html.erb:17: syntax error, unexpected $end, expecting kEND
+Function body:           def _run_erb_app47views47quiz47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<p>Quiz Yourself on one of these Decks</p>\n\n"
+
+;  for user in @users ; @output_buffer.concat "\n<p>Decks by "
+; @output_buffer.concat(( user.username ).to_s); @output_buffer.concat ":\n<ul>\n"
+
+;  for deck in user.decks ; @output_buffer.concat "\n  <li>"
+; @output_buffer.concat(( link_to h(deck.name + " by " + deck.user.username), :id => deck, :action => 'quiz' ).to_s); @output_buffer.concat "</li>\n"
+;  end ; @output_buffer.concat "\n</ul>\n\n"
+
+
+;  for user in @users ; @output_buffer.concat "\n"
+; @output_buffer.concat(( user.username ).to_s); @output_buffer.concat "\n"
+;  end ; @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/rob/code/flashcards/app/views/quiz/index.html.erb:17:in `compile!'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/base.rb:896:in `render_without_benchmark'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/rob/code/flashcards/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/base.rb:868:in `render_without_benchmark'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/rob/code/flashcards/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/base.rb:1251:in `default_render'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/base.rb:1257:in `perform_action_without_filters'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+/home/rob/code/flashcards/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/rob/code/flashcards/vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+/home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+/home/rob/code/flashcards/vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+/home/rob/code/flashcards/vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+/home/rob/code/flashcards/vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+/home/rob/code/flashcards/vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+/home/rob/code/flashcards/vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/home/rob/code/flashcards/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/home/rob/code/flashcards/vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+/home/rob/code/flashcards/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/home/rob/code/flashcards/vendor/rails/railties/lib/commands/server.rb:49
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+
+ActionView::TemplateError (compile error
+/home/rob/code/flashcards/app/views/quiz/index.html.erb:15: syntax error, unexpected kENSURE, expecting kEND
+/home/rob/code/flashcards/app/views/quiz/index.html.erb:17: syntax error, unexpected $end, expecting kEND) on line #15 of app/views/quiz/index.html.erb:
+12: <%= user.username %>
+13: <% end %>
+
+    app/views/quiz/index.html.erb:17:in `compile!'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:896:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:868:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1251:in `default_render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1257:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (30.0ms)
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (83.8ms)
+Rendering /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-12 20:02:10) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.6ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;36;1mDeck Load (0.6ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 38ms (View: 19, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-12 20:02:27) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.6ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;36;1mDeck Load (0.7ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 54ms (View: 20, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-12 20:02:36) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.7ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;36;1mDeck Load (0.6ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 37ms (View: 18, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-04-12 20:02:40) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Cookie set: user_credentials=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to http://localhost:3000/
+Completed in 18ms (DB: 2) | 302 Found [http://localhost/logout]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-12 20:02:40) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;35;1mDeck Load (0.6ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mDeck Load (0.6ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
+Completed in 31ms (View: 14, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-04-12 20:02:43) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 26ms (View: 11, DB: 2) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-04-12 20:02:46) [POST]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"rob2", "password"=>"dare"}, "authenticity_token"=>"97c985cfe3c8114482cf30bdbf57e5ed1ae74b9d"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'rob2') LIMIT 1[0m
+Cookie set: user_credentials=05176e8da514be9cf8627e119a681dcfdd49206de734a9771c83a00b4aaece780c6447fda7150c2cd139052232ed7f2a32350758eec0e30d5e62b034500f6f5a%3A%3A2; path=/
+Redirected to http://localhost:3000/
+Completed in 18ms (DB: 2) | 302 Found [http://localhost/user_sessions]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-12 20:02:46) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;35;1mDeck Load (0.6ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mDeck Load (0.6ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '2') LIMIT 1[0m
+Completed in 33ms (View: 16, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing DecksController#index (for 127.0.0.1 at 2010-04-12 20:02:49) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '2') LIMIT 1[0m
+  [4;36;1mDeck Load (0.2ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."user_id" = 2) [0m
+Rendering template within layouts/application
+Rendering decks/index
+Completed in 52ms (View: 32, DB: 2) | 200 OK [http://localhost/decks]
+
+
+Processing DecksController#new (for 127.0.0.1 at 2010-04-12 20:02:50) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '2') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering decks/new
+Rendered decks/_card (4.6ms)
+Rendered decks/_card (4.3ms)
+Rendered decks/_card (4.5ms)
+Rendered decks/_card (3.4ms)
+Rendered decks/_fields (29.9ms)
+Completed in 105ms (View: 82, DB: 2) | 200 OK [http://localhost/decks/new]
+
+
+Processing DecksController#create (for 127.0.0.1 at 2010-04-12 20:03:16) [POST]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"deck"=>{"share"=>"1", "name"=>"test", "card_attributes"=>[{"back"=>"there", "front"=>"hello"}, {"back"=>"", "front"=>""}, {"back"=>"", "front"=>""}]}, "commit"=>"Create", "authenticity_token"=>"97c985cfe3c8114482cf30bdbf57e5ed1ae74b9d"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '2') LIMIT 1[0m
+  [4;35;1mDeck Create (0.2ms)[0m   [0mINSERT INTO "decks" ("name", "share", "created_at", "updated_at", "user_id") VALUES('test', 't', '2010-04-13 00:03:16', '2010-04-13 00:03:16', 2)[0m
+  [4;36;1mCard Create (0.1ms)[0m   [0;1mINSERT INTO "cards" ("back", "created_at", "front", "updated_at", "deck_id") VALUES('there', '2010-04-13 00:03:16', 'hello', '2010-04-13 00:03:16', 26)[0m
+  [4;35;1mCard Create (0.1ms)[0m   [0mINSERT INTO "cards" ("back", "created_at", "front", "updated_at", "deck_id") VALUES('', '2010-04-13 00:03:16', '', '2010-04-13 00:03:16', 26)[0m
+  [4;36;1mCard Create (0.1ms)[0m   [0;1mINSERT INTO "cards" ("back", "created_at", "front", "updated_at", "deck_id") VALUES('', '2010-04-13 00:03:16', '', '2010-04-13 00:03:16', 26)[0m
+Redirected to #<Deck:0xb5f5d498>
+Completed in 106ms (DB: 2) | 302 Found [http://localhost/decks]
+
+
+Processing DecksController#show (for 127.0.0.1 at 2010-04-12 20:03:17) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"id"=>"26"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '2') LIMIT 1[0m
+  [4;36;1mDeck Load (0.3ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."id" = 26) [0m
+Rendering template within layouts/application
+Rendering decks/show
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCard Load (0.5ms)[0m   [0;1mSELECT * FROM "cards" WHERE ("cards".deck_id = 26) [0m
+Completed in 34ms (View: 13, DB: 2) | 200 OK [http://localhost/decks/26]
+
+
+Processing DecksController#index (for 127.0.0.1 at 2010-04-12 20:03:19) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '2') LIMIT 1[0m
+  [4;36;1mDeck Load (0.3ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."user_id" = 2) [0m
+Rendering template within layouts/application
+Rendering decks/index
+Completed in 34ms (View: 12, DB: 2) | 200 OK [http://localhost/decks]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-12 20:03:22) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;35;1mDeck Load (0.7ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mDeck Load (0.5ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;36;1mDeck Load (0.3ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '2') LIMIT 1[0m
+Completed in 36ms (View: 17, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing DecksController#index (for 127.0.0.1 at 2010-04-12 20:03:27) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '2') LIMIT 1[0m
+  [4;35;1mDeck Load (0.4ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."user_id" = 2) [0m
+Rendering template within layouts/application
+Rendering decks/index
+Completed in 33ms (View: 13, DB: 3) | 200 OK [http://localhost/decks]
+
+
+Processing DecksController#destroy (for 127.0.0.1 at 2010-04-12 20:03:31) [DELETE]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"authenticity_token"=>"97c985cfe3c8114482cf30bdbf57e5ed1ae74b9d", "id"=>"26"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '2') LIMIT 1[0m
+  [4;35;1mDeck Load (0.3ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."id" = 26) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."id" = 26) [0m
+  [4;35;1mCard Load (0.5ms)[0m   [0mSELECT * FROM "cards" WHERE ("cards".deck_id = 26) [0m
+  [4;36;1mCard Destroy (0.2ms)[0m   [0;1mDELETE FROM "cards" WHERE "id" = 127[0m
+  [4;35;1mCard Destroy (0.1ms)[0m   [0mDELETE FROM "cards" WHERE "id" = 128[0m
+  [4;36;1mCard Destroy (0.2ms)[0m   [0;1mDELETE FROM "cards" WHERE "id" = 129[0m
+  [4;35;1mDeck Destroy (0.1ms)[0m   [0mDELETE FROM "decks" WHERE "id" = 26[0m
+Redirected to http://localhost:3000/decks
+Completed in 107ms (DB: 4) | 302 Found [http://localhost/decks/26]
+
+
+Processing DecksController#index (for 127.0.0.1 at 2010-04-12 20:03:31) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '2') LIMIT 1[0m
+  [4;35;1mDeck Load (0.1ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."user_id" = 2) [0m
+Rendering template within layouts/application
+Rendering decks/index
+Completed in 24ms (View: 6, DB: 2) | 200 OK [http://localhost/decks]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-12 20:03:34) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mDeck Load (0.6ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;36;1mDeck Load (0.6ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '2') LIMIT 1[0m
+Completed in 36ms (View: 17, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-04-12 20:05:35) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '2') LIMIT 1[0m
+Cookie set: user_credentials=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to http://localhost:3000/
+Completed in 17ms (DB: 2) | 302 Found [http://localhost/logout]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-12 20:05:35) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;35;1mDeck Load (0.5ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mDeck Load (0.5ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
+Completed in 98ms (View: 82, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-04-12 20:05:37) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 25ms (View: 11, DB: 1) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-04-12 20:05:40) [POST]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"rob", "password"=>"dare"}, "authenticity_token"=>"97c985cfe3c8114482cf30bdbf57e5ed1ae74b9d"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'rob') LIMIT 1[0m
+Cookie set: user_credentials=c7397351e6ad49bfcc0669e33cece88e96da365e5dc520a02577c278a4791c4950efaffa2c03b40bc1189eb53307eab89db93fb25ad7aaeb738988690cb09df3%3A%3A1; path=/
+Redirected to http://localhost:3000/
+Completed in 19ms (DB: 2) | 302 Found [http://localhost/user_sessions]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-12 20:05:40) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;35;1mDeck Load (0.5ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mDeck Load (0.5ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 102ms (View: 84, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing QuizController#quiz (for 127.0.0.1 at 2010-04-12 20:05:41) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"id"=>"6"}
+  [4;35;1mDeck Load (0.3ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."id" = 6) [0m
+Redirected to actionquiz_card
+Completed in 5ms (DB: 2) | 302 Found [http://localhost/quiz/6]
+
+
+Processing QuizController#quiz_card (for 127.0.0.1 at 2010-04-12 20:05:41) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mCard Load (1.2ms)[0m   [0;1mSELECT * FROM "cards" WHERE ("cards".deck_id = 6) [0m
+Rendering template within layouts/application
+Rendering quiz/quiz_card
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 34ms (View: 23, DB: 2) | 200 OK [http://localhost/quiz/quiz_card]
+
+
+Processing DecksController#index (for 127.0.0.1 at 2010-04-12 20:05:45) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mDeck Load (0.7ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."user_id" = 1) [0m
+Rendering template within layouts/application
+Rendering decks/index
+Completed in 46ms (View: 25, DB: 3) | 200 OK [http://localhost/decks]
+
+
+Processing DecksController#edit (for 127.0.0.1 at 2010-04-12 20:05:47) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"id"=>"6"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mDeck Load (0.3ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."id" = 6) [0m
+Rendering template within layouts/application
+Rendering decks/edit
+  [4;35;1mCard Load (1.5ms)[0m   [0mSELECT * FROM "cards" WHERE ("cards".deck_id = 6) [0m
+Rendered decks/_card (16.5ms)
+Rendered decks/_card (2.9ms)
+Rendered decks/_card (2.9ms)
+Rendered decks/_card (2.9ms)
+Rendered decks/_card (11.2ms)
+Rendered decks/_card (2.9ms)
+Rendered decks/_card (2.8ms)
+Rendered decks/_card (2.8ms)
+Rendered decks/_card (2.9ms)
+Rendered decks/_card (2.9ms)
+Rendered decks/_card (2.7ms)
+Rendered decks/_card (1.7ms)
+Rendered decks/_fields (71.1ms)
+Completed in 146ms (View: 82, DB: 3) | 200 OK [http://localhost/decks/6/edit]
+
+
+Processing DecksController#edit (for 127.0.0.1 at 2010-04-12 20:06:11) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"id"=>"6"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mDeck Load (0.3ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."id" = 6) [0m
+Rendering template within layouts/application
+Rendering decks/edit
+  [4;35;1mCard Load (1.3ms)[0m   [0mSELECT * FROM "cards" WHERE ("cards".deck_id = 6) [0m
+Rendered decks/_card (3.3ms)
+Rendered decks/_card (2.4ms)
+Rendered decks/_card (2.4ms)
+Rendered decks/_card (2.9ms)
+Rendered decks/_card (2.4ms)
+Rendered decks/_card (2.4ms)
+Rendered decks/_card (2.4ms)
+Rendered decks/_card (2.4ms)
+Rendered decks/_card (2.5ms)
+Rendered decks/_card (2.5ms)
+Rendered decks/_card (2.4ms)
+Rendered decks/_card (1.5ms)
+Rendered decks/_fields (42.9ms)
+Completed in 73ms (View: 53, DB: 2) | 200 OK [http://localhost/decks/6/edit]
+
+
+Processing DecksController#edit (for 127.0.0.1 at 2010-04-12 20:06:19) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"id"=>"6"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mDeck Load (0.3ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."id" = 6) [0m
+Rendering template within layouts/application
+Rendering decks/edit
+  [4;35;1mCard Load (1.3ms)[0m   [0mSELECT * FROM "cards" WHERE ("cards".deck_id = 6) [0m
+Rendered decks/_card (2.8ms)
+Rendered decks/_card (2.8ms)
+Rendered decks/_card (2.6ms)
+Rendered decks/_card (2.6ms)
+Rendered decks/_card (2.5ms)
+Rendered decks/_card (2.6ms)
+Rendered decks/_card (2.6ms)
+Rendered decks/_card (2.5ms)
+Rendered decks/_card (2.6ms)
+Rendered decks/_card (2.7ms)
+Rendered decks/_card (2.6ms)
+Rendered decks/_card (1.6ms)
+Rendered decks/_fields (44.5ms)
+Completed in 77ms (View: 55, DB: 2) | 200 OK [http://localhost/decks/6/edit]
+
+
+Processing DecksController#index (for 127.0.0.1 at 2010-04-12 20:06:23) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mDeck Load (0.6ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."user_id" = 1) [0m
+Rendering template within layouts/application
+Rendering decks/index
+Completed in 41ms (View: 22, DB: 2) | 200 OK [http://localhost/decks]
+
+
+Processing DecksController#new (for 127.0.0.1 at 2010-04-12 20:06:25) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering decks/new
+Rendered decks/_card (1.8ms)
+Rendered decks/_card (1.6ms)
+Rendered decks/_card (1.7ms)
+Rendered decks/_card (1.7ms)
+Rendered decks/_fields (16.1ms)
+Completed in 52ms (View: 26, DB: 2) | 200 OK [http://localhost/decks/new]
+
+
+Processing DecksController#index (for 127.0.0.1 at 2010-04-12 20:06:30) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."user_id" = 1) [0m
+Rendering template within layouts/application
+Rendering decks/index
+Completed in 42ms (View: 23, DB: 2) | 200 OK [http://localhost/decks]
+
+
+Processing DecksController#edit (for 127.0.0.1 at 2010-04-12 20:06:31) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"id"=>"25"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mDeck Load (0.3ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."id" = 25) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."id" = 25) [0m
+Rendering template within layouts/application
+Rendering decks/edit
+  [4;36;1mCard Load (1.2ms)[0m   [0;1mSELECT * FROM "cards" WHERE ("cards".deck_id = 25) [0m
+Rendered decks/_card (2.5ms)
+Rendered decks/_card (2.5ms)
+Rendered decks/_card (2.5ms)
+Rendered decks/_card (2.4ms)
+Rendered decks/_card (2.4ms)
+Rendered decks/_card (2.4ms)
+Rendered decks/_card (2.4ms)
+Rendered decks/_card (72.0ms)
+Rendered decks/_card (2.8ms)
+Rendered decks/_card (2.7ms)
+Rendered decks/_card (3.1ms)
+Rendered decks/_card (1.9ms)
+Rendered decks/_fields (114.6ms)
+Completed in 145ms (View: 125, DB: 2) | 200 OK [http://localhost/decks/25/edit]
+
+
+Processing DecksController#edit (for 127.0.0.1 at 2010-04-12 20:07:03) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  Parameters: {"id"=>"25"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mDeck Load (0.3ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."id" = 25) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."id" = 25) [0m
+Rendering template within layouts/application
+Rendering decks/edit
+  [4;36;1mCard Load (1.3ms)[0m   [0;1mSELECT * FROM "cards" WHERE ("cards".deck_id = 25) [0m
+Rendered decks/_card (2.8ms)
+Rendered decks/_card (2.7ms)
+Rendered decks/_card (2.5ms)
+Rendered decks/_card (2.5ms)
+Rendered decks/_card (2.5ms)
+Rendered decks/_card (2.5ms)
+Rendered decks/_card (2.7ms)
+Rendered decks/_card (2.7ms)
+Rendered decks/_card (2.6ms)
+Rendered decks/_card (2.6ms)
+Rendered decks/_card (2.5ms)
+Rendered decks/_card (1.6ms)
+Rendered decks/_fields (44.4ms)
+Completed in 76ms (View: 54, DB: 2) | 200 OK [http://localhost/decks/25/edit]
+
+
+Processing DecksController#index (for 127.0.0.1 at 2010-04-12 20:07:06) [GET]
+  Session ID: f1f84d966b03aba2304336b1627bb08e
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."user_id" = 1) [0m
+Rendering template within layouts/application
+Rendering decks/index
+Completed in 40ms (View: 22, DB: 2) | 200 OK [http://localhost/decks]

@@ -1,11 +1,11 @@
-<div>
+<div class="edit-card">
   <% fields_for "deck[card_attributes][]", card do |f| %>
     <p>
 	Card: 
         <%= f.text_field :front, :size => 20, :index => nil %>
         <%= f.text_field :back, :size => 20, :index => nil %>
 	<% if card.new_record? %>
-  	  <%= link_to_function "remove", "$(this).up('.card').remove()" %>
+  	  <%= link_to_function "remove", "$(this).up('.edit-card').remove()" %>
 	<% else %>
 	  <%= link_to_function "remove", "mark_for_destroy(this)" %>
 	  <%= f.hidden_field :id, :index => nil %>

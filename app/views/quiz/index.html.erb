@@ -1,7 +1,10 @@
 <p>Quiz Yourself on one of these Decks</p>
 
+<% for user in @users %>
+<p>Decks by <%= user.username %>:
 <ul>
-<% for deck in @decks %>
-  <li><%= link_to h(deck.name + " by " + deck.user.username), :id => deck, :action => 'quiz' %></li>
+<% for deck in user.decks %>
+  <li><%= link_to h(deck.name), :id => deck, :action => 'quiz' %></li>
 <% end %>
 </ul>
+<% end %>
