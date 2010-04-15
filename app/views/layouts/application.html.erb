@@ -10,6 +10,8 @@
 </head>
 <body>
 <div id="wrapper">
+
+<div id="header">
 <div id="account">
 <% if current_user %>
     <li><%= link_to "Edit Profile", edit_user_path(:current) %></li> | 
@@ -20,19 +22,19 @@
   <% end %>
 </div>
 
-<div id="header">
   Kirkland's Flashcards
 </div>
 
 <div id="user-nav">
-
   <% if current_user %>
-    <li><%= link_to 'Home', root_url %></li> | 
+    <li><%= link_to 'Home', root_url %></li>
     <li><%= link_to 'My Decks', decks_url %></li>
   <% else %>
     <%= link_to 'Home', root_url %>
   <% end %>
-
+  <li><%= link_to 'Resources', root_url %></li> <!-- need to make a page for this -->
+  <li><%= link_to 'About', root_url %></li> <!-- need to make a page for this -->
+  <li><%= link_to 'News', root_url %></li> <!-- need to make a page for this -->
 </div>
 
 <div id="content">
@@ -42,7 +44,7 @@
   <% end %>
   <%= yield  %>
 </div>
-</div>
 
+</div>
 </body>
 </html>

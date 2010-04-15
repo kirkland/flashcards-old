@@ -15,25 +15,33 @@ div#wrapper {
 
 div#header {
     font-size:30px;
-    text-align: center;
+    padding-left:15px;
     padding-top:15px;
+    float:left;
+    width:733px;
+    background-color:#FFD47D;
+    height:60px;
 }
 
 div#user-nav {
-    text-align:center;
+    text-align:right;
     list-style-type:none;
     margin-left:0;
-    padding:0;
-
+    padding:15px;
+    width:100px;
+    float:left;
+    background-color:#C0A05E;
+    height:700px;   /* testing only, need to get user-nav and content actually lined up */
 }
 
-div#user-nav li {
-    display:inline;
+div#account li {
+    display: inline;
 }
 
 div#content {
-    width:715px;
+    width:570px;
     padding:15px;
+    float:left;
 }
 
 .card {
@@ -56,5 +64,7 @@ div#content {
     text-align: right;
     font-size: x-small;
     padding-right: 10px;
-    padding-top: 10px;
+    padding-top:0px;
+    float:right;
+    
 }
