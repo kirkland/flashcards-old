@@ -45,6 +45,9 @@
 ** TODO more dynamic card size					 :comp:today:
 
 ** TODO make nicer navigation buttons (click on cards?)		 :comp:today:
+** DONE register/login/etc. in upper right, small		       :comp:
+** TODO sidebar navigation 					       :comp:
+** TODO graphical logo (talk to wife) 				       :comp:
 * Data
 ** TODO fix vowels: part 1 add or ang, fix double little b's	 :comp:today:
 ** TODO automate database creation, data import 		       :comp:

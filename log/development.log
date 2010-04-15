@@ -49371,3 +49371,336 @@ Rendering quiz/index
   [4;35;1mDeck Load (0.9ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
   [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
 Completed in 35ms (View: 17, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-15 19:16:51) [GET]
+  Session ID: c5e8eb52b9229e940926da35a1a8c04c
+  [4;36;1mDeck Load (1.0ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;35;1mUser Load (2.1ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;36;1mDeck Load (2.6ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
+Completed in 189ms (View: 94, DB: 5) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-15 19:18:31) [GET]
+  Session ID: c5e8eb52b9229e940926da35a1a8c04c
+  [4;35;1mDeck Load (0.9ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mDeck Load (0.9ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
+Completed in 39ms (View: 16, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-15 19:18:49) [GET]
+  Session ID: c5e8eb52b9229e940926da35a1a8c04c
+  [4;36;1mDeck Load (0.9ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;36;1mDeck Load (0.8ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
+Completed in 36ms (View: 15, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-15 19:19:23) [GET]
+  Session ID: c5e8eb52b9229e940926da35a1a8c04c
+  [4;35;1mDeck Load (0.9ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mDeck Load (0.8ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
+Completed in 35ms (View: 15, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-15 19:19:40) [GET]
+  Session ID: c5e8eb52b9229e940926da35a1a8c04c
+  [4;36;1mDeck Load (0.8ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;36;1mDeck Load (0.9ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
+Completed in 35ms (View: 15, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-15 19:20:06) [GET]
+  Session ID: c5e8eb52b9229e940926da35a1a8c04c
+  [4;35;1mDeck Load (0.9ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mDeck Load (0.8ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
+Completed in 37ms (View: 16, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-15 19:20:19) [GET]
+  Session ID: c5e8eb52b9229e940926da35a1a8c04c
+  [4;36;1mDeck Load (0.9ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;36;1mDeck Load (0.8ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
+Completed in 36ms (View: 15, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-15 19:20:25) [GET]
+  Session ID: c5e8eb52b9229e940926da35a1a8c04c
+  [4;35;1mDeck Load (0.9ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mDeck Load (0.8ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
+Completed in 35ms (View: 15, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-15 19:20:34) [GET]
+  Session ID: c5e8eb52b9229e940926da35a1a8c04c
+  [4;36;1mDeck Load (0.8ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;36;1mDeck Load (0.9ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
+Completed in 84ms (View: 16, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-15 19:20:41) [GET]
+  Session ID: c5e8eb52b9229e940926da35a1a8c04c
+  [4;35;1mDeck Load (0.9ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mDeck Load (0.8ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
+Completed in 37ms (View: 15, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-15 19:20:46) [GET]
+  Session ID: c5e8eb52b9229e940926da35a1a8c04c
+  [4;36;1mDeck Load (0.9ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;36;1mDeck Load (0.8ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
+Completed in 36ms (View: 15, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-15 19:20:53) [GET]
+  Session ID: c5e8eb52b9229e940926da35a1a8c04c
+  [4;35;1mDeck Load (0.8ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mDeck Load (0.8ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
+Completed in 35ms (View: 15, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-15 19:21:04) [GET]
+  Session ID: c5e8eb52b9229e940926da35a1a8c04c
+  [4;36;1mDeck Load (0.9ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;36;1mDeck Load (0.9ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
+Completed in 37ms (View: 16, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-15 19:21:11) [GET]
+  Session ID: c5e8eb52b9229e940926da35a1a8c04c
+  [4;35;1mDeck Load (0.9ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mDeck Load (0.8ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
+Completed in 36ms (View: 15, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-15 19:21:29) [GET]
+  Session ID: c5e8eb52b9229e940926da35a1a8c04c
+  [4;36;1mDeck Load (0.8ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;36;1mDeck Load (0.8ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
+Completed in 35ms (View: 15, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-15 19:21:49) [GET]
+  Session ID: c5e8eb52b9229e940926da35a1a8c04c
+  [4;35;1mDeck Load (0.8ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mDeck Load (0.9ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
+Completed in 36ms (View: 15, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-15 19:22:00) [GET]
+  Session ID: c5e8eb52b9229e940926da35a1a8c04c
+  [4;36;1mDeck Load (0.9ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;36;1mDeck Load (0.8ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
+Completed in 37ms (View: 15, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-04-15 19:22:11) [GET]
+  Session ID: c5e8eb52b9229e940926da35a1a8c04c
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 60ms (View: 40, DB: 2) | 200 OK [http://localhost/login]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-15 19:22:12) [GET]
+  Session ID: c5e8eb52b9229e940926da35a1a8c04c
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (11.4ms)
+Completed in 97ms (View: 86, DB: 1) | 200 OK [http://localhost/users/new]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-15 19:22:14) [GET]
+  Session ID: c5e8eb52b9229e940926da35a1a8c04c
+  [4;35;1mDeck Load (0.9ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mDeck Load (0.8ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
+Completed in 35ms (View: 15, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing QuizController#quiz (for 127.0.0.1 at 2010-04-15 19:23:58) [GET]
+  Session ID: c5e8eb52b9229e940926da35a1a8c04c
+  Parameters: {"id"=>"29"}
+  [4;36;1mDeck Load (0.8ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."id" = 29) [0m
+Redirected to actionquiz_card
+Completed in 70ms (DB: 1) | 302 Found [http://localhost/quiz/29]
+
+
+Processing QuizController#quiz_card (for 127.0.0.1 at 2010-04-15 19:23:58) [GET]
+  Session ID: c5e8eb52b9229e940926da35a1a8c04c
+  [4;35;1mCard Load (3.4ms)[0m   [0mSELECT * FROM "cards" WHERE ("cards".deck_id = 29) [0m
+Rendering template within layouts/application
+Rendering quiz/quiz_card
+Completed in 106ms (View: 59, DB: 5) | 200 OK [http://localhost/quiz/quiz_card]
+
+
+Processing QuizController#quiz_card (for 127.0.0.1 at 2010-04-15 19:24:06) [POST]
+  Session ID: c5e8eb52b9229e940926da35a1a8c04c
+  Parameters: {"authenticity_token"=>"1249e84d18d3e099370f4bcd01ca9ceb99ec0c5b"}
+Rendering template within layouts/application
+Rendering quiz/quiz_card
+Completed in 24ms (View: 19, DB: 1) | 200 OK [http://localhost/quiz/quiz_card]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-15 19:25:53) [GET]
+  Session ID: c5e8eb52b9229e940926da35a1a8c04c
+  [4;36;1mDeck Load (0.8ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;36;1mDeck Load (1.0ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
+Completed in 85ms (View: 16, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-15 19:26:32) [GET]
+  Session ID: c5e8eb52b9229e940926da35a1a8c04c
+  [4;35;1mDeck Load (0.8ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mDeck Load (0.8ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
+Completed in 33ms (View: 15, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-15 19:27:50) [GET]
+  Session ID: c5e8eb52b9229e940926da35a1a8c04c
+  [4;36;1mDeck Load (0.8ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;36;1mDeck Load (0.8ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
+Completed in 32ms (View: 15, DB: 3) | 200 OK [http://localhost/]

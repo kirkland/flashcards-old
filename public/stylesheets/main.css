@@ -29,7 +29,6 @@ div#user-nav {
 
 div#user-nav li {
     display:inline;
-
 }
 
 div#content {
@@ -51,4 +50,11 @@ div#content {
 
 #card-navigation {
  
+}
+
+#account {
+    text-align: right;
+    font-size: x-small;
+    padding-right: 10px;
+    padding-top: 10px;
 }
