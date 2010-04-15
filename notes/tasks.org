@@ -42,13 +42,16 @@
 
 ** DONE fix deck editing view					       :comp:
 
-** TODO more dynamic card size 					       :comp:
+** TODO more dynamic card size					 :comp:today:
 
-** TODO make nicer navigation buttons 				       :comp:
+** TODO make nicer navigation buttons (click on cards?)		 :comp:today:
+* Data
+** TODO fix vowels: part 1 add or ang, fix double little b's	 :comp:today:
+** TODO automate database creation, data import 		       :comp:
+
 * Other
 ** DONE enter vowels						       :comp:
-** TODO how to embed audio? talk to anne 			       :comp:
-** TODO automate database creation, data import 		       :comp:
+** DONE how to embed audio? talk to anne			       :comp:
 ** DONE add thai consonants part 2/3/4				       :comp:
 ** TODO play with an emacs rails package 			       :comp:
 ** TODO ask ben: why does my find only work w/ true and 0? 	       :comp:
@@ -56,3 +59,4 @@
 ** TODO make news page 						       :comp:
 ** TODO resources page to learningthai.com: pronounciation	       :comp:
 ** TODO make about page 					       :comp:
+** TODO reverse engineer answers.com				 :comp:today:

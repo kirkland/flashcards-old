@@ -49330,3 +49330,44 @@ Rendering quiz/index
   [4;35;1mDeck Load (0.9ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
   [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
 Completed in 38ms (View: 19, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing QuizController#quiz (for 127.0.0.1 at 2010-04-14 08:49:45) [GET]
+  Session ID: 7fe642c2a73137fb9568dbbda7eacd44
+  Parameters: {"id"=>"29"}
+  [4;35;1mDeck Load (0.3ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."id" = 29) [0m
+Redirected to actionquiz_card
+Completed in 35ms (DB: 2) | 302 Found [http://localhost/quiz/29]
+
+
+Processing QuizController#quiz_card (for 127.0.0.1 at 2010-04-14 08:49:45) [GET]
+  Session ID: 7fe642c2a73137fb9568dbbda7eacd44
+  [4;36;1mCard Load (1.1ms)[0m   [0;1mSELECT * FROM "cards" WHERE ("cards".deck_id = 29) [0m
+Rendering template within layouts/application
+Rendering quiz/quiz_card
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 33ms (View: 22, DB: 2) | 200 OK [http://localhost/quiz/quiz_card]
+
+
+Processing QuizController#quiz_card (for 127.0.0.1 at 2010-04-14 08:49:50) [POST]
+  Session ID: 7fe642c2a73137fb9568dbbda7eacd44
+  Parameters: {"authenticity_token"=>"587c103b186b3f31be0d22da1b8bcc4c0dc2df70"}
+Rendering template within layouts/application
+Rendering quiz/quiz_card
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 31ms (View: 26, DB: 2) | 200 OK [http://localhost/quiz/quiz_card]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-14 08:49:55) [GET]
+  Session ID: 7fe642c2a73137fb9568dbbda7eacd44
+  [4;35;1mDeck Load (1.1ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mDeck Load (0.9ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 35ms (View: 17, DB: 4) | 200 OK [http://localhost/]
