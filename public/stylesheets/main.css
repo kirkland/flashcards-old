@@ -1,5 +1,5 @@
 html, body {
-    background-color:#A7791C;
+    background-color:#013A62;
     padding:0;
     width:750px;
     margin:auto;
@@ -8,7 +8,7 @@ html, body {
 
 div#wrapper {
     float:left;
-    background-color:#FFDF9F;
+    background-color:#FFF;
     border:solid;
     border-width:1px;
 }
@@ -19,7 +19,7 @@ div#header {
     padding-top:15px;
     float:left;
     width:733px;
-    background-color:#FFD47D;
+    background-color:#FFD328;
     height:60px;
 }
 
@@ -30,7 +30,7 @@ div#user-nav {
     padding:15px;
     width:100px;
     float:left;
-    background-color:#C0A05E;
+    background-color:#f3db65;
     height:700px;   /* testing only, need to get user-nav and content actually lined up */
 }
 
@@ -45,7 +45,7 @@ div#content {
 }
 
 .card {
-    background-color:white;
+    background-color:#F4EC80;
     float:left;
     font-size:50px;
     width:330px;

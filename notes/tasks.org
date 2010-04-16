@@ -22,6 +22,7 @@
 ** TODO quiz view update should be AJAX				       :comp:
 ** DONE front page lists decks BY user, first 5 or so only, and a link to more :comp:
 ** DONE fix 'remove' options on edit/create deck		       :comp:
+** TODO fix quiz view with sidebar layout 			       :comp:
 * Pretty
 ** DONE quiz: bigger font, make buttons not move		       :comp:
 
@@ -58,7 +59,7 @@
 ** DONE add thai consonants part 2/3/4				       :comp:
 ** TODO play with an emacs rails package 			       :comp:
 ** TODO ask ben: why does my find only work w/ true and 0? 	       :comp:
-** TODO register domain 					       :comp:
+** DONE register domain						       :comp:
 ** TODO make news page 						       :comp:
 ** TODO resources page to learningthai.com: pronounciation	       :comp:
 ** TODO make about page 					       :comp:
