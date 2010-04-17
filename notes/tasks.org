@@ -19,10 +19,10 @@
 ** DONE make sure no one can edit cards model directly 		       :comp:
 ** DONE quiz: refreshing page should not go to next card	       :comp:
 ** DONE let users opt to share or not share their decks		       :comp:
-** TODO quiz view update should be AJAX				       :comp:
+** TODO quiz view update should be AJAX 			       :comp:
 ** DONE front page lists decks BY user, first 5 or so only, and a link to more :comp:
 ** DONE fix 'remove' options on edit/create deck		       :comp:
-** TODO fix quiz view with sidebar layout 			       :comp:
+** DONE fix quiz view with sidebar layout			       :comp:
 * Pretty
 ** DONE quiz: bigger font, make buttons not move		       :comp:
 
@@ -43,11 +43,11 @@
 
 ** DONE fix deck editing view					       :comp:
 
-** TODO more dynamic card size					 :comp:today:
+** TODO more dynamic card text size 				 :comp:today:
 
 ** TODO make nicer navigation buttons (click on cards?)		 :comp:today:
 ** DONE register/login/etc. in upper right, small		       :comp:
-** TODO sidebar navigation 					       :comp:
+** DONE sidebar navigation					       :comp:
 ** TODO graphical logo (talk to wife) 				       :comp:
 * Data
 ** TODO fix vowels: part 1 add or ang, fix double little b's	 :comp:today:

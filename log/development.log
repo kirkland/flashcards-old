@@ -49704,3 +49704,40 @@ Rendering template within layouts/application
 Rendering quiz/index
   [4;36;1mDeck Load (0.8ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
 Completed in 32ms (View: 15, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-16 17:39:05) [GET]
+  Session ID: a5ba317b28ee9350e8a639e4a1078ae8
+  [4;36;1mDeck Load (0.9ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;35;1mUser Load (2.4ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;36;1mDeck Load (2.5ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
+Completed in 345ms (View: 117, DB: 6) | 200 OK [http://localhost/]
+
+
+Processing QuizController#quiz (for 127.0.0.1 at 2010-04-16 17:40:15) [GET]
+  Session ID: a5ba317b28ee9350e8a639e4a1078ae8
+  Parameters: {"id"=>"24"}
+  [4;35;1mDeck Load (0.8ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."id" = 24) [0m
+Redirected to actionquiz_card
+Completed in 73ms (DB: 1) | 302 Found [http://localhost/quiz/24]
+
+
+Processing QuizController#quiz_card (for 127.0.0.1 at 2010-04-16 17:40:16) [GET]
+  Session ID: a5ba317b28ee9350e8a639e4a1078ae8
+  [4;36;1mCard Load (28.9ms)[0m   [0;1mSELECT * FROM "cards" WHERE ("cards".deck_id = 24) [0m
+Rendering template within layouts/application
+Rendering quiz/quiz_card
+Completed in 124ms (View: 45, DB: 30) | 200 OK [http://localhost/quiz/quiz_card]
+
+
+Processing QuizController#quiz_card (for 127.0.0.1 at 2010-04-16 17:42:55) [GET]
+  Session ID: a5ba317b28ee9350e8a639e4a1078ae8
+Rendering template within layouts/application
+Rendering quiz/quiz_card
+Completed in 25ms (View: 20, DB: 1) | 200 OK [http://localhost/quiz/quiz_card]
