@@ -1,0 +1,26 @@
+<h1>Listing card_sounds</h1>
+
+<table>
+  <tr>
+    <th>Filename</th>
+    <th>Type</th>
+    <th>Sound data</th>
+    <th>Card</th>
+  </tr>
+
+<% for card_sound in @card_sounds %>
+  <tr>
+    <td><%=h card_sound.filename %></td>
+    <td><%=h card_sound.type %></td>
+    <td><%=h card_sound.sound_data %></td>
+    <td><%=h card_sound.card_id %></td>
+    <td><%= link_to 'Show', card_sound %></td>
+    <td><%= link_to 'Edit', edit_card_sound_path(card_sound) %></td>
+    <td><%= link_to 'Destroy', card_sound, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New card_sound', new_card_sound_path %>

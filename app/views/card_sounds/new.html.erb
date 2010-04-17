@@ -1,0 +1,14 @@
+<h1>New card_sound</h1>
+
+<% form_for(@card_sound, :html => {:multipart => true } ) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.file_field :file %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', card_sounds_path %>

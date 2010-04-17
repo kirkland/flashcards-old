@@ -1,0 +1,28 @@
+<h1>Editing card_sound</h1>
+
+<% form_for(@card_sound) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :filename %><br />
+    <%= f.text_field :filename %>
+  </p>
+  <p>
+    <%= f.label :type %><br />
+    <%= f.text_field :type %>
+  </p>
+  <p>
+    <%= f.label :sound_data %><br />
+    <%= f.text_field :sound_data %>
+  </p>
+  <p>
+    <%= f.label :card_id %><br />
+    <%= f.text_field :card_id %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @card_sound %> |
+<%= link_to 'Back', card_sounds_path %>

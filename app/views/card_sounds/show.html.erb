@@ -1,0 +1,23 @@
+<p>
+  <b>Filename:</b>
+  <%=h @card_sound.filename %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @card_sound.type %>
+</p>
+
+<p>
+  <b>Sound data:</b>
+  <%=h @card_sound.sound_data %>
+</p>
+
+<p>
+  <b>Card:</b>
+  <%=h @card_sound.card_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_card_sound_path(@card_sound) %> |
+<%= link_to 'Back', card_sounds_path %>

@@ -50652,3 +50652,2518 @@ Processing QuizController#quiz_card (for 127.0.0.1 at 2010-04-17 11:34:19) [GET]
 Rendering template within layouts/application
 Rendering quiz/quiz_card
 Completed in 31ms (View: 19, DB: 2) | 200 OK [http://localhost/quiz/quiz_card]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-17 13:01:55) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  [4;36;1mDeck Load (0.8ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;36;1mDeck Load (0.8ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 36ms (View: 19, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing DecksController#index (for 127.0.0.1 at 2010-04-17 13:02:25) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mDeck Load (0.8ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."user_id" = 1) [0m
+Rendering template within layouts/application
+Rendering decks/index
+Completed in 62ms (View: 40, DB: 3) | 200 OK [http://localhost/decks]
+
+
+Processing DecksController#edit (for 127.0.0.1 at 2010-04-17 13:02:29) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  Parameters: {"id"=>"6"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mDeck Load (0.3ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."id" = 6) [0m
+Rendering template within layouts/application
+Rendering decks/edit
+  [4;35;1mCard Load (1.3ms)[0m   [0mSELECT * FROM "cards" WHERE ("cards".deck_id = 6) [0m
+Rendered decks/_card (2.5ms)
+Rendered decks/_card (2.4ms)
+Rendered decks/_card (2.4ms)
+Rendered decks/_card (2.4ms)
+Rendered decks/_card (2.5ms)
+Rendered decks/_card (2.6ms)
+Rendered decks/_card (2.5ms)
+Rendered decks/_card (2.5ms)
+Rendered decks/_card (2.4ms)
+Rendered decks/_card (2.4ms)
+Rendered decks/_card (2.4ms)
+Rendered decks/_card (1.5ms)
+Rendered decks/_fields (41.8ms)
+Completed in 72ms (View: 52, DB: 2) | 200 OK [http://localhost/decks/6/edit]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-17 14:00:27) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  [4;36;1mDeck Load (0.9ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 3) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 4) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;36;1mDeck Load (0.9ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks".user_id = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 37ms (View: 19, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCards (20100315232432)
+Migrating to CreateDecks (20100315232444)
+Migrating to CreateSessions (20100324221513)
+Migrating to CreateUsers (20100329232541)
+Migrating to AddUserToDecks (20100330102824)
+Migrating to MakeDeckSharingOptional (20100412112955)
+Migrating to CreateCardSounds (20100417180339)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (119.3ms)[0m   [0mCREATE TABLE "card_sounds" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "filename" varchar(255), "type" varchar(255), "sound_data" blob, "card_id" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (89.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100417180339')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("card_sounds")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("cards")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("decks")[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mPRAGMA index_list("sessions")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mPRAGMA index_info('index_sessions_on_updated_at')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_sessions_on_session_id')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-17 14:04:23) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+
+
+ActionController::RoutingError (No route matches "/sounds" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-17 14:04:27) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+
+
+ActionController::RoutingError (No route matches "/sounds/index" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing CardSoundsController#show (for 127.0.0.1 at 2010-04-17 14:04:30) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mCardSound Load (0.1ms)[0m   [0mSELECT * FROM "card_sounds" WHERE ("card_sounds"."id" = 0) [0m
+
+
+ActiveRecord::RecordNotFound (Couldn't find CardSound with ID=index):
+    /vendor/rails/activerecord/lib/active_record/base.rb:1528:in `find_one'
+    /vendor/rails/activerecord/lib/active_record/base.rb:1511:in `find_from_ids'
+    /vendor/rails/activerecord/lib/active_record/base.rb:590:in `find'
+    /app/controllers/card_sounds_controller.rb:16:in `show'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (82.4ms)
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (18.3ms)
+Rendering /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing CardSoundsController#index (for 127.0.0.1 at 2010-04-17 14:04:33) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mCardSound Load (0.2ms)[0m   [0mSELECT * FROM "card_sounds" [0m
+Rendering template within layouts/card_sounds
+Rendering card_sounds/index
+Completed in 25ms (View: 3, DB: 2) | 200 OK [http://localhost/card_sounds/]
+
+
+Processing CardSoundsController#new (for 127.0.0.1 at 2010-04-17 14:04:41) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/card_sounds
+Rendering card_sounds/new
+Completed in 33ms (View: 9, DB: 2) | 200 OK [http://localhost/card_sounds/new]
+
+
+Processing CardSoundsController#new (for 127.0.0.1 at 2010-04-17 14:08:45) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/card_sounds
+Rendering card_sounds/new
+Completed in 31ms (View: 9, DB: 2) | 200 OK [http://localhost/card_sounds/new]
+
+
+Processing CardSoundsController#new (for 127.0.0.1 at 2010-04-17 14:09:00) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/card_sounds
+Rendering card_sounds/new
+Completed in 34ms (View: 6, DB: 2) | 200 OK [http://localhost/card_sounds/new]
+
+
+Processing CardSoundsController#create (for 127.0.0.1 at 2010-04-17 14:09:29) [POST]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"deb73b979c9565b1435c64fd5629f695f3099677", "card_sound"=>{"file"=>"gor-gai.mp3"}}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+
+
+ActiveRecord::UnknownAttributeError (unknown attribute: file):
+    /vendor/rails/activerecord/lib/active_record/base.rb:2589:in `attributes='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2585:in `each'
+    /vendor/rails/activerecord/lib/active_record/base.rb:2585:in `attributes='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2285:in `initialize'
+    /app/controllers/card_sounds_controller.rb:43:in `new'
+    /app/controllers/card_sounds_controller.rb:43:in `create'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (27.0ms)
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (17.2ms)
+Rendering /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing CardSoundsController#create (for 127.0.0.1 at 2010-04-17 14:10:30) [POST]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"deb73b979c9565b1435c64fd5629f695f3099677", "card_sound"=>{"file"=>"gor-gai.mp3"}}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+
+
+NoMethodError (undefined method `original_filename' for "gor-gai.mp3":String):
+    /app/models/card_sound.rb:3:in `file='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2589:in `send'
+    /vendor/rails/activerecord/lib/active_record/base.rb:2589:in `attributes='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2585:in `each'
+    /vendor/rails/activerecord/lib/active_record/base.rb:2585:in `attributes='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2285:in `initialize'
+    /app/controllers/card_sounds_controller.rb:43:in `new'
+    /app/controllers/card_sounds_controller.rb:43:in `create'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (28.9ms)
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (17.8ms)
+Rendering /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing CardSoundsController#new (for 127.0.0.1 at 2010-04-17 14:10:45) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/card_sounds
+Rendering card_sounds/new
+Completed in 28ms (View: 6, DB: 2) | 200 OK [http://localhost/card_sounds/new]
+
+
+Processing CardSoundsController#create (for 127.0.0.1 at 2010-04-17 14:10:47) [POST]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"deb73b979c9565b1435c64fd5629f695f3099677", "card_sound"=>{"file"=>"gor-gai.mp3"}}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+
+
+NoMethodError (undefined method `original_filename' for "gor-gai.mp3":String):
+    /app/models/card_sound.rb:3:in `file='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2589:in `send'
+    /vendor/rails/activerecord/lib/active_record/base.rb:2589:in `attributes='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2585:in `each'
+    /vendor/rails/activerecord/lib/active_record/base.rb:2585:in `attributes='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2285:in `initialize'
+    /app/controllers/card_sounds_controller.rb:43:in `new'
+    /app/controllers/card_sounds_controller.rb:43:in `create'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (27.4ms)
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (17.4ms)
+Rendering /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing CardSoundsController#create (for 127.0.0.1 at 2010-04-17 14:11:25) [POST]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"deb73b979c9565b1435c64fd5629f695f3099677", "card_sound"=>{"file"=>"gor-gai.mp3"}}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+
+
+NoMethodError (undefined method `original_filename' for "gor-gai.mp3":String):
+    /app/models/card_sound.rb:3:in `file='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2589:in `send'
+    /vendor/rails/activerecord/lib/active_record/base.rb:2589:in `attributes='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2585:in `each'
+    /vendor/rails/activerecord/lib/active_record/base.rb:2585:in `attributes='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2285:in `initialize'
+    /app/controllers/card_sounds_controller.rb:43:in `new'
+    /app/controllers/card_sounds_controller.rb:43:in `create'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (28.5ms)
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (17.4ms)
+Rendering /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing CardSoundsController#new (for 127.0.0.1 at 2010-04-17 14:11:28) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/card_sounds
+Rendering card_sounds/new
+Completed in 28ms (View: 6, DB: 2) | 200 OK [http://localhost/card_sounds/new]
+
+
+Processing CardSoundsController#create (for 127.0.0.1 at 2010-04-17 14:11:29) [POST]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"deb73b979c9565b1435c64fd5629f695f3099677", "card_sound"=>{"file"=>#<ActionController::UploadedStringIO:0xb612fd5c>}}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+
+
+NoMethodError (undefined method `content_type=' for #<CardSound:0xb609b5f8>):
+    /vendor/rails/activerecord/lib/active_record/attribute_methods.rb:255:in `method_missing'
+    /app/models/card_sound.rb:4:in `file='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2589:in `send'
+    /vendor/rails/activerecord/lib/active_record/base.rb:2589:in `attributes='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2585:in `each'
+    /vendor/rails/activerecord/lib/active_record/base.rb:2585:in `attributes='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2285:in `initialize'
+    /app/controllers/card_sounds_controller.rb:43:in `new'
+    /app/controllers/card_sounds_controller.rb:43:in `create'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (28.2ms)
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (17.8ms)
+Rendering /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing CardSoundsController#new (for 127.0.0.1 at 2010-04-17 14:11:32) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/card_sounds
+Rendering card_sounds/new
+Completed in 31ms (View: 7, DB: 2) | 200 OK [http://localhost/card_sounds/new]
+
+
+Processing CardSoundsController#create (for 127.0.0.1 at 2010-04-17 14:11:36) [POST]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"deb73b979c9565b1435c64fd5629f695f3099677", "card_sound"=>{"file"=>#<ActionController::UploadedStringIO:0xb606fca0>}}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+
+
+NoMethodError (undefined method `content_type=' for #<CardSound:0xb600b494>):
+    /vendor/rails/activerecord/lib/active_record/attribute_methods.rb:255:in `method_missing'
+    /app/models/card_sound.rb:4:in `file='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2589:in `send'
+    /vendor/rails/activerecord/lib/active_record/base.rb:2589:in `attributes='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2585:in `each'
+    /vendor/rails/activerecord/lib/active_record/base.rb:2585:in `attributes='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2285:in `initialize'
+    /app/controllers/card_sounds_controller.rb:43:in `new'
+    /app/controllers/card_sounds_controller.rb:43:in `create'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (27.4ms)
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (77.4ms)
+Rendering /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing CardSoundsController#create (for 127.0.0.1 at 2010-04-17 14:12:04) [POST]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"deb73b979c9565b1435c64fd5629f695f3099677", "card_sound"=>{"file"=>#<ActionController::UploadedStringIO:0xb6107a64>}}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+
+
+NoMethodError (undefined method `binary_data=' for #<CardSound:0xb6078f44>):
+    /vendor/rails/activerecord/lib/active_record/attribute_methods.rb:255:in `method_missing'
+    /app/models/card_sound.rb:5:in `file='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2589:in `send'
+    /vendor/rails/activerecord/lib/active_record/base.rb:2589:in `attributes='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2585:in `each'
+    /vendor/rails/activerecord/lib/active_record/base.rb:2585:in `attributes='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2285:in `initialize'
+    /app/controllers/card_sounds_controller.rb:43:in `new'
+    /app/controllers/card_sounds_controller.rb:43:in `create'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (28.9ms)
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (17.3ms)
+Rendering /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing CardSoundsController#create (for 127.0.0.1 at 2010-04-17 14:12:14) [POST]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"deb73b979c9565b1435c64fd5629f695f3099677", "card_sound"=>{"file"=>#<ActionController::UploadedStringIO:0xb614d974>}}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+
+
+NoMethodError (undefined method `binary=' for #<CardSound:0xb60a3528>):
+    /vendor/rails/activerecord/lib/active_record/attribute_methods.rb:255:in `method_missing'
+    /app/models/card_sound.rb:5:in `file='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2589:in `send'
+    /vendor/rails/activerecord/lib/active_record/base.rb:2589:in `attributes='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2585:in `each'
+    /vendor/rails/activerecord/lib/active_record/base.rb:2585:in `attributes='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2285:in `initialize'
+    /app/controllers/card_sounds_controller.rb:43:in `new'
+    /app/controllers/card_sounds_controller.rb:43:in `create'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (28.2ms)
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (17.5ms)
+Rendering /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing CardSoundsController#create (for 127.0.0.1 at 2010-04-17 14:12:25) [POST]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"deb73b979c9565b1435c64fd5629f695f3099677", "card_sound"=>{"file"=>#<ActionController::UploadedStringIO:0xb5f6abe8>}}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mCardSound Create (0.4ms)[0m   [0mINSERT INTO "card_sounds" ("created_at", "card_id", "updated_at", "type", "filename", "sound_data") VALUES('2010-04-17 18:12:25', NULL, '2010-04-17 18:12:25', 'audio/mpeg', 'gor-gai.mp3', 'ÿó@Ä%00˜xC%00°gĞ%00%001‰Áğ|"zÁğü¸>ŸÔ;Êçò”q‡ÿßøœÿÄ%00É@C‚à‡(sƒê P(€À`0%00),ÑL°8}dOÅàÊ>~¡ÿóBÄ ŠšÒ_‘hğNÿ0ƒ%25Ÿã>”JalÿÃÑ±|šdO4ÿüÙ†Ãƒ\b³ÿÿÄ€îÂ È9¦cØ“!IBÿÿş''ä¸÷£Ä{Q%256/:±‡.ÿÿU¼’€PšÂÕŞÿó@Ä	 2˜Ì…‡dXÓº8.Ë¶+)f’°RRÀ¶ÿ,ª¿éör?öM.õ6èf~—÷‰ÛŸ×äaÕåæÿZÉßÿæxË›¿sßûßÜÿZ¥k¶šıöûñ†F—Nß›QøÊÿóBÄKRÆ^0G­Ş½)¦›¿ì­¤OÍoÛµ;7ÖÙßş:¼|Ÿs>ìô#°ï°ÍFŠuE%00ë´ğ6@&‘9ÎEÑíP&FûC*…7‹K!m“¢T„N’¡&¢º*`Õğt¾•ÿó@Ä	 ¢˜
+y†š»|½zV è-IwØMÙîôë´»½ŸvS¬şM*^}îóí½÷ÃÄ:ÿ»+³İ™·ÿ^ıåú zå^³ıvİ~ï·õ¬»j/Ú¶¤nI$’A‰€dTõb7ÿóBÄ*ÂÒ^FæõbT
+û1muw,®´éf\–~²­Kó>œ™à·%25ó;‘?·»ìr”ÜIésı­}Íœêd«"ö²ç<ÜÙÃº4;80‰%00>‰“]NÄŠUÒ@­ÿó@Ä
+ Æœ*y†á‹‡"C#WâËóİÛ¸Yb`ñÀÂF.†
+5¡È%00Ä˜u«Ÿ=,*üš‘Ë­±í½j«´íTQ¢ÉØÅ’2™…v”,¢–kÇÁz±Ø…Ô"âH9çŠÿóBÄ–œ
+xÆ%00´Ë·5€ó­BãbqD@e”ÅT:J\€<—‰ëJ8ñ$Ù¨@]´è½—,"Qæ*ÁĞ8>,MºŒÓß†*ƒ«FŠüc$DÑ9$•´:äÿó@Ä# ’˜
+a†4"òã¹¼TĞ8ì8£—÷‰Ü°(tšŒ9Ì\ëĞH}¡F¶ÄSi,4€ŞªĞ¬~&ìº=Ø–·öçÅÌä\Œ:Yá¨¬ç;ôSvïı–5Thp>-w¶ÿóBÄ-–˜
+`F!ó¸¿à¦½Fı¬÷Æ÷e}¿µ¿¿†óoå½ò]ÔòNÕöaÖ‰GjCPÒOC²ë©°aV„!Öi¤ÎŒá,EsaóÙAå ˜µá12"ğH„äJÅ–"Ç¹ÿó@Ä8H˜y†¥®È7,Õ¡I1eô) Øô
+²!`Å„ÁÕUBôz‚ZR!æÑR¹ËeÃƒgXvÁm$LÁN†±ñµÚ<–ã¬{Òğhb„ûTÆ3"p’3ÿóBÄApœ*`Ä8İAİ^Ùµ’5$4IÉw’ÛD%25aD‘Àßsà£4hBzºªŸä´ø®j3±ÎÌr«©×ş3úè…é^¾¯ÛÑì‰ºıMÎ¨Vº¥_¥?w¢óoúPø?°kËjÆ4ÿó@ÄSÛ"Âş0D=ÔÄ¬%252ÇãÂ€Ô„Ø½˜’iÔ+ZxG¹› ‰€PÚ*ÑLÂ,`ãÃÍ!OÓjÔLà«Õ36ukñ9$¸¬ã‚m½·Ãau="Âò “@e—4îa–g
+ÿóBÄ^X¦¥ty†%00­Yİa>¨ç™„QáÔ%25ÈAæ6eHduà–¢P©6”°‘²íaŠbÇV¥‚RÍ8½h·nsµ0ô™=µ7µR•ğ<
+å¶¥c–Ò7´bE™<Ô«p®Uÿó@Ähğš˜%00aFHl£1%25+P¢ÅĞÓ9v‚ï«6Ñ`»ÀÆŞˆ÷_™;½‹pÃ4lVµ‹Ã‚–,•¨¯ Am]¶]¶Ûqn''%00·(Ô¤Häô¬ß¡ÌœYYË)æI,K\Ñ¼¯O¹ÿóBÄw°Æ ²HF@ªÚ]al}7Ï…Ë¥uÙç‘¹”Ob—ÉËzÈ¾ôÍİZ±ŠÚ¿W¤‹àé«óbL¿y›Ç9ìöosPë†Xºn•ÕdHğÂ4J` j˜¤\©¤âÿó@Ä„+F¾^I†($mÂ[·ş1*>iF¿ğ\‰cËØÖwi¥Îæ§+Y¶‹ï	Ôó²CwIiæDnI¡yÖpoĞUK:ñİ‹õ$ôd{t3w8‹X4¤*4XV’™uj.ÿóBÄv³^ty†%00ÏŞ¦0ÿuçaïlÚ¼f¤Ç„E(¨V“+	Ä’…~‘#?r‘™Ñë3˜B9‹³ÊŠŠu5]œ…1‡F”‚ÛÑt6cN¢©22¹Îî¶Úï½Şùª­z˜¤ÿó@Äg‹V•”`Êİ†"9D4Á2U2”³2Áâ‘È»MŒ&\^€YIDbv{™ÄAÕ¶sˆhnh”8—ÁÎyf½Ê¼PTÇ„u:\;çÛÍËtË{¬<ÏÚÉòC„É™t‰ÿóBÄOË.ta†%25¶3‡æh–”º¯^dRIgË=Tñ›çŞ^ª–[ïû R6‰ö9$®Ù¤ˆYÒIÎçÁLer%00{ ïc·4Í\ÿñ§ºÈx¬ü•¤MŸh¦Ig2×r4å¦r¾ª†ÿ]õßÿó@ÄCP–©”`F%25›Z‹s×~åcğÿûúü)|d+j*-×d’Ëm¶ÑYØâÏ'',Å%00‰ì9o2…òIyÒ‘˜Ñe^^ı$S)Jİä¿VùÓì8Pñ½JšçcÈüU×òpL™
+Ü›îd.,%25VÿóBÄH¢â^GCÌ­ÎîMOkÂ/òhiWù­º4%00%00™%00•Ö¹ˆ¢`Ô±ÍÇJVgdaLr:…äivAÿä3tú†…º''Ä#·à¡ÿæàÖ>\«øª×*iœ·ù·A.ñ·óNıaÿó@ÄI0¶˜
+HÆÒ{¦ìøÍğ§ÙKÿê	Ò0¡iYø5‚¼5êˆæ‡dÕ€ÎÈ¥­2ºµ5e»ôZ²2mU­Ó¹Öµv#İû>B_Åa(˜U[Êór«zš¦‰B"ñbG{ÜıÿóBÄOâ˜ªxÄ<k?bjaBV´A''?²öİô@d€ĞŒÓwÕİäØŠQÙYÊiˆ]ĞßgG­_³{]j@¦%00 4 @yáC‹Å+kP¢m5RS¨uÑ•SËk…ÔŠj]H·#mÿó@ÄV^ ò`Ä<Ûe¶P@a+F2Bø•’T*A´an{%25;Fh¸Qê—isÌSşˆÿàï,}±×¹ù™2¾ŸÍ¾ô[øç0ºe!_|â«Õoûıÿ åm‹ÍBe¶+Uo;Æ(54ÌÿóBÄ_Ùº^FÍY£¸¨Lğİ`øPFãM*"ÿ÷E|Ï(©ûR¯súgı†kµSûùé˜s‚íC‹%25"ŠZˆ‘R¶La7¡OçØ>±Ç3l‚,Dö(í*%00
+–§
+¥`Œt˜+Áÿó@Äcª”%00xÆ%00¿4iŸÉò¾4N_n9<ş÷NíÿùF*ëŸû•0Ãÿâ¾ãıMñ.­7uáÛW¤æÜÏËó/wıç6ÿÿÂãøLâCê’ûˆCXW7%25è³Yo*çu†`Á£GÿóBÄi°¥”a„QZN…°É‰‰%00±õÀ[œ¤Ÿ>ıÉzC"fö/:,§zçË@(«©aQuìƒåƒ§—Ã¢¤D†UD·TÀUá–µ$1Ğ‘K¨Têt®µ/‰ÎÓÔ˜O±ïÿó@ÄrŠœ
+`Æ%00ÅBÛf''Gk’PPzh IyáÅöœ`f§Fƒ''š(^åÒ»ÔYfØE	(jÖ*!sj`Q‡[DL–‚Ë(QD2ƒ¿!˜E¹*y—ÇÚ–ÛYÄ<_V›ExYØçÿóBÄ|I6¥tHFXOÏ§‡ÿÿ¾»Å<ü¶nÏ{9oè©K}¿ŸŸñŸş^·9|QÜ…ïUğÈ-À"tU1L’ÌJú[JÄDxÉ×
+ş"›ÀˆÖÿ3íÌ(_ç,¿æ>ÿó@Ä†¨bœÊy†Ï1Ì·Œ®wÓG§ü÷ÇãëI9_ƒÇïûşôÙ6g÷¿ê&§Z¿»ÃÓ‹¬ÔÒ:rïKc¬~r\vA$q¿å®X¥!FvŒÑªäZÚ&ÚşŠ¦ıÿóBÄ(¦HÄÒ’öC¸bÓgqyóó}[}ÿ÷6.b™¾ŠúJºCB†}PuwS$”Ôˆ®BÉå9ÓS''‡%00	K…x*…²;H¼ùç,¼è2E€¦$?dÿó@Ä•¢R©”@Dùîõ	EĞÅ
+[TòiO)`‰ïa&†*2;®6×øª C !©B?˜‡D!º^¶3ÓöUÂá¡ƒÈ©‚9
+L‹ª
+’<¤äŸĞ;ax22%002eÂHl±§V1ÓLÿóBÄ™š˜ªxÆ%00D‹*Å ˜àå R"''k»…—‚…K¥–nÊA—"‰ìh%00fcÏJ?+ıÀû¾òïÙ|sÏ‰Ç¨A\¢J±„ËıúÛü=&İnµ{“UşªoËVy‹ş>ÿó@Ä¢ğ®­œI†%00c÷õ7nmjW.½c*œ¬˜DmG¿ÇdÉµæŠ‡ã¥™
+^ùşL%25š“‰e+	$«ÿî¦×æKmß6üHœ±Î\<j(Kso¹}ŒŞ»ŸÌ|Ëßİ\ÿóBÄ©°š©”0†ós^€ Ê,ÕX€X!H!´`UiQà´ >ßSğQucõö_>ÒØgï§•å ³ßíÌÎ]mş¢mü-ÿº÷ñ·÷í''ê¾¶ïÚ¶–ño÷¦»²s“ÏQ«fÿó@Ä®áz©tH†!Å@/£æùÁ«7¶ÒÍœĞ—»Œ2Ü·« )(`÷è½¶ÒL›úÛNØ‘D2`|Áé	¨0÷ÿö™şük×Ötéïkvı?æıoûƒÿ¾Ù•`+úA:6•ƒt}ÿóBÄ±¸>¤Ô@D%25x°JN¶Êöë×ØVFèD$´
+%00©R÷ªğOÊÚÅ`€t°Åg(k&Át
+''İjkÃ!@ Q‡
+è’ÇŒİ´U»VÇP¡ëR„§£Á:XÕ\-ájój&ÿó@ÄºèÎ ´`ÄUš´¯ÉaaçÏyµzM¬V£
+uœï‘GÈåçûJk¯ırO¥şóåûçQµíCäRw/Ÿ_”2"7¶ùæk—Bj×¾ÏÀ''}~¥ßd•ÈÜsKnÚá¨æÿóBÄ½àò˜
+y†c‘BÑœ•Ôõ¥c]zÀò¸ÒÔi´q	ÊÄÎƒ°<ÙÇ÷@cX‚+''<yáPúN8^Sm"s:=½t£¯JÆiá«h©² 2GTå±T²c¸léœˆÿó@ÄÁÚÂ¤4`F%25Æœk©8ÆZ&ÙÑcËE‘´BRÇVŞß?[·:®¶º…¸=[æZ…Ó¼RMsÌuvÂNÈ‘ÙkTSØ×Ÿ0Â%00SjÇ-“]¿ÿqGW!ÈOr02-Me÷´µ“ÿóBÄÄÁÂ^ELiõš‘
+aF_%00PÓb*Ìæ*MCuŸz”»ÃÌv˜®‡âÍ,üô	ùL_½Ç¸ëvvwmÚ×xC&İ?¦¤¨uÉ
+&#c`P~·£ÎdB’XTHÉ}Ëÿó@ÄÉ™ª¤T`Ä<9ßó0ßkí¯d—ãêÛö½ëÿ™¾gˆ<ú½}
+lV8–+kôWQ?/R''Ó1¶«å»q‡Øü¡_JeÛÿ‘ÀA‡51Ûæ³[Õk6@”*ˆ{9é¢ñšYÿóBÄÑ)¢Ê^GM­ã¡ÜÆO]4Ö——¥
+y§ )İaŞ”e3ªïG;ë«Lî§9ûÙ¤z¥¥¾Å~óçziĞ­?1#Š¬£°š³ƒñO"Éîè,}á%25•,1|Í±-´ÿó@ÄÔR ÌxÄ-,%00Ô"åC%00vÏ=PÓÁCÄ‡Š½\¦l>Ö¤ b–·l»8öœUî)Y­&C<w-.=a£ÌÅA9ÒœÜ…œØË@dÎ?ÎŸêÔ©LìoA‰LŞÿóBÄÚë2­–0DÜuøİ#­éò>åUÏçË¼¿>im?Šfœ3B­ƒH*µ%00qÇ‹Øø•UàwÎ¸èg"¥Â°éËáõÍëYËé2±ôMRÌÏuv#êÔkvOvgÿó@ÄŞp˜%00bÆ%00R4;=pO_ôë{ÿ÷åyaë¾ní*›Pv¶ïµ[İÏ·ÇZÛ²:³©*²0¸v®Tu"º#8XXƒ™¶"£Ej8g±à®‹iÂb^2Ü«Iùd~óĞçkÿóBÄç¢’˜òzF%00ß4 qê/­É{Ód§‘:emüùÏÎäGss/Lô7\­ùŸNì¿¡ı`pF>Ja9F°tYËœÚ’³vÖxà­Òår]ˆ¦Ë:îlÉŸ&×>î´­äSV%25îÿÿó@Ää1¦œ,`Ä]Aó—5Ã¼ëj_ÿ×_äqº›/ğÂöán#İøßìÄ3ÿ3xÿí –Òé¶öáAVäÓÊ† áumÚçM]¼a·T:s¬CúnGcÍıÿÂ³Ï
+™=Òÿó@Äê[R˜Ôa†	–Nœˆˆpú"GGÚj‚c¥Èëëƒ¸±·Aîûj¶''}İóVq
+¿ÙSä”ïyÒ%25²-*ìµÿäcuüLEŠĞÑ8¡:J‹ ãÏò 1šE¦X¹À(·#aû[Xº–ÿóBÄã(’”%00yŒo8*r£ç#4¸›şÕ¤Á£C•wÙ[ƒ(úuÉ¤%25æÕ$NÈë­»³µæ)m[ıMoÛ¬ï2»2kE*Q”.û%25»l6\gˆKgª[sÊa¬O)Ÿü¬İÕ›ÿó@ÄêÉÂ^1†•KE˜ÕÓm_YÇ9÷-¿Èëö·ÎÎT`„SM˜ÙT™•;0\¨Æ›(2.³ÂµÙpä*LãÅÅ“=¸Ñ-ÕXÄ“–K¶ØU±ñŠæ‘C¨	ĞX_‡ñƒÿóBÄáQzÔöaĞ§^âh=|v’(Ùi)ÕU–Ô}çbò×‡oMè$­‚*W—
+ta-]o:Û`­’Ş}hc­í‰£åNjö5ĞB}3îóbÊªf¦rë¶ûq->4µùÆÕpÿó@ÄÓ™Æö>[ÅY·ê¿pø''şHs»¼zJşnµT}>È¥Öp$è''»3Ò!ç@N:³2§Ùp,*ph0p¹ò`ˆàÆ7ìê"íp¾´	Ä/8c*(9#ƒvñOüµ@ÿóBÄÏ™zñ¾;DëJğ¡Õ_–Âtğ|ÚşM¦íMb7Ñ+ÛÃ9‚ïïiR–%25Tq-<“à\UçÖÔŞ9Âc«ÔX”ĞGş›°é1ÇbÂTU&
+Ke¶Ñ¶(5+£„®«ÿó@ÄÈŠş^BÄÎ’¢®å’Úƒ¢ohÊíß¡Ò¾¬óa1¬Iÿãçwqdñ÷ÉÄw3û.MLßÍÕ<ü)w¸ş½‡•ë~«¥—Ö“ÌÓs:Å>Fä@P·aa²[âß)[ÿóBÄÆ‰ªÔş@EF¹pœşæ‰ È/yqF¤U''¨©w[xú«±ˆµ¦Kˆˆ7 ïdÈê”e¢ËKÑH§U¾U]CH¤eéEÁ»}ÿüRdDbñvÅb,H>½Oš±‹Š!ÿó@ÄÇ¸¦æ^J''ù£°Lœ¢€.ÓBãğøå%00Ôó†¢tò±°²W²ÕO4ñF7õh0ó4=-J‡ªn°[rí¶Ûa66p°-¡["˜*("Á#Dò¢ªŸh¨s„yVŒœkÌÿóBÄËh’ÕŒxIñWŒ¬Q‡¶­`²•U¦ÚTX8)`Ïsb›ÀÉiÓ¬¬Plí•%00	í¶Ûq‘@â ±4ØYZ—±iøÌ4rØ)3w®¾l_à®JğöÎ±ëIúl|s‚îÿó@ÄÕHvÑ¾Œ ÷%25–e2bJi™ÜæSTÌˆÄo˜˜ÈÚÊQzV·I9H§+_û=ŠqjNGÅ	)É%25•*xx§Š.$%00%00x@áyj¶û¶Šåëî«â§¯ÿ‘{JŠ PÈŞàÉyÿóBÄâ.ú^1D"tS0nMhÒ¹Õ„%25â‚Mœ««ö7æ¢¸²ÕSl¤9ó!Èá­¡üæµÊ	ä=«èˆÏ¶ÆU™HèP^“°T1D´Q†¼€ºVµ2«ï¿4B”RóIYRÿó@Äíc&Â^GÉÇ‰h¨“ cÔØo¬…ÓNÉÕœc?÷ò›:é°¾ôâ_ı-¿z››Ò…ËEM7*A­´b}â±súÌ|1„u:ş0JcûDÎUŠã‹‹ú°%25?à=*ÿóBÄæ“2¸>@E•!oÛimRC}v…®RõãŸçH %00F07Aÿ¿k(jõûv×¥¶‚ğ:‡÷Ì{˜ÒsUi†#zÜ5Œg7ØXçâ’9®‰¼`åùvü³~L*?:ş@0œÙ8¿§ÿó@Äç‰Ê¼xÒÌŒA	À×”(%00wÀèEM%25\^ú°[a”¿õÌ£ ‘„,P²iA+vÜ75¦Üí›÷/òY©î	ß):ö‹}*
+azM½­ê?Ğ›‹8çL!3ÿòŞÿóBÄß™²ÈzF¸RD÷ªÚ™»³µÏÿÿõÄ³ÛâÌÛ#''|Î„Ñ¤ÒJ‚^Èí²?‹_)Ò¡–UîÛ…WŒ~è9[_(6ÜjÌĞCpâyÍ¡Ez÷ëä|Æncw.…mEÿó@Äà©¦ív@EN>tä5¡íÿv[æ2Ù‘»º6Sí¿UïIV«Ù‹2º"sh—yè´tfe½*a`!òJæ0‰øöf›"Â‡®-3Fó‚Ôh!±ªW}z‹sø$yB)ƒZŸÿóBÄì»RávXMëöèËİ”Ê9ªc»^û6Èb»Ñ˜ú=sÚnŠ´f»¥æC¦”!&ÖçR"]f`ÉéÓ2*HB%00òHMÆë°-_	Íô%00r­ñ‡O"Ç^á.‚[õã>¤ÕÂè·ı?ìšÿó@Äás>õ*DÃoW½„ €3ûõ»şGÌ ½İwÁêŞ¡½…•³¿Yt?Íçù	>5jËy	Eäx[%009iWHK^Ğ›gÂ"Â°ÂUòOÊˆå-]a7¤(ÍnyÿóBÄæ6ÕvIDÓo™rOcÜš ï—˜b‚X¸ìJ¥˜j’ñ…›ä†¬NõÊZq B2ÆÊ€ê* BîØR1|Ï,úğ¡eùƒëL¢b“§i‡œş¤ëIì&¬xFÆÿ?”öÿó@Äáy²Õv@EÜ;7ç¨Æ åÿ«¹W1L$‘¯4äZz…•º{Axôèè6¶$,ğª~=ù—BG«0£#«òAÖÆcó?ò?*?TLóó2ş‚3˜Vs Qu2àºzcÉ—ÿóBÄæIºÔö2FbIiXxÜ¶Îû"¼İÁÃ«B+>_o™üH×.Ízú7ğ2å"r³4%00Î‘}ÕŞ¿‰7$¢5''A»ş|€}JHntuzÙïuŒÿ!İ¦¦jìí.Å$?ˆ«ùşÙPNáÿó@Ää²Èö`FĞe2¬“Q‚²¦‰Ş¿d¯Ò·=û³v­»£•ìKlºùÚ!â¨IªHFö»m`Ã°Gd5‘]¬Qáó%25ÿ…bl™TÖ–×/)õVã0«xûšƒÿóBÄï	ò¸Ö3ÆMLÎ³ıe­/ÿû6a—%003|õ§Ë|ée”Ï¥õVê«ßJ·U–?*coödµ%00–ù.ûqZ	$Á²èÎÈYİZ·õÛé2¤hŸŸÖ¬rjê–[ğõ¢uÿó@Äæ{.Øş0ÄûhiØ¿îPÃàïï=[hhåZ7&£VÃÿìû%25¿\Sİ®ó—o¿Ì¾©İÄFd#û­»mÃ%25!Uˆ.z%25Œm‡‹v|‰Xu?Ğ².Üçè¯	#SäÕ–Å¯+-…İóµÔÿóBÄçÙj¸VHÆ•”Û;>*¯uJ½.¨{I"•õêöoZ}“dºõJ)Y¤z1jşê¶s0i{€*½_X§ÎÉ‰UD»N%25Bm•xYÀqB#<•ŸU(”yæ–6²jI±çÿó@Äçá²Ê^ÄİÈ¦˜©ã¦‹”"´%25ëC2Œ]ŠL¿Ëhí“m#Ôn `Å«±9€A [cÆ$[ÀÑÒİ<%252#ên¼+³8Iu»J‚”%25Ï3_È¯¾ß2–şÅÿóBÄæ.¼ş0Ä½$Ú”*C”Êñã¿%25Ê•"¿ü">uïÚ~g˜#¤Ï*uK÷Ê®’—ä4ÜßKõªE«j°€KŒª2®‚‘­ÕlÖLäÑé%25%00†¯H…!«CVhTŠ	¾J9lšÿó@Äå :¬ÔCÒ%00^eëœ¹é%00
+9N1™KkŠ¼	\øb„1B”6Ö+\<`ğÊ*›Oîû	¡ìóûÉ¨ ı
+fu!hh-Ó5G»XäÖl)H”‘:ªFgt…LÁyÆ‰ÖŸÎå“ÿóBÄïK"¬şI†)È_ı9K«)¦_Jù’#¾e|‹Š;âX™²¿¢}˜år³ÜÕr%25Mí-œ•#«ŞI$n’ƒğ)ªˆÜ+ˆÌ8[üÛ•àCÆ{™¹åär-È÷ókF;ÿó@Äå¨T2F%00n».¦Œ¾§sÍ³b#ût–åºr’¤×ô¥¿6ş÷Ÿş¾L¿3§ïSĞòÏò''ŠP_/Íuiä“_¶Úğ@ „ùÑ\İr™Î/¡¾õ•{¼XñÙßƒepF‡‹ÿóBÄíš†¥”`FA¦	ˆÖ,ğp!¡T­-"/Y¶°%00Â¥cM®÷½æ	¶ sY­*WyÆ ©0Q€*Ü1DJª«‰BÕ¼Ú²«9iÒcÒKjVCÌYI˜e&ÙøŸÖ6YnjÇè‡Öê^Óô’ÿó@Äæc6­`†ÚU,ÛÿgfµízTıcG¬ÒokFÿ€Gısõ”òš®Âu}`¥ŠXsu`JGXe§âØmœú¼H&™ø·õØ»ÛGBõFœ%253<’	ˆŒŠKw:ßÙÿóBÄßxşÆ^E@!é©ùÓ¶cäé›±ù§!ÿå«6Q<ÿ?ËóHvÜ”ìc2ÿ‘Êœ_ÿ/¤~Ä|ÍB''mÌ<Ææzíl“mvÖàd‰Í›0¡°Š¢|GÔÇ%25f4J4ÌÖs+ZºÕ2ÿó@ÄåX¦¥”`Ä=Ó»—2¬®ï;´ç[³®Êš˜’Lo;Ëé•Ñ?ı¾Ï‘ÿy÷³òWus¥¨¢˜İµaÖÜjİ®ÖĞaÂ„†¨ùÃÎœĞè(jŞL«va®Ú%25WÖ¢;l‘éZ¶2ÿóBÄæƒ"”y†=Ïû2Ö½\ÊÊs%25#f÷ûuMâŞ1 ÎçûŞÿøÇ…üæ_YÎw§7¯Ï}âúıª‰É &ìâƒšªG2_zÁC€€ş""(bÌÒ®Ô‹‹ÃûôâóË¾ñ²v«ÿó@Äà32î^0D?ÚNá¯„`VÂğ¯ûTRû1-VH†õ³·5ßd/»<¦Fı>ôLvv[¤kƒOE"j5ö˜S`1Ù6Î­İÒ)ÅH7a,Æde×ÿ·´ÇW0§ƒ8S¾oÿóBÄâÈªÂ^FáSK8˜û_üà³ªìü„b,IrV»Ú!ÿú×ë´ï÷íaox ÊNÎ[Í
+ùd³ÿwÿqXH‚¾,ØÌÌÇË#»Å
+Ø„²º@n×S:hÇ8„Òš™!›òìŒpÿó@Äæi”
+x†æ——Ì»’A³ĞÓ¿ºóÆÓ«lušNqXG)''[\eşMÑ''ìË‡Ø!rİ#‡‰Š9Èÿù$’HÇ"@	¾=Ç]Ì¯±@Å2J3ƒz]ÛQ=¡Å)V€öÄö‡^³ÿóBÄãp‚¨üHF)EFK­fH›kˆŞ¢¥R­á½ÌÉƒ‚Fn…¶´¬Búª>éÇ$Œ¡*>ª"D.G";á~80‡<@0E#ŸÊ{×`eg0i|¬¿sC+¼­Şÿó@ÄéùêÆ^G…‘ÊYÆ¥×bL“ĞßÊL‹ñUÌü·¯K¹µe›ï²öß>NLä·ş÷¶~á;R:Åw“ÕV‚§ş4ÀBŠe¹Íu¡¼÷½Íä€ÁRw®ø‚¼I''şÿúÿóBÄäæÚ>0D²·E2(½÷w¾÷Ä¯÷U$ï<Ãiçê~ı¬ìşOı¤³Xö±şï=#|êË.–ÿößğâ%00‡Ö¶¹K­Šr™~[)Åëèó@F¦ìEğçH+‘†%25dj¨Îÿó@ÄïK^­zF	V‘t"ğ¢å<Gû(SNb
+pÊØ_&,¤vîõ_bßîœÛ|fsß2C½íµº5’¯ÆbÔH¶¶%25ÌùÕkş&¢f¹*ª¶*˜§½‹;U)ïµ‘Y\ÈUéİŞªÿóBÄàØ¬üHÄ«Èêí"µô»Ï¦”İ¯e¢.õB¡Ô¯½è}ö{^Î›"ÿwß»jêş¯¥‚Ä@„kÀ‡¿,İEÌÍWÛ«Áƒ1aá`ìBY.äã@ó…–ä)Böqÿó@Äèû6Æ^G©ç—MVæ™(±†(4k’ÇÊÌÀñÒ"±Lİãˆ^m-”¹“ŠD-ñÊ5jw5åTı©)êHÍ<QUÈ.•ù¡›9ç«»İÚŞèF‹l†1n5Ş±Î<pÈ-¾ÿóBÄããœOÿÿÿÿh”ÿÿÿñbÈ‡Ñ"%00‚´Ğ‰%25UUUS3332ÌÌİU?UU€Ñ2ì¬ ª êpTp‰@Ğ5úƒ¼°4@¨*ï®TÖ
+Ê»ÿó@Äç&»Ú”õ@%00ò ¨*
+‚Ç–•pˆ;LAMEUULAME3.98.2UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUÿóBÄ§8¶x?Æ%00UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUÿó@Äª%00%00H%00%00%00%00UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU')[0m
+Redirected to #<CardSound:0xb6145b0c>
+Completed in 168ms (DB: 2) | 302 Found [http://localhost/card_sounds]
+
+
+Processing CardSoundsController#show (for 127.0.0.1 at 2010-04-17 14:12:26) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mCardSound Load (0.3ms)[0m   [0mSELECT * FROM "card_sounds" WHERE ("card_sounds"."id" = 1) [0m
+
+
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'audio/mpeg'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite CardSound.inheritance_column to use another column for that information.):
+    /vendor/rails/activerecord/lib/active_record/base.rb:1579:in `instantiate'
+    /vendor/rails/activerecord/lib/active_record/base.rb:635:in `find_by_sql'
+    /vendor/rails/activerecord/lib/active_record/base.rb:635:in `collect!'
+    /vendor/rails/activerecord/lib/active_record/base.rb:635:in `find_by_sql'
+    /vendor/rails/activerecord/lib/active_record/base.rb:1490:in `find_every'
+    /vendor/rails/activerecord/lib/active_record/base.rb:1525:in `find_one'
+    /vendor/rails/activerecord/lib/active_record/base.rb:1511:in `find_from_ids'
+    /vendor/rails/activerecord/lib/active_record/base.rb:590:in `find'
+    /app/controllers/card_sounds_controller.rb:16:in `show'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (27.5ms)
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (70.5ms)
+Rendering /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCards (20100315232432)
+Migrating to CreateDecks (20100315232444)
+Migrating to CreateSessions (20100324221513)
+Migrating to CreateUsers (20100329232541)
+Migrating to AddUserToDecks (20100330102824)
+Migrating to MakeDeckSharingOptional (20100412112955)
+Migrating to CreateCardSounds (20100417180339)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("card_sounds")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("cards")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("decks")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("sessions")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_sessions_on_updated_at')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_sessions_on_session_id')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing CardSoundsController#new (for 127.0.0.1 at 2010-04-17 14:13:26) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/card_sounds
+Rendering card_sounds/new
+Completed in 33ms (View: 6, DB: 2) | 200 OK [http://localhost/card_sounds/new]
+
+
+Processing CardSoundsController#create (for 127.0.0.1 at 2010-04-17 14:13:27) [POST]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"deb73b979c9565b1435c64fd5629f695f3099677", "card_sound"=>{"file"=>#<ActionController::UploadedStringIO:0xb5fe05b4>}}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+
+
+NoMethodError (undefined method `content_type=' for #<CardSound:0xb5f78b08>):
+    /vendor/rails/activerecord/lib/active_record/attribute_methods.rb:255:in `method_missing'
+    /app/models/card_sound.rb:4:in `file='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2589:in `send'
+    /vendor/rails/activerecord/lib/active_record/base.rb:2589:in `attributes='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2585:in `each'
+    /vendor/rails/activerecord/lib/active_record/base.rb:2585:in `attributes='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2285:in `initialize'
+    /app/controllers/card_sounds_controller.rb:43:in `new'
+    /app/controllers/card_sounds_controller.rb:43:in `create'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (26.8ms)
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (75.7ms)
+Rendering /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+  [4;36;1mCardSound Load (0.3ms)[0m   [0;1mSELECT * FROM "card_sounds" WHERE ("card_sounds"."id" = 1) [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCards (20100315232432)
+Migrating to CreateDecks (20100315232444)
+Migrating to CreateSessions (20100324221513)
+Migrating to CreateUsers (20100329232541)
+Migrating to AddUserToDecks (20100330102824)
+Migrating to MakeDeckSharingOptional (20100412112955)
+Migrating to CreateCardSounds (20100417180339)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("card_sounds")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("cards")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("decks")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("sessions")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_sessions_on_updated_at')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_sessions_on_session_id')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCardSounds (20100417180339)
+  [4;36;1mSQL (89.7ms)[0m   [0;1mDROP TABLE "card_sounds"[0m
+  [4;35;1mSQL (112.0ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100417180339'[0m
+Migrating to MakeDeckSharingOptional (20100412112955)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_decks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "user_id" integer, "share" boolean DEFAULT 'f') [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("decks")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mDROP TABLE "decks"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "decks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "user_id" integer) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("altered_decks")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDROP TABLE "altered_decks"[0m
+  [4;35;1mSQL (100.5ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100412112955'[0m
+Migrating to AddUserToDecks (20100330102824)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_decks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "user_id" integer) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("decks")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mDROP TABLE "decks"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TABLE "decks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("altered_decks")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDROP TABLE "altered_decks"[0m
+  [4;36;1mSQL (100.4ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100330102824'[0m
+Migrating to CreateUsers (20100329232541)
+  [4;35;1mSQL (78.6ms)[0m   [0mDROP TABLE "users"[0m
+  [4;36;1mSQL (99.6ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100329232541'[0m
+Migrating to CreateSessions (20100324221513)
+  [4;35;1mSQL (84.5ms)[0m   [0mDROP TABLE "sessions"[0m
+  [4;36;1mSQL (100.4ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100324221513'[0m
+Migrating to CreateDecks (20100315232444)
+  [4;35;1mSQL (98.0ms)[0m   [0mDROP TABLE "decks"[0m
+  [4;36;1mSQL (100.3ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100315232444'[0m
+Migrating to CreateCards (20100315232432)
+  [4;35;1mSQL (94.6ms)[0m   [0mDROP TABLE "cards"[0m
+  [4;36;1mSQL (100.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100315232432'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCards (20100315232432)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (74.6ms)[0m   [0mCREATE TABLE "cards" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "front" varchar(255), "back" varchar(255), "deck_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100315232432')[0m
+Migrating to CreateDecks (20100315232444)
+  [4;35;1mSQL (92.7ms)[0m   [0mCREATE TABLE "decks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (88.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100315232444')[0m
+Migrating to CreateSessions (20100324221513)
+  [4;35;1mSQL (86.6ms)[0m   [0mCREATE TABLE "sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255) NOT NULL, "data" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (89.7ms)[0m   [0;1mCREATE INDEX "index_sessions_on_session_id" ON "sessions" ("session_id")[0m
+  [4;35;1mSQL (89.1ms)[0m   [0mCREATE INDEX "index_sessions_on_updated_at" ON "sessions" ("updated_at")[0m
+  [4;36;1mSQL (99.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100324221513')[0m
+Migrating to CreateUsers (20100329232541)
+  [4;35;1mSQL (86.5ms)[0m   [0mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (90.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100329232541')[0m
+Migrating to AddUserToDecks (20100330102824)
+  [4;35;1mSQL (81.9ms)[0m   [0mALTER TABLE "decks" ADD "user_id" integer[0m
+  [4;36;1mSQL (145.4ms)[0m   [0;1mVACUUM[0m
+  [4;35;1mSQL (67.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100330102824')[0m
+Migrating to MakeDeckSharingOptional (20100412112955)
+  [4;36;1mSQL (82.0ms)[0m   [0;1mALTER TABLE "decks" ADD "share" boolean DEFAULT 0[0m
+  [4;35;1mSQL (90.2ms)[0m   [0mVACUUM[0m
+  [4;36;1mDeck Load (0.4ms)[0m   [0;1mSELECT * FROM "decks" [0m
+  [4;35;1mSQL (49.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100412112955')[0m
+Migrating to CreateCardSounds (20100417180339)
+  [4;36;1mSQL (208.8ms)[0m   [0;1mCREATE TABLE "card_sounds" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "filename" varchar(255), "content_stype" varchar(255), "sound_data" blob, "card_id" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (90.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100417180339')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("card_sounds")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("cards")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("decks")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("sessions")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_sessions_on_updated_at')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_sessions_on_session_id')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCardSounds (20100417180339)
+  [4;36;1mSQL (91.2ms)[0m   [0;1mDROP TABLE "card_sounds"[0m
+  [4;35;1mSQL (88.6ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100417180339'[0m
+Migrating to MakeDeckSharingOptional (20100412112955)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TEMPORARY TABLE "altered_decks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "user_id" integer, "share" boolean DEFAULT 'f') [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("decks")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDROP TABLE "decks"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "decks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "user_id" integer) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("altered_decks")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDROP TABLE "altered_decks"[0m
+  [4;35;1mSQL (89.7ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100412112955'[0m
+Migrating to AddUserToDecks (20100330102824)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_decks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "user_id" integer) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("decks")[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mDROP TABLE "decks"[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "decks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("altered_decks")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDROP TABLE "altered_decks"[0m
+  [4;36;1mSQL (78.2ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100330102824'[0m
+Migrating to CreateUsers (20100329232541)
+  [4;35;1mSQL (82.6ms)[0m   [0mDROP TABLE "users"[0m
+  [4;36;1mSQL (77.2ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100329232541'[0m
+Migrating to CreateSessions (20100324221513)
+  [4;35;1mSQL (74.8ms)[0m   [0mDROP TABLE "sessions"[0m
+  [4;36;1mSQL (77.6ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100324221513'[0m
+Migrating to CreateDecks (20100315232444)
+  [4;35;1mSQL (76.0ms)[0m   [0mDROP TABLE "decks"[0m
+  [4;36;1mSQL (90.7ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100315232444'[0m
+Migrating to CreateCards (20100315232432)
+  [4;35;1mSQL (98.5ms)[0m   [0mDROP TABLE "cards"[0m
+  [4;36;1mSQL (101.7ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100315232432'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCards (20100315232432)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (90.3ms)[0m   [0mCREATE TABLE "cards" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "front" varchar(255), "back" varchar(255), "deck_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (89.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100315232432')[0m
+Migrating to CreateDecks (20100315232444)
+  [4;35;1mSQL (88.6ms)[0m   [0mCREATE TABLE "decks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (88.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100315232444')[0m
+Migrating to CreateSessions (20100324221513)
+  [4;35;1mSQL (71.5ms)[0m   [0mCREATE TABLE "sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255) NOT NULL, "data" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (88.9ms)[0m   [0;1mCREATE INDEX "index_sessions_on_session_id" ON "sessions" ("session_id")[0m
+  [4;35;1mSQL (89.1ms)[0m   [0mCREATE INDEX "index_sessions_on_updated_at" ON "sessions" ("updated_at")[0m
+  [4;36;1mSQL (77.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100324221513')[0m
+Migrating to CreateUsers (20100329232541)
+  [4;35;1mSQL (76.3ms)[0m   [0mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (99.9ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100329232541')[0m
+Migrating to AddUserToDecks (20100330102824)
+  [4;35;1mSQL (72.5ms)[0m   [0mALTER TABLE "decks" ADD "user_id" integer[0m
+  [4;36;1mSQL (167.5ms)[0m   [0;1mVACUUM[0m
+  [4;35;1mSQL (89.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100330102824')[0m
+Migrating to MakeDeckSharingOptional (20100412112955)
+  [4;36;1mSQL (82.1ms)[0m   [0;1mALTER TABLE "decks" ADD "share" boolean DEFAULT 0[0m
+  [4;35;1mSQL (90.2ms)[0m   [0mVACUUM[0m
+  [4;36;1mDeck Load (0.4ms)[0m   [0;1mSELECT * FROM "decks" [0m
+  [4;35;1mSQL (65.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100412112955')[0m
+Migrating to CreateCardSounds (20100417180339)
+  [4;36;1mSQL (146.8ms)[0m   [0;1mCREATE TABLE "card_sounds" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "filename" varchar(255), "content_stype" varchar(255), "sound_data" blob, "card_id" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (67.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100417180339')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("card_sounds")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("cards")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("decks")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("sessions")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_sessions_on_updated_at')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_sessions_on_session_id')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCards (20100315232432)
+Migrating to CreateDecks (20100315232444)
+Migrating to CreateSessions (20100324221513)
+Migrating to CreateUsers (20100329232541)
+Migrating to AddUserToDecks (20100330102824)
+Migrating to MakeDeckSharingOptional (20100412112955)
+Migrating to CreateCardSounds (20100417180339)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("card_sounds")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("cards")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("decks")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("sessions")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_sessions_on_updated_at')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_sessions_on_session_id')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCardSounds (20100417180339)
+  [4;36;1mSQL (80.5ms)[0m   [0;1mDROP TABLE "card_sounds"[0m
+  [4;35;1mSQL (88.4ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100417180339'[0m
+Migrating to MakeDeckSharingOptional (20100412112955)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TEMPORARY TABLE "altered_decks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "user_id" integer, "share" boolean DEFAULT 'f') [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("decks")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mDROP TABLE "decks"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "decks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "user_id" integer) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("altered_decks")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDROP TABLE "altered_decks"[0m
+  [4;35;1mSQL (100.1ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100412112955'[0m
+Migrating to AddUserToDecks (20100330102824)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_decks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "user_id" integer) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("decks")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mDROP TABLE "decks"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TABLE "decks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("altered_decks")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDROP TABLE "altered_decks"[0m
+  [4;36;1mSQL (90.3ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100330102824'[0m
+Migrating to CreateUsers (20100329232541)
+  [4;35;1mSQL (82.8ms)[0m   [0mDROP TABLE "users"[0m
+  [4;36;1mSQL (88.5ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100329232541'[0m
+Migrating to CreateSessions (20100324221513)
+  [4;35;1mSQL (86.7ms)[0m   [0mDROP TABLE "sessions"[0m
+  [4;36;1mSQL (89.4ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100324221513'[0m
+Migrating to CreateDecks (20100315232444)
+  [4;35;1mSQL (87.3ms)[0m   [0mDROP TABLE "decks"[0m
+  [4;36;1mSQL (88.7ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100315232444'[0m
+Migrating to CreateCards (20100315232432)
+  [4;35;1mSQL (87.1ms)[0m   [0mDROP TABLE "cards"[0m
+  [4;36;1mSQL (77.8ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100315232432'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCards (20100315232432)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (90.3ms)[0m   [0mCREATE TABLE "cards" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "front" varchar(255), "back" varchar(255), "deck_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (77.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100315232432')[0m
+Migrating to CreateDecks (20100315232444)
+  [4;35;1mSQL (74.4ms)[0m   [0mCREATE TABLE "decks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (78.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100315232444')[0m
+Migrating to CreateSessions (20100324221513)
+  [4;35;1mSQL (70.1ms)[0m   [0mCREATE TABLE "sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255) NOT NULL, "data" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (88.8ms)[0m   [0;1mCREATE INDEX "index_sessions_on_session_id" ON "sessions" ("session_id")[0m
+  [4;35;1mSQL (89.2ms)[0m   [0mCREATE INDEX "index_sessions_on_updated_at" ON "sessions" ("updated_at")[0m
+  [4;36;1mSQL (88.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100324221513')[0m
+Migrating to CreateUsers (20100329232541)
+  [4;35;1mSQL (82.4ms)[0m   [0mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (77.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100329232541')[0m
+Migrating to AddUserToDecks (20100330102824)
+  [4;35;1mSQL (65.2ms)[0m   [0mALTER TABLE "decks" ADD "user_id" integer[0m
+  [4;36;1mSQL (134.0ms)[0m   [0;1mVACUUM[0m
+  [4;35;1mSQL (56.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100330102824')[0m
+Migrating to MakeDeckSharingOptional (20100412112955)
+  [4;36;1mSQL (75.8ms)[0m   [0;1mALTER TABLE "decks" ADD "share" boolean DEFAULT 0[0m
+  [4;35;1mSQL (79.1ms)[0m   [0mVACUUM[0m
+  [4;36;1mDeck Load (0.5ms)[0m   [0;1mSELECT * FROM "decks" [0m
+  [4;35;1mSQL (99.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100412112955')[0m
+Migrating to CreateCardSounds (20100417180339)
+  [4;36;1mSQL (157.5ms)[0m   [0;1mCREATE TABLE "card_sounds" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "filename" varchar(255), "content_stype" varchar(255), "sound_data" blob, "card_id" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (67.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100417180339')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("card_sounds")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("cards")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("decks")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("sessions")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_sessions_on_updated_at')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_sessions_on_session_id')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCardSounds (20100417180339)
+  [4;36;1mSQL (136.3ms)[0m   [0;1mDROP TABLE "card_sounds"[0m
+  [4;35;1mSQL (77.1ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100417180339'[0m
+Migrating to MakeDeckSharingOptional (20100412112955)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TEMPORARY TABLE "altered_decks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "user_id" integer, "share" boolean DEFAULT 'f') [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("decks")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mDROP TABLE "decks"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "decks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "user_id" integer) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("altered_decks")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDROP TABLE "altered_decks"[0m
+  [4;35;1mSQL (78.0ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100412112955'[0m
+Migrating to AddUserToDecks (20100330102824)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_decks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "user_id" integer) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("decks")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mDROP TABLE "decks"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TABLE "decks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("altered_decks")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDROP TABLE "altered_decks"[0m
+  [4;36;1mSQL (89.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100330102824'[0m
+Migrating to CreateUsers (20100329232541)
+  [4;35;1mSQL (76.1ms)[0m   [0mDROP TABLE "users"[0m
+  [4;36;1mSQL (89.3ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100329232541'[0m
+Migrating to CreateSessions (20100324221513)
+  [4;35;1mSQL (84.4ms)[0m   [0mDROP TABLE "sessions"[0m
+  [4;36;1mSQL (100.6ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100324221513'[0m
+Migrating to CreateDecks (20100315232444)
+  [4;35;1mSQL (93.4ms)[0m   [0mDROP TABLE "decks"[0m
+  [4;36;1mSQL (100.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100315232444'[0m
+Migrating to CreateCards (20100315232432)
+  [4;35;1mSQL (81.6ms)[0m   [0mDROP TABLE "cards"[0m
+  [4;36;1mSQL (78.2ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100315232432'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCards (20100315232432)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (114.5ms)[0m   [0mCREATE TABLE "cards" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "front" varchar(255), "back" varchar(255), "deck_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (88.9ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100315232432')[0m
+Migrating to CreateDecks (20100315232444)
+  [4;35;1mSQL (70.4ms)[0m   [0mCREATE TABLE "decks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (89.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100315232444')[0m
+Migrating to CreateSessions (20100324221513)
+  [4;35;1mSQL (80.0ms)[0m   [0mCREATE TABLE "sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255) NOT NULL, "data" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (89.6ms)[0m   [0;1mCREATE INDEX "index_sessions_on_session_id" ON "sessions" ("session_id")[0m
+  [4;35;1mSQL (77.9ms)[0m   [0mCREATE INDEX "index_sessions_on_updated_at" ON "sessions" ("updated_at")[0m
+  [4;36;1mSQL (79.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100324221513')[0m
+Migrating to CreateUsers (20100329232541)
+  [4;35;1mSQL (67.7ms)[0m   [0mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (77.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100329232541')[0m
+Migrating to AddUserToDecks (20100330102824)
+  [4;35;1mSQL (73.9ms)[0m   [0mALTER TABLE "decks" ADD "user_id" integer[0m
+  [4;36;1mSQL (146.6ms)[0m   [0;1mVACUUM[0m
+  [4;35;1mSQL (56.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100330102824')[0m
+Migrating to MakeDeckSharingOptional (20100412112955)
+  [4;36;1mSQL (98.2ms)[0m   [0;1mALTER TABLE "decks" ADD "share" boolean DEFAULT 0[0m
+  [4;35;1mSQL (101.4ms)[0m   [0mVACUUM[0m
+  [4;36;1mDeck Load (1.0ms)[0m   [0;1mSELECT * FROM "decks" [0m
+  [4;35;1mSQL (74.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100412112955')[0m
+Migrating to CreateCardSounds (20100417180339)
+  [4;36;1mSQL (163.2ms)[0m   [0;1mCREATE TABLE "card_sounds" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "filename" varchar(255), "content_stype" varchar(255), "sound_data" blob, "card_id" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (67.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100417180339')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("card_sounds")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("cards")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("decks")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mPRAGMA index_list("sessions")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_sessions_on_updated_at')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_sessions_on_session_id')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCards (20100315232432)
+Migrating to CreateDecks (20100315232444)
+Migrating to CreateSessions (20100324221513)
+Migrating to CreateUsers (20100329232541)
+Migrating to AddUserToDecks (20100330102824)
+Migrating to MakeDeckSharingOptional (20100412112955)
+Migrating to CreateCardSounds (20100417180339)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("card_sounds")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("cards")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("decks")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("sessions")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_sessions_on_updated_at')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_sessions_on_session_id')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCardSounds (20100417180339)
+  [4;36;1mSQL (86.8ms)[0m   [0;1mDROP TABLE "card_sounds"[0m
+  [4;35;1mSQL (100.5ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100417180339'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("cards")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("decks")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("sessions")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_sessions_on_updated_at')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_sessions_on_session_id')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCards (20100315232432)
+Migrating to CreateDecks (20100315232444)
+Migrating to CreateSessions (20100324221513)
+Migrating to CreateUsers (20100329232541)
+Migrating to AddUserToDecks (20100330102824)
+Migrating to MakeDeckSharingOptional (20100412112955)
+Migrating to CreateCardSounds (20100417180339)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (83.5ms)[0m   [0mCREATE TABLE "card_sounds" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "filename" varchar(255), "content_type" varchar(255), "sound_data" blob, "card_id" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (77.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100417180339')[0m
+  [4;35;1mSQL (1.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("card_sounds")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("cards")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("decks")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("sessions")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_sessions_on_updated_at')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_sessions_on_session_id')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing CardSoundsController#create (for 127.0.0.1 at 2010-04-17 14:23:14) [POST]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"deb73b979c9565b1435c64fd5629f695f3099677", "card_sound"=>{"file"=>#<ActionController::UploadedStringIO:0xb60d4664>}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:authorized] rendered_or_redirected.
+Completed in 15ms (DB: 1) | 302 Found [http://localhost/card_sounds]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-17 14:23:14) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  [4;35;1mDeck Load (0.2ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 38ms (View: 21, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing CardSoundsController#index (for 127.0.0.1 at 2010-04-17 14:23:20) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:authorized] rendered_or_redirected.
+Completed in 64ms (DB: 1) | 302 Found [http://localhost/card_sounds]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-17 14:23:20) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  [4;35;1mDeck Load (0.2ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 27ms (View: 11, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-04-17 14:23:23) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 27ms (View: 12, DB: 1) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-04-17 14:23:27) [POST]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"rob", "password"=>"dare"}, "authenticity_token"=>"deb73b979c9565b1435c64fd5629f695f3099677"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".username) = 'rob') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 164ms (View: 13, DB: 1) | 200 OK [http://localhost/user_sessions]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-17 14:23:36) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  [4;35;1mDeck Load (0.2ms)[0m   [0mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 27ms (View: 11, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-04-17 14:23:49) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 25ms (View: 11, DB: 1) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-04-17 14:23:51) [POST]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"rob", "password"=>"dare"}, "authenticity_token"=>"deb73b979c9565b1435c64fd5629f695f3099677"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".username) = 'rob') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 87ms (View: 14, DB: 1) | 200 OK [http://localhost/user_sessions]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-17 14:23:53) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (9.2ms)
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 58ms (View: 36, DB: 1) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-04-17 14:24:00) [POST]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"deb73b979c9565b1435c64fd5629f695f3099677", "user"=>{"password_confirmation"=>"dare", "username"=>"rob", "password"=>"dare", "email"=>"rob@home.com"}}
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'rob@home.com') LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'rob') LIMIT 1[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'ee2ba24571b8710d1a334ae9fb76772dea3ebc8d729d09b6927aa368802d689896b90b349695b3bf2478a95e203c8f461a999531cf811660b5294d68d4a88060') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Cookie set: user_credentials=ee2ba24571b8710d1a334ae9fb76772dea3ebc8d729d09b6927aa368802d689896b90b349695b3bf2478a95e203c8f461a999531cf811660b5294d68d4a88060%3A%3A; path=/
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("created_at", "crypted_password", "updated_at", "username", "password_salt", "persistence_token", "email") VALUES('2010-04-17 18:24:00', '3bf7ebf9876d0ff7ff29f1eef70dff410e6fd698723935180d1cc88230dfcd710e5198ef77d6f33a0788fed66533755f4eb6d0317a73da42a888b3672101da2c', '2010-04-17 18:24:00', 'rob', 'I9RzEScfNjDUyBB4Fb1g', 'ee2ba24571b8710d1a334ae9fb76772dea3ebc8d729d09b6927aa368802d689896b90b349695b3bf2478a95e203c8f461a999531cf811660b5294d68d4a88060', 'rob@home.com')[0m
+Redirected to controllerdecks
+Completed in 103ms (DB: 1) | 302 Found [http://localhost/users]
+
+
+Processing DecksController#index (for 127.0.0.1 at 2010-04-17 14:24:00) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'ee2ba24571b8710d1a334ae9fb76772dea3ebc8d729d09b6927aa368802d689896b90b349695b3bf2478a95e203c8f461a999531cf811660b5294d68d4a88060') LIMIT 1[0m
+  [4;36;1mDeck Load (0.1ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."user_id" = 1) [0m
+Rendering template within layouts/application
+Rendering decks/index
+Completed in 30ms (View: 7, DB: 1) | 200 OK [http://localhost/decks]
+
+
+Processing CardSoundsController#index (for 127.0.0.1 at 2010-04-17 14:24:05) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'ee2ba24571b8710d1a334ae9fb76772dea3ebc8d729d09b6927aa368802d689896b90b349695b3bf2478a95e203c8f461a999531cf811660b5294d68d4a88060') LIMIT 1[0m
+  [4;36;1mCardSound Load (0.2ms)[0m   [0;1mSELECT * FROM "card_sounds" [0m
+Rendering template within layouts/card_sounds
+Rendering card_sounds/index
+Completed in 86ms (View: 3, DB: 1) | 200 OK [http://localhost/card_sounds]
+
+
+Processing CardSoundsController#new (for 127.0.0.1 at 2010-04-17 14:24:08) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'ee2ba24571b8710d1a334ae9fb76772dea3ebc8d729d09b6927aa368802d689896b90b349695b3bf2478a95e203c8f461a999531cf811660b5294d68d4a88060') LIMIT 1[0m
+Rendering template within layouts/card_sounds
+Rendering card_sounds/new
+Completed in 29ms (View: 6, DB: 1) | 200 OK [http://localhost/card_sounds/new]
+
+
+Processing CardSoundsController#create (for 127.0.0.1 at 2010-04-17 14:24:11) [POST]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"deb73b979c9565b1435c64fd5629f695f3099677", "card_sound"=>{"file"=>#<ActionController::UploadedStringIO:0xb5f98750>}}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'ee2ba24571b8710d1a334ae9fb76772dea3ebc8d729d09b6927aa368802d689896b90b349695b3bf2478a95e203c8f461a999531cf811660b5294d68d4a88060') LIMIT 1[0m
+  [4;35;1mCardSound Create (0.3ms)[0m   [0mINSERT INTO "card_sounds" ("created_at", "content_type", "card_id", "updated_at", "filename", "sound_data") VALUES('2010-04-17 18:24:11', 'audio/mpeg', NULL, '2010-04-17 18:24:11', 'gor-gai.mp3', 'ÿó@Ä%00˜xC%00°gĞ%00%001‰Áğ|"zÁğü¸>ŸÔ;Êçò”q‡ÿßøœÿÄ%00É@C‚à‡(sƒê P(€À`0%00),ÑL°8}dOÅàÊ>~¡ÿóBÄ ŠšÒ_‘hğNÿ0ƒ%25Ÿã>”JalÿÃÑ±|šdO4ÿüÙ†Ãƒ\b³ÿÿÄ€îÂ È9¦cØ“!IBÿÿş''ä¸÷£Ä{Q%256/:±‡.ÿÿU¼’€PšÂÕŞÿó@Ä	 2˜Ì…‡dXÓº8.Ë¶+)f’°RRÀ¶ÿ,ª¿éör?öM.õ6èf~—÷‰ÛŸ×äaÕåæÿZÉßÿæxË›¿sßûßÜÿZ¥k¶šıöûñ†F—Nß›QøÊÿóBÄKRÆ^0G­Ş½)¦›¿ì­¤OÍoÛµ;7ÖÙßş:¼|Ÿs>ìô#°ï°ÍFŠuE%00ë´ğ6@&‘9ÎEÑíP&FûC*…7‹K!m“¢T„N’¡&¢º*`Õğt¾•ÿó@Ä	 ¢˜
+y†š»|½zV è-IwØMÙîôë´»½ŸvS¬şM*^}îóí½÷ÃÄ:ÿ»+³İ™·ÿ^ıåú zå^³ıvİ~ï·õ¬»j/Ú¶¤nI$’A‰€dTõb7ÿóBÄ*ÂÒ^FæõbT
+û1muw,®´éf\–~²­Kó>œ™à·%25ó;‘?·»ìr”ÜIésı­}Íœêd«"ö²ç<ÜÙÃº4;80‰%00>‰“]NÄŠUÒ@­ÿó@Ä
+ Æœ*y†á‹‡"C#WâËóİÛ¸Yb`ñÀÂF.†
+5¡È%00Ä˜u«Ÿ=,*üš‘Ë­±í½j«´íTQ¢ÉØÅ’2™…v”,¢–kÇÁz±Ø…Ô"âH9çŠÿóBÄ–œ
+xÆ%00´Ë·5€ó­BãbqD@e”ÅT:J\€<—‰ëJ8ñ$Ù¨@]´è½—,"Qæ*ÁĞ8>,MºŒÓß†*ƒ«FŠüc$DÑ9$•´:äÿó@Ä# ’˜
+a†4"òã¹¼TĞ8ì8£—÷‰Ü°(tšŒ9Ì\ëĞH}¡F¶ÄSi,4€ŞªĞ¬~&ìº=Ø–·öçÅÌä\Œ:Yá¨¬ç;ôSvïı–5Thp>-w¶ÿóBÄ-–˜
+`F!ó¸¿à¦½Fı¬÷Æ÷e}¿µ¿¿†óoå½ò]ÔòNÕöaÖ‰GjCPÒOC²ë©°aV„!Öi¤ÎŒá,EsaóÙAå ˜µá12"ğH„äJÅ–"Ç¹ÿó@Ä8H˜y†¥®È7,Õ¡I1eô) Øô
+²!`Å„ÁÕUBôz‚ZR!æÑR¹ËeÃƒgXvÁm$LÁN†±ñµÚ<–ã¬{Òğhb„ûTÆ3"p’3ÿóBÄApœ*`Ä8İAİ^Ùµ’5$4IÉw’ÛD%25aD‘Àßsà£4hBzºªŸä´ø®j3±ÎÌr«©×ş3úè…é^¾¯ÛÑì‰ºıMÎ¨Vº¥_¥?w¢óoúPø?°kËjÆ4ÿó@ÄSÛ"Âş0D=ÔÄ¬%252ÇãÂ€Ô„Ø½˜’iÔ+ZxG¹› ‰€PÚ*ÑLÂ,`ãÃÍ!OÓjÔLà«Õ36ukñ9$¸¬ã‚m½·Ãau="Âò “@e—4îa–g
+ÿóBÄ^X¦¥ty†%00­Yİa>¨ç™„QáÔ%25ÈAæ6eHduà–¢P©6”°‘²íaŠbÇV¥‚RÍ8½h·nsµ0ô™=µ7µR•ğ<
+å¶¥c–Ò7´bE™<Ô«p®Uÿó@Ähğš˜%00aFHl£1%25+P¢ÅĞÓ9v‚ï«6Ñ`»ÀÆŞˆ÷_™;½‹pÃ4lVµ‹Ã‚–,•¨¯ Am]¶]¶Ûqn''%00·(Ô¤Häô¬ß¡ÌœYYË)æI,K\Ñ¼¯O¹ÿóBÄw°Æ ²HF@ªÚ]al}7Ï…Ë¥uÙç‘¹”Ob—ÉËzÈ¾ôÍİZ±ŠÚ¿W¤‹àé«óbL¿y›Ç9ìöosPë†Xºn•ÕdHğÂ4J` j˜¤\©¤âÿó@Ä„+F¾^I†($mÂ[·ş1*>iF¿ğ\‰cËØÖwi¥Îæ§+Y¶‹ï	Ôó²CwIiæDnI¡yÖpoĞUK:ñİ‹õ$ôd{t3w8‹X4¤*4XV’™uj.ÿóBÄv³^ty†%00ÏŞ¦0ÿuçaïlÚ¼f¤Ç„E(¨V“+	Ä’…~‘#?r‘™Ñë3˜B9‹³ÊŠŠu5]œ…1‡F”‚ÛÑt6cN¢©22¹Îî¶Úï½Şùª­z˜¤ÿó@Äg‹V•”`Êİ†"9D4Á2U2”³2Áâ‘È»MŒ&\^€YIDbv{™ÄAÕ¶sˆhnh”8—ÁÎyf½Ê¼PTÇ„u:\;çÛÍËtË{¬<ÏÚÉòC„É™t‰ÿóBÄOË.ta†%25¶3‡æh–”º¯^dRIgË=Tñ›çŞ^ª–[ïû R6‰ö9$®Ù¤ˆYÒIÎçÁLer%00{ ïc·4Í\ÿñ§ºÈx¬ü•¤MŸh¦Ig2×r4å¦r¾ª†ÿ]õßÿó@ÄCP–©”`F%25›Z‹s×~åcğÿûúü)|d+j*-×d’Ëm¶ÑYØâÏ'',Å%00‰ì9o2…òIyÒ‘˜Ñe^^ı$S)Jİä¿VùÓì8Pñ½JšçcÈüU×òpL™
+Ü›îd.,%25VÿóBÄH¢â^GCÌ­ÎîMOkÂ/òhiWù­º4%00%00™%00•Ö¹ˆ¢`Ô±ÍÇJVgdaLr:…äivAÿä3tú†…º''Ä#·à¡ÿæàÖ>\«øª×*iœ·ù·A.ñ·óNıaÿó@ÄI0¶˜
+HÆÒ{¦ìøÍğ§ÙKÿê	Ò0¡iYø5‚¼5êˆæ‡dÕ€ÎÈ¥­2ºµ5e»ôZ²2mU­Ó¹Öµv#İû>B_Åa(˜U[Êór«zš¦‰B"ñbG{ÜıÿóBÄOâ˜ªxÄ<k?bjaBV´A''?²öİô@d€ĞŒÓwÕİäØŠQÙYÊiˆ]ĞßgG­_³{]j@¦%00 4 @yáC‹Å+kP¢m5RS¨uÑ•SËk…ÔŠj]H·#mÿó@ÄV^ ò`Ä<Ûe¶P@a+F2Bø•’T*A´an{%25;Fh¸Qê—isÌSşˆÿàï,}±×¹ù™2¾ŸÍ¾ô[øç0ºe!_|â«Õoûıÿ åm‹ÍBe¶+Uo;Æ(54ÌÿóBÄ_Ùº^FÍY£¸¨Lğİ`øPFãM*"ÿ÷E|Ï(©ûR¯súgı†kµSûùé˜s‚íC‹%25"ŠZˆ‘R¶La7¡OçØ>±Ç3l‚,Dö(í*%00
+–§
+¥`Œt˜+Áÿó@Äcª”%00xÆ%00¿4iŸÉò¾4N_n9<ş÷NíÿùF*ëŸû•0Ãÿâ¾ãıMñ.­7uáÛW¤æÜÏËó/wıç6ÿÿÂãøLâCê’ûˆCXW7%25è³Yo*çu†`Á£GÿóBÄi°¥”a„QZN…°É‰‰%00±õÀ[œ¤Ÿ>ıÉzC"fö/:,§zçË@(«©aQuìƒåƒ§—Ã¢¤D†UD·TÀUá–µ$1Ğ‘K¨Têt®µ/‰ÎÓÔ˜O±ïÿó@ÄrŠœ
+`Æ%00ÅBÛf''Gk’PPzh IyáÅöœ`f§Fƒ''š(^åÒ»ÔYfØE	(jÖ*!sj`Q‡[DL–‚Ë(QD2ƒ¿!˜E¹*y—ÇÚ–ÛYÄ<_V›ExYØçÿóBÄ|I6¥tHFXOÏ§‡ÿÿ¾»Å<ü¶nÏ{9oè©K}¿ŸŸñŸş^·9|QÜ…ïUğÈ-À"tU1L’ÌJú[JÄDxÉ×
+ş"›ÀˆÖÿ3íÌ(_ç,¿æ>ÿó@Ä†¨bœÊy†Ï1Ì·Œ®wÓG§ü÷ÇãëI9_ƒÇïûşôÙ6g÷¿ê&§Z¿»ÃÓ‹¬ÔÒ:rïKc¬~r\vA$q¿å®X¥!FvŒÑªäZÚ&ÚşŠ¦ıÿóBÄ(¦HÄÒ’öC¸bÓgqyóó}[}ÿ÷6.b™¾ŠúJºCB†}PuwS$”Ôˆ®BÉå9ÓS''‡%00	K…x*…²;H¼ùç,¼è2E€¦$?dÿó@Ä•¢R©”@Dùîõ	EĞÅ
+[TòiO)`‰ïa&†*2;®6×øª C !©B?˜‡D!º^¶3ÓöUÂá¡ƒÈ©‚9
+L‹ª
+’<¤äŸĞ;ax22%002eÂHl±§V1ÓLÿóBÄ™š˜ªxÆ%00D‹*Å ˜àå R"''k»…—‚…K¥–nÊA—"‰ìh%00fcÏJ?+ıÀû¾òïÙ|sÏ‰Ç¨A\¢J±„ËıúÛü=&İnµ{“UşªoËVy‹ş>ÿó@Ä¢ğ®­œI†%00c÷õ7nmjW.½c*œ¬˜DmG¿ÇdÉµæŠ‡ã¥™
+^ùşL%25š“‰e+	$«ÿî¦×æKmß6üHœ±Î\<j(Kso¹}ŒŞ»ŸÌ|Ëßİ\ÿóBÄ©°š©”0†ós^€ Ê,ÕX€X!H!´`UiQà´ >ßSğQucõö_>ÒØgï§•å ³ßíÌÎ]mş¢mü-ÿº÷ñ·÷í''ê¾¶ïÚ¶–ño÷¦»²s“ÏQ«fÿó@Ä®áz©tH†!Å@/£æùÁ«7¶ÒÍœĞ—»Œ2Ü·« )(`÷è½¶ÒL›úÛNØ‘D2`|Áé	¨0÷ÿö™şük×Ötéïkvı?æıoûƒÿ¾Ù•`+úA:6•ƒt}ÿóBÄ±¸>¤Ô@D%25x°JN¶Êöë×ØVFèD$´
+%00©R÷ªğOÊÚÅ`€t°Åg(k&Át
+''İjkÃ!@ Q‡
+è’ÇŒİ´U»VÇP¡ëR„§£Á:XÕ\-ájój&ÿó@ÄºèÎ ´`ÄUš´¯ÉaaçÏyµzM¬V£
+uœï‘GÈåçûJk¯ırO¥şóåûçQµíCäRw/Ÿ_”2"7¶ùæk—Bj×¾ÏÀ''}~¥ßd•ÈÜsKnÚá¨æÿóBÄ½àò˜
+y†c‘BÑœ•Ôõ¥c]zÀò¸ÒÔi´q	ÊÄÎƒ°<ÙÇ÷@cX‚+''<yáPúN8^Sm"s:=½t£¯JÆiá«h©² 2GTå±T²c¸léœˆÿó@ÄÁÚÂ¤4`F%25Æœk©8ÆZ&ÙÑcËE‘´BRÇVŞß?[·:®¶º…¸=[æZ…Ó¼RMsÌuvÂNÈ‘ÙkTSØ×Ÿ0Â%00SjÇ-“]¿ÿqGW!ÈOr02-Me÷´µ“ÿóBÄÄÁÂ^ELiõš‘
+aF_%00PÓb*Ìæ*MCuŸz”»ÃÌv˜®‡âÍ,üô	ùL_½Ç¸ëvvwmÚ×xC&İ?¦¤¨uÉ
+&#c`P~·£ÎdB’XTHÉ}Ëÿó@ÄÉ™ª¤T`Ä<9ßó0ßkí¯d—ãêÛö½ëÿ™¾gˆ<ú½}
+lV8–+kôWQ?/R''Ó1¶«å»q‡Øü¡_JeÛÿ‘ÀA‡51Ûæ³[Õk6@”*ˆ{9é¢ñšYÿóBÄÑ)¢Ê^GM­ã¡ÜÆO]4Ö——¥
+y§ )İaŞ”e3ªïG;ë«Lî§9ûÙ¤z¥¥¾Å~óçziĞ­?1#Š¬£°š³ƒñO"Éîè,}á%25•,1|Í±-´ÿó@ÄÔR ÌxÄ-,%00Ô"åC%00vÏ=PÓÁCÄ‡Š½\¦l>Ö¤ b–·l»8öœUî)Y­&C<w-.=a£ÌÅA9ÒœÜ…œØË@dÎ?ÎŸêÔ©LìoA‰LŞÿóBÄÚë2­–0DÜuøİ#­éò>åUÏçË¼¿>im?Šfœ3B­ƒH*µ%00qÇ‹Øø•UàwÎ¸èg"¥Â°éËáõÍëYËé2±ôMRÌÏuv#êÔkvOvgÿó@ÄŞp˜%00bÆ%00R4;=pO_ôë{ÿ÷åyaë¾ní*›Pv¶ïµ[İÏ·ÇZÛ²:³©*²0¸v®Tu"º#8XXƒ™¶"£Ej8g±à®‹iÂb^2Ü«Iùd~óĞçkÿóBÄç¢’˜òzF%00ß4 qê/­É{Ód§‘:emüùÏÎäGss/Lô7\­ùŸNì¿¡ı`pF>Ja9F°tYËœÚ’³vÖxà­Òår]ˆ¦Ë:îlÉŸ&×>î´­äSV%25îÿÿó@Ää1¦œ,`Ä]Aó—5Ã¼ëj_ÿ×_äqº›/ğÂöán#İøßìÄ3ÿ3xÿí –Òé¶öáAVäÓÊ† áumÚçM]¼a·T:s¬CúnGcÍıÿÂ³Ï
+™=Òÿó@Äê[R˜Ôa†	–Nœˆˆpú"GGÚj‚c¥Èëëƒ¸±·Aîûj¶''}İóVq
+¿ÙSä”ïyÒ%25²-*ìµÿäcuüLEŠĞÑ8¡:J‹ ãÏò 1šE¦X¹À(·#aû[Xº–ÿóBÄã(’”%00yŒo8*r£ç#4¸›şÕ¤Á£C•wÙ[ƒ(úuÉ¤%25æÕ$NÈë­»³µæ)m[ıMoÛ¬ï2»2kE*Q”.û%25»l6\gˆKgª[sÊa¬O)Ÿü¬İÕ›ÿó@ÄêÉÂ^1†•KE˜ÕÓm_YÇ9÷-¿Èëö·ÎÎT`„SM˜ÙT™•;0\¨Æ›(2.³ÂµÙpä*LãÅÅ“=¸Ñ-ÕXÄ“–K¶ØU±ñŠæ‘C¨	ĞX_‡ñƒÿóBÄáQzÔöaĞ§^âh=|v’(Ùi)ÕU–Ô}çbò×‡oMè$­‚*W—
+ta-]o:Û`­’Ş}hc­í‰£åNjö5ĞB}3îóbÊªf¦rë¶ûq->4µùÆÕpÿó@ÄÓ™Æö>[ÅY·ê¿pø''şHs»¼zJşnµT}>È¥Öp$è''»3Ò!ç@N:³2§Ùp,*ph0p¹ò`ˆàÆ7ìê"íp¾´	Ä/8c*(9#ƒvñOüµ@ÿóBÄÏ™zñ¾;DëJğ¡Õ_–Âtğ|ÚşM¦íMb7Ñ+ÛÃ9‚ïïiR–%25Tq-<“à\UçÖÔŞ9Âc«ÔX”ĞGş›°é1ÇbÂTU&
+Ke¶Ñ¶(5+£„®«ÿó@ÄÈŠş^BÄÎ’¢®å’Úƒ¢ohÊíß¡Ò¾¬óa1¬Iÿãçwqdñ÷ÉÄw3û.MLßÍÕ<ü)w¸ş½‡•ë~«¥—Ö“ÌÓs:Å>Fä@P·aa²[âß)[ÿóBÄÆ‰ªÔş@EF¹pœşæ‰ È/yqF¤U''¨©w[xú«±ˆµ¦Kˆˆ7 ïdÈê”e¢ËKÑH§U¾U]CH¤eéEÁ»}ÿüRdDbñvÅb,H>½Oš±‹Š!ÿó@ÄÇ¸¦æ^J''ù£°Lœ¢€.ÓBãğøå%00Ôó†¢tò±°²W²ÕO4ñF7õh0ó4=-J‡ªn°[rí¶Ûa66p°-¡["˜*("Á#Dò¢ªŸh¨s„yVŒœkÌÿóBÄËh’ÕŒxIñWŒ¬Q‡¶­`²•U¦ÚTX8)`Ïsb›ÀÉiÓ¬¬Plí•%00	í¶Ûq‘@â ±4ØYZ—±iøÌ4rØ)3w®¾l_à®JğöÎ±ëIúl|s‚îÿó@ÄÕHvÑ¾Œ ÷%25–e2bJi™ÜæSTÌˆÄo˜˜ÈÚÊQzV·I9H§+_û=ŠqjNGÅ	)É%25•*xx§Š.$%00%00x@áyj¶û¶Šåëî«â§¯ÿ‘{JŠ PÈŞàÉyÿóBÄâ.ú^1D"tS0nMhÒ¹Õ„%25â‚Mœ««ö7æ¢¸²ÕSl¤9ó!Èá­¡üæµÊ	ä=«èˆÏ¶ÆU™HèP^“°T1D´Q†¼€ºVµ2«ï¿4B”RóIYRÿó@Äíc&Â^GÉÇ‰h¨“ cÔØo¬…ÓNÉÕœc?÷ò›:é°¾ôâ_ı-¿z››Ò…ËEM7*A­´b}â±súÌ|1„u:ş0JcûDÎUŠã‹‹ú°%25?à=*ÿóBÄæ“2¸>@E•!oÛimRC}v…®RõãŸçH %00F07Aÿ¿k(jõûv×¥¶‚ğ:‡÷Ì{˜ÒsUi†#zÜ5Œg7ØXçâ’9®‰¼`åùvü³~L*?:ş@0œÙ8¿§ÿó@Äç‰Ê¼xÒÌŒA	À×”(%00wÀèEM%25\^ú°[a”¿õÌ£ ‘„,P²iA+vÜ75¦Üí›÷/òY©î	ß):ö‹}*
+azM½­ê?Ğ›‹8çL!3ÿòŞÿóBÄß™²ÈzF¸RD÷ªÚ™»³µÏÿÿõÄ³ÛâÌÛ#''|Î„Ñ¤ÒJ‚^Èí²?‹_)Ò¡–UîÛ…WŒ~è9[_(6ÜjÌĞCpâyÍ¡Ez÷ëä|Æncw.…mEÿó@Äà©¦ív@EN>tä5¡íÿv[æ2Ù‘»º6Sí¿UïIV«Ù‹2º"sh—yè´tfe½*a`!òJæ0‰øöf›"Â‡®-3Fó‚Ôh!±ªW}z‹sø$yB)ƒZŸÿóBÄì»RávXMëöèËİ”Ê9ªc»^û6Èb»Ñ˜ú=sÚnŠ´f»¥æC¦”!&ÖçR"]f`ÉéÓ2*HB%00òHMÆë°-_	Íô%00r­ñ‡O"Ç^á.‚[õã>¤ÕÂè·ı?ìšÿó@Äás>õ*DÃoW½„ €3ûõ»şGÌ ½İwÁêŞ¡½…•³¿Yt?Íçù	>5jËy	Eäx[%009iWHK^Ğ›gÂ"Â°ÂUòOÊˆå-]a7¤(ÍnyÿóBÄæ6ÕvIDÓo™rOcÜš ï—˜b‚X¸ìJ¥˜j’ñ…›ä†¬NõÊZq B2ÆÊ€ê* BîØR1|Ï,úğ¡eùƒëL¢b“§i‡œş¤ëIì&¬xFÆÿ?”öÿó@Äáy²Õv@EÜ;7ç¨Æ åÿ«¹W1L$‘¯4äZz…•º{Axôèè6¶$,ğª~=ù—BG«0£#«òAÖÆcó?ò?*?TLóó2ş‚3˜Vs Qu2àºzcÉ—ÿóBÄæIºÔö2FbIiXxÜ¶Îû"¼İÁÃ«B+>_o™üH×.Ízú7ğ2å"r³4%00Î‘}ÕŞ¿‰7$¢5''A»ş|€}JHntuzÙïuŒÿ!İ¦¦jìí.Å$?ˆ«ùşÙPNáÿó@Ää²Èö`FĞe2¬“Q‚²¦‰Ş¿d¯Ò·=û³v­»£•ìKlºùÚ!â¨IªHFö»m`Ã°Gd5‘]¬Qáó%25ÿ…bl™TÖ–×/)õVã0«xûšƒÿóBÄï	ò¸Ö3ÆMLÎ³ıe­/ÿû6a—%003|õ§Ë|ée”Ï¥õVê«ßJ·U–?*coödµ%00–ù.ûqZ	$Á²èÎÈYİZ·õÛé2¤hŸŸÖ¬rjê–[ğõ¢uÿó@Äæ{.Øş0ÄûhiØ¿îPÃàïï=[hhåZ7&£VÃÿìû%25¿\Sİ®ó—o¿Ì¾©İÄFd#û­»mÃ%25!Uˆ.z%25Œm‡‹v|‰Xu?Ğ².Üçè¯	#SäÕ–Å¯+-…İóµÔÿóBÄçÙj¸VHÆ•”Û;>*¯uJ½.¨{I"•õêöoZ}“dºõJ)Y¤z1jşê¶s0i{€*½_X§ÎÉ‰UD»N%25Bm•xYÀqB#<•ŸU(”yæ–6²jI±çÿó@Äçá²Ê^ÄİÈ¦˜©ã¦‹”"´%25ëC2Œ]ŠL¿Ëhí“m#Ôn `Å«±9€A [cÆ$[ÀÑÒİ<%252#ên¼+³8Iu»J‚”%25Ï3_È¯¾ß2–şÅÿóBÄæ.¼ş0Ä½$Ú”*C”Êñã¿%25Ê•"¿ü">uïÚ~g˜#¤Ï*uK÷Ê®’—ä4ÜßKõªE«j°€KŒª2®‚‘­ÕlÖLäÑé%25%00†¯H…!«CVhTŠ	¾J9lšÿó@Äå :¬ÔCÒ%00^eëœ¹é%00
+9N1™KkŠ¼	\øb„1B”6Ö+\<`ğÊ*›Oîû	¡ìóûÉ¨ ı
+fu!hh-Ó5G»XäÖl)H”‘:ªFgt…LÁyÆ‰ÖŸÎå“ÿóBÄïK"¬şI†)È_ı9K«)¦_Jù’#¾e|‹Š;âX™²¿¢}˜år³ÜÕr%25Mí-œ•#«ŞI$n’ƒğ)ªˆÜ+ˆÌ8[üÛ•àCÆ{™¹åär-È÷ókF;ÿó@Äå¨T2F%00n».¦Œ¾§sÍ³b#ût–åºr’¤×ô¥¿6ş÷Ÿş¾L¿3§ïSĞòÏò''ŠP_/Íuiä“_¶Úğ@ „ùÑ\İr™Î/¡¾õ•{¼XñÙßƒepF‡‹ÿóBÄíš†¥”`FA¦	ˆÖ,ğp!¡T­-"/Y¶°%00Â¥cM®÷½æ	¶ sY­*WyÆ ©0Q€*Ü1DJª«‰BÕ¼Ú²«9iÒcÒKjVCÌYI˜e&ÙøŸÖ6YnjÇè‡Öê^Óô’ÿó@Äæc6­`†ÚU,ÛÿgfµízTıcG¬ÒokFÿ€Gısõ”òš®Âu}`¥ŠXsu`JGXe§âØmœú¼H&™ø·õØ»ÛGBõFœ%253<’	ˆŒŠKw:ßÙÿóBÄßxşÆ^E@!é©ùÓ¶cäé›±ù§!ÿå«6Q<ÿ?ËóHvÜ”ìc2ÿ‘Êœ_ÿ/¤~Ä|ÍB''mÌ<Ææzíl“mvÖàd‰Í›0¡°Š¢|GÔÇ%25f4J4ÌÖs+ZºÕ2ÿó@ÄåX¦¥”`Ä=Ó»—2¬®ï;´ç[³®Êš˜’Lo;Ëé•Ñ?ı¾Ï‘ÿy÷³òWus¥¨¢˜İµaÖÜjİ®ÖĞaÂ„†¨ùÃÎœĞè(jŞL«va®Ú%25WÖ¢;l‘éZ¶2ÿóBÄæƒ"”y†=Ïû2Ö½\ÊÊs%25#f÷ûuMâŞ1 ÎçûŞÿøÇ…üæ_YÎw§7¯Ï}âúıª‰É &ìâƒšªG2_zÁC€€ş""(bÌÒ®Ô‹‹ÃûôâóË¾ñ²v«ÿó@Äà32î^0D?ÚNá¯„`VÂğ¯ûTRû1-VH†õ³·5ßd/»<¦Fı>ôLvv[¤kƒOE"j5ö˜S`1Ù6Î­İÒ)ÅH7a,Æde×ÿ·´ÇW0§ƒ8S¾oÿóBÄâÈªÂ^FáSK8˜û_üà³ªìü„b,IrV»Ú!ÿú×ë´ï÷íaox ÊNÎ[Í
+ùd³ÿwÿqXH‚¾,ØÌÌÇË#»Å
+Ø„²º@n×S:hÇ8„Òš™!›òìŒpÿó@Äæi”
+x†æ——Ì»’A³ĞÓ¿ºóÆÓ«lušNqXG)''[\eşMÑ''ìË‡Ø!rİ#‡‰Š9Èÿù$’HÇ"@	¾=Ç]Ì¯±@Å2J3ƒz]ÛQ=¡Å)V€öÄö‡^³ÿóBÄãp‚¨üHF)EFK­fH›kˆŞ¢¥R­á½ÌÉƒ‚Fn…¶´¬Búª>éÇ$Œ¡*>ª"D.G";á~80‡<@0E#ŸÊ{×`eg0i|¬¿sC+¼­Şÿó@ÄéùêÆ^G…‘ÊYÆ¥×bL“ĞßÊL‹ñUÌü·¯K¹µe›ï²öß>NLä·ş÷¶~á;R:Åw“ÕV‚§ş4ÀBŠe¹Íu¡¼÷½Íä€ÁRw®ø‚¼I''şÿúÿóBÄäæÚ>0D²·E2(½÷w¾÷Ä¯÷U$ï<Ãiçê~ı¬ìşOı¤³Xö±şï=#|êË.–ÿößğâ%00‡Ö¶¹K­Šr™~[)Åëèó@F¦ìEğçH+‘†%25dj¨Îÿó@ÄïK^­zF	V‘t"ğ¢å<Gû(SNb
+pÊØ_&,¤vîõ_bßîœÛ|fsß2C½íµº5’¯ÆbÔH¶¶%25ÌùÕkş&¢f¹*ª¶*˜§½‹;U)ïµ‘Y\ÈUéİŞªÿóBÄàØ¬üHÄ«Èêí"µô»Ï¦”İ¯e¢.õB¡Ô¯½è}ö{^Î›"ÿwß»jêş¯¥‚Ä@„kÀ‡¿,İEÌÍWÛ«Áƒ1aá`ìBY.äã@ó…–ä)Böqÿó@Äèû6Æ^G©ç—MVæ™(±†(4k’ÇÊÌÀñÒ"±Lİãˆ^m-”¹“ŠD-ñÊ5jw5åTı©)êHÍ<QUÈ.•ù¡›9ç«»İÚŞèF‹l†1n5Ş±Î<pÈ-¾ÿóBÄããœOÿÿÿÿh”ÿÿÿñbÈ‡Ñ"%00‚´Ğ‰%25UUUS3332ÌÌİU?UU€Ñ2ì¬ ª êpTp‰@Ğ5úƒ¼°4@¨*ï®TÖ
+Ê»ÿó@Äç&»Ú”õ@%00ò ¨*
+‚Ç–•pˆ;LAMEUULAME3.98.2UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUÿóBÄ§8¶x?Æ%00UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUÿó@Äª%00%00H%00%00%00%00UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU')[0m
+Redirected to #<CardSound:0xb5f52db8>
+Completed in 195ms (DB: 1) | 302 Found [http://localhost/card_sounds]
+
+
+Processing CardSoundsController#show (for 127.0.0.1 at 2010-04-17 14:24:11) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'ee2ba24571b8710d1a334ae9fb76772dea3ebc8d729d09b6927aa368802d689896b90b349695b3bf2478a95e203c8f461a999531cf811660b5294d68d4a88060') LIMIT 1[0m
+  [4;35;1mCardSound Load (0.3ms)[0m   [0mSELECT * FROM "card_sounds" WHERE ("card_sounds"."id" = 1) [0m
+Rendering template within layouts/card_sounds
+Rendering card_sounds/show
+Completed in 40ms (View: 5, DB: 1) | 200 OK [http://localhost/card_sounds/1]
+
+
+Processing QuizController#index (for 127.0.0.1 at 2010-04-17 14:27:48) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  [4;36;1mDeck Load (0.2ms)[0m   [0;1mSELECT * FROM "decks" WHERE ("decks"."share" = 't') [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "decks" WHERE ("decks".user_id = 1) [0m
+Rendering template within layouts/application
+Rendering quiz/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'ee2ba24571b8710d1a334ae9fb76772dea3ebc8d729d09b6927aa368802d689896b90b349695b3bf2478a95e203c8f461a999531cf811660b5294d68d4a88060') LIMIT 1[0m
+Completed in 35ms (View: 15, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing CardSoundsController#show (for 127.0.0.1 at 2010-04-17 14:27:52) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'ee2ba24571b8710d1a334ae9fb76772dea3ebc8d729d09b6927aa368802d689896b90b349695b3bf2478a95e203c8f461a999531cf811660b5294d68d4a88060') LIMIT 1[0m
+  [4;35;1mCardSound Load (0.3ms)[0m   [0mSELECT * FROM "card_sounds" WHERE ("card_sounds"."id" = 1) [0m
+
+
+NoMethodError (undefined method `binary_data' for #<CardSound:0xb5fb95cc>):
+    /vendor/rails/activerecord/lib/active_record/attribute_methods.rb:260:in `method_missing'
+    /app/controllers/card_sounds_controller.rb:17:in `show'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (24.8ms)
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing CardSoundsController#show (for 127.0.0.1 at 2010-04-17 14:28:14) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'ee2ba24571b8710d1a334ae9fb76772dea3ebc8d729d09b6927aa368802d689896b90b349695b3bf2478a95e203c8f461a999531cf811660b5294d68d4a88060') LIMIT 1[0m
+  [4;35;1mCardSound Load (0.4ms)[0m   [0mSELECT * FROM "card_sounds" WHERE ("card_sounds"."id" = 1) [0m
+Sending data gor-gai.mp3
+
+
+ActionController::DoubleRenderError (Can only render or redirect once per action):
+    /vendor/rails/actionpack/lib/action_controller/base.rb:865:in `render_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    /vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `custom'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    /app/controllers/card_sounds_controller.rb:20:in `show'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (102.4ms)
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (1.1ms)
+Rendering /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing CardSoundsController#show (for 127.0.0.1 at 2010-04-17 14:29:05) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'ee2ba24571b8710d1a334ae9fb76772dea3ebc8d729d09b6927aa368802d689896b90b349695b3bf2478a95e203c8f461a999531cf811660b5294d68d4a88060') LIMIT 1[0m
+  [4;35;1mCardSound Load (0.3ms)[0m   [0mSELECT * FROM "card_sounds" WHERE ("card_sounds"."id" = 1) [0m
+Sending data gor-gai.mp3
+
+
+ActionController::DoubleRenderError (Can only render or redirect once per action):
+    /vendor/rails/actionpack/lib/action_controller/base.rb:865:in `render_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    /vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `custom'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    /app/controllers/card_sounds_controller.rb:20:in `show'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (28.7ms)
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.9ms)
+Rendering /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing CardSoundsController#show (for 127.0.0.1 at 2010-04-17 14:29:06) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'ee2ba24571b8710d1a334ae9fb76772dea3ebc8d729d09b6927aa368802d689896b90b349695b3bf2478a95e203c8f461a999531cf811660b5294d68d4a88060') LIMIT 1[0m
+  [4;35;1mCardSound Load (0.3ms)[0m   [0mSELECT * FROM "card_sounds" WHERE ("card_sounds"."id" = 1) [0m
+Sending data gor-gai.mp3
+
+
+ActionController::DoubleRenderError (Can only render or redirect once per action):
+    /vendor/rails/actionpack/lib/action_controller/base.rb:865:in `render_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    /vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `custom'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    /app/controllers/card_sounds_controller.rb:20:in `show'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (27.9ms)
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing CardSoundsController#create (for 127.0.0.1 at 2010-04-17 14:29:09) [POST]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"deb73b979c9565b1435c64fd5629f695f3099677", "card_sound"=>{"file"=>#<ActionController::UploadedStringIO:0xb60e54c8>}}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'ee2ba24571b8710d1a334ae9fb76772dea3ebc8d729d09b6927aa368802d689896b90b349695b3bf2478a95e203c8f461a999531cf811660b5294d68d4a88060') LIMIT 1[0m
+  [4;35;1mCardSound Create (0.3ms)[0m   [0mINSERT INTO "card_sounds" ("created_at", "content_type", "card_id", "updated_at", "filename", "sound_data") VALUES('2010-04-17 18:29:09', 'audio/mpeg', NULL, '2010-04-17 18:29:09', 'gor-gai.mp3', 'ÿó@Ä%00˜xC%00°gĞ%00%001‰Áğ|"zÁğü¸>ŸÔ;Êçò”q‡ÿßøœÿÄ%00É@C‚à‡(sƒê P(€À`0%00),ÑL°8}dOÅàÊ>~¡ÿóBÄ ŠšÒ_‘hğNÿ0ƒ%25Ÿã>”JalÿÃÑ±|šdO4ÿüÙ†Ãƒ\b³ÿÿÄ€îÂ È9¦cØ“!IBÿÿş''ä¸÷£Ä{Q%256/:±‡.ÿÿU¼’€PšÂÕŞÿó@Ä	 2˜Ì…‡dXÓº8.Ë¶+)f’°RRÀ¶ÿ,ª¿éör?öM.õ6èf~—÷‰ÛŸ×äaÕåæÿZÉßÿæxË›¿sßûßÜÿZ¥k¶šıöûñ†F—Nß›QøÊÿóBÄKRÆ^0G­Ş½)¦›¿ì­¤OÍoÛµ;7ÖÙßş:¼|Ÿs>ìô#°ï°ÍFŠuE%00ë´ğ6@&‘9ÎEÑíP&FûC*…7‹K!m“¢T„N’¡&¢º*`Õğt¾•ÿó@Ä	 ¢˜
+y†š»|½zV è-IwØMÙîôë´»½ŸvS¬şM*^}îóí½÷ÃÄ:ÿ»+³İ™·ÿ^ıåú zå^³ıvİ~ï·õ¬»j/Ú¶¤nI$’A‰€dTõb7ÿóBÄ*ÂÒ^FæõbT
+û1muw,®´éf\–~²­Kó>œ™à·%25ó;‘?·»ìr”ÜIésı­}Íœêd«"ö²ç<ÜÙÃº4;80‰%00>‰“]NÄŠUÒ@­ÿó@Ä
+ Æœ*y†á‹‡"C#WâËóİÛ¸Yb`ñÀÂF.†
+5¡È%00Ä˜u«Ÿ=,*üš‘Ë­±í½j«´íTQ¢ÉØÅ’2™…v”,¢–kÇÁz±Ø…Ô"âH9çŠÿóBÄ–œ
+xÆ%00´Ë·5€ó­BãbqD@e”ÅT:J\€<—‰ëJ8ñ$Ù¨@]´è½—,"Qæ*ÁĞ8>,MºŒÓß†*ƒ«FŠüc$DÑ9$•´:äÿó@Ä# ’˜
+a†4"òã¹¼TĞ8ì8£—÷‰Ü°(tšŒ9Ì\ëĞH}¡F¶ÄSi,4€ŞªĞ¬~&ìº=Ø–·öçÅÌä\Œ:Yá¨¬ç;ôSvïı–5Thp>-w¶ÿóBÄ-–˜
+`F!ó¸¿à¦½Fı¬÷Æ÷e}¿µ¿¿†óoå½ò]ÔòNÕöaÖ‰GjCPÒOC²ë©°aV„!Öi¤ÎŒá,EsaóÙAå ˜µá12"ğH„äJÅ–"Ç¹ÿó@Ä8H˜y†¥®È7,Õ¡I1eô) Øô
+²!`Å„ÁÕUBôz‚ZR!æÑR¹ËeÃƒgXvÁm$LÁN†±ñµÚ<–ã¬{Òğhb„ûTÆ3"p’3ÿóBÄApœ*`Ä8İAİ^Ùµ’5$4IÉw’ÛD%25aD‘Àßsà£4hBzºªŸä´ø®j3±ÎÌr«©×ş3úè…é^¾¯ÛÑì‰ºıMÎ¨Vº¥_¥?w¢óoúPø?°kËjÆ4ÿó@ÄSÛ"Âş0D=ÔÄ¬%252ÇãÂ€Ô„Ø½˜’iÔ+ZxG¹› ‰€PÚ*ÑLÂ,`ãÃÍ!OÓjÔLà«Õ36ukñ9$¸¬ã‚m½·Ãau="Âò “@e—4îa–g
+ÿóBÄ^X¦¥ty†%00­Yİa>¨ç™„QáÔ%25ÈAæ6eHduà–¢P©6”°‘²íaŠbÇV¥‚RÍ8½h·nsµ0ô™=µ7µR•ğ<
+å¶¥c–Ò7´bE™<Ô«p®Uÿó@Ähğš˜%00aFHl£1%25+P¢ÅĞÓ9v‚ï«6Ñ`»ÀÆŞˆ÷_™;½‹pÃ4lVµ‹Ã‚–,•¨¯ Am]¶]¶Ûqn''%00·(Ô¤Häô¬ß¡ÌœYYË)æI,K\Ñ¼¯O¹ÿóBÄw°Æ ²HF@ªÚ]al}7Ï…Ë¥uÙç‘¹”Ob—ÉËzÈ¾ôÍİZ±ŠÚ¿W¤‹àé«óbL¿y›Ç9ìöosPë†Xºn•ÕdHğÂ4J` j˜¤\©¤âÿó@Ä„+F¾^I†($mÂ[·ş1*>iF¿ğ\‰cËØÖwi¥Îæ§+Y¶‹ï	Ôó²CwIiæDnI¡yÖpoĞUK:ñİ‹õ$ôd{t3w8‹X4¤*4XV’™uj.ÿóBÄv³^ty†%00ÏŞ¦0ÿuçaïlÚ¼f¤Ç„E(¨V“+	Ä’…~‘#?r‘™Ñë3˜B9‹³ÊŠŠu5]œ…1‡F”‚ÛÑt6cN¢©22¹Îî¶Úï½Şùª­z˜¤ÿó@Äg‹V•”`Êİ†"9D4Á2U2”³2Áâ‘È»MŒ&\^€YIDbv{™ÄAÕ¶sˆhnh”8—ÁÎyf½Ê¼PTÇ„u:\;çÛÍËtË{¬<ÏÚÉòC„É™t‰ÿóBÄOË.ta†%25¶3‡æh–”º¯^dRIgË=Tñ›çŞ^ª–[ïû R6‰ö9$®Ù¤ˆYÒIÎçÁLer%00{ ïc·4Í\ÿñ§ºÈx¬ü•¤MŸh¦Ig2×r4å¦r¾ª†ÿ]õßÿó@ÄCP–©”`F%25›Z‹s×~åcğÿûúü)|d+j*-×d’Ëm¶ÑYØâÏ'',Å%00‰ì9o2…òIyÒ‘˜Ñe^^ı$S)Jİä¿VùÓì8Pñ½JšçcÈüU×òpL™
+Ü›îd.,%25VÿóBÄH¢â^GCÌ­ÎîMOkÂ/òhiWù­º4%00%00™%00•Ö¹ˆ¢`Ô±ÍÇJVgdaLr:…äivAÿä3tú†…º''Ä#·à¡ÿæàÖ>\«øª×*iœ·ù·A.ñ·óNıaÿó@ÄI0¶˜
+HÆÒ{¦ìøÍğ§ÙKÿê	Ò0¡iYø5‚¼5êˆæ‡dÕ€ÎÈ¥­2ºµ5e»ôZ²2mU­Ó¹Öµv#İû>B_Åa(˜U[Êór«zš¦‰B"ñbG{ÜıÿóBÄOâ˜ªxÄ<k?bjaBV´A''?²öİô@d€ĞŒÓwÕİäØŠQÙYÊiˆ]ĞßgG­_³{]j@¦%00 4 @yáC‹Å+kP¢m5RS¨uÑ•SËk…ÔŠj]H·#mÿó@ÄV^ ò`Ä<Ûe¶P@a+F2Bø•’T*A´an{%25;Fh¸Qê—isÌSşˆÿàï,}±×¹ù™2¾ŸÍ¾ô[øç0ºe!_|â«Õoûıÿ åm‹ÍBe¶+Uo;Æ(54ÌÿóBÄ_Ùº^FÍY£¸¨Lğİ`øPFãM*"ÿ÷E|Ï(©ûR¯súgı†kµSûùé˜s‚íC‹%25"ŠZˆ‘R¶La7¡OçØ>±Ç3l‚,Dö(í*%00
+–§
+¥`Œt˜+Áÿó@Äcª”%00xÆ%00¿4iŸÉò¾4N_n9<ş÷NíÿùF*ëŸû•0Ãÿâ¾ãıMñ.­7uáÛW¤æÜÏËó/wıç6ÿÿÂãøLâCê’ûˆCXW7%25è³Yo*çu†`Á£GÿóBÄi°¥”a„QZN…°É‰‰%00±õÀ[œ¤Ÿ>ıÉzC"fö/:,§zçË@(«©aQuìƒåƒ§—Ã¢¤D†UD·TÀUá–µ$1Ğ‘K¨Têt®µ/‰ÎÓÔ˜O±ïÿó@ÄrŠœ
+`Æ%00ÅBÛf''Gk’PPzh IyáÅöœ`f§Fƒ''š(^åÒ»ÔYfØE	(jÖ*!sj`Q‡[DL–‚Ë(QD2ƒ¿!˜E¹*y—ÇÚ–ÛYÄ<_V›ExYØçÿóBÄ|I6¥tHFXOÏ§‡ÿÿ¾»Å<ü¶nÏ{9oè©K}¿ŸŸñŸş^·9|QÜ…ïUğÈ-À"tU1L’ÌJú[JÄDxÉ×
+ş"›ÀˆÖÿ3íÌ(_ç,¿æ>ÿó@Ä†¨bœÊy†Ï1Ì·Œ®wÓG§ü÷ÇãëI9_ƒÇïûşôÙ6g÷¿ê&§Z¿»ÃÓ‹¬ÔÒ:rïKc¬~r\vA$q¿å®X¥!FvŒÑªäZÚ&ÚşŠ¦ıÿóBÄ(¦HÄÒ’öC¸bÓgqyóó}[}ÿ÷6.b™¾ŠúJºCB†}PuwS$”Ôˆ®BÉå9ÓS''‡%00	K…x*…²;H¼ùç,¼è2E€¦$?dÿó@Ä•¢R©”@Dùîõ	EĞÅ
+[TòiO)`‰ïa&†*2;®6×øª C !©B?˜‡D!º^¶3ÓöUÂá¡ƒÈ©‚9
+L‹ª
+’<¤äŸĞ;ax22%002eÂHl±§V1ÓLÿóBÄ™š˜ªxÆ%00D‹*Å ˜àå R"''k»…—‚…K¥–nÊA—"‰ìh%00fcÏJ?+ıÀû¾òïÙ|sÏ‰Ç¨A\¢J±„ËıúÛü=&İnµ{“UşªoËVy‹ş>ÿó@Ä¢ğ®­œI†%00c÷õ7nmjW.½c*œ¬˜DmG¿ÇdÉµæŠ‡ã¥™
+^ùşL%25š“‰e+	$«ÿî¦×æKmß6üHœ±Î\<j(Kso¹}ŒŞ»ŸÌ|Ëßİ\ÿóBÄ©°š©”0†ós^€ Ê,ÕX€X!H!´`UiQà´ >ßSğQucõö_>ÒØgï§•å ³ßíÌÎ]mş¢mü-ÿº÷ñ·÷í''ê¾¶ïÚ¶–ño÷¦»²s“ÏQ«fÿó@Ä®áz©tH†!Å@/£æùÁ«7¶ÒÍœĞ—»Œ2Ü·« )(`÷è½¶ÒL›úÛNØ‘D2`|Áé	¨0÷ÿö™şük×Ötéïkvı?æıoûƒÿ¾Ù•`+úA:6•ƒt}ÿóBÄ±¸>¤Ô@D%25x°JN¶Êöë×ØVFèD$´
+%00©R÷ªğOÊÚÅ`€t°Åg(k&Át
+''İjkÃ!@ Q‡
+è’ÇŒİ´U»VÇP¡ëR„§£Á:XÕ\-ájój&ÿó@ÄºèÎ ´`ÄUš´¯ÉaaçÏyµzM¬V£
+uœï‘GÈåçûJk¯ırO¥şóåûçQµíCäRw/Ÿ_”2"7¶ùæk—Bj×¾ÏÀ''}~¥ßd•ÈÜsKnÚá¨æÿóBÄ½àò˜
+y†c‘BÑœ•Ôõ¥c]zÀò¸ÒÔi´q	ÊÄÎƒ°<ÙÇ÷@cX‚+''<yáPúN8^Sm"s:=½t£¯JÆiá«h©² 2GTå±T²c¸léœˆÿó@ÄÁÚÂ¤4`F%25Æœk©8ÆZ&ÙÑcËE‘´BRÇVŞß?[·:®¶º…¸=[æZ…Ó¼RMsÌuvÂNÈ‘ÙkTSØ×Ÿ0Â%00SjÇ-“]¿ÿqGW!ÈOr02-Me÷´µ“ÿóBÄÄÁÂ^ELiõš‘
+aF_%00PÓb*Ìæ*MCuŸz”»ÃÌv˜®‡âÍ,üô	ùL_½Ç¸ëvvwmÚ×xC&İ?¦¤¨uÉ
+&#c`P~·£ÎdB’XTHÉ}Ëÿó@ÄÉ™ª¤T`Ä<9ßó0ßkí¯d—ãêÛö½ëÿ™¾gˆ<ú½}
+lV8–+kôWQ?/R''Ó1¶«å»q‡Øü¡_JeÛÿ‘ÀA‡51Ûæ³[Õk6@”*ˆ{9é¢ñšYÿóBÄÑ)¢Ê^GM­ã¡ÜÆO]4Ö——¥
+y§ )İaŞ”e3ªïG;ë«Lî§9ûÙ¤z¥¥¾Å~óçziĞ­?1#Š¬£°š³ƒñO"Éîè,}á%25•,1|Í±-´ÿó@ÄÔR ÌxÄ-,%00Ô"åC%00vÏ=PÓÁCÄ‡Š½\¦l>Ö¤ b–·l»8öœUî)Y­&C<w-.=a£ÌÅA9ÒœÜ…œØË@dÎ?ÎŸêÔ©LìoA‰LŞÿóBÄÚë2­–0DÜuøİ#­éò>åUÏçË¼¿>im?Šfœ3B­ƒH*µ%00qÇ‹Øø•UàwÎ¸èg"¥Â°éËáõÍëYËé2±ôMRÌÏuv#êÔkvOvgÿó@ÄŞp˜%00bÆ%00R4;=pO_ôë{ÿ÷åyaë¾ní*›Pv¶ïµ[İÏ·ÇZÛ²:³©*²0¸v®Tu"º#8XXƒ™¶"£Ej8g±à®‹iÂb^2Ü«Iùd~óĞçkÿóBÄç¢’˜òzF%00ß4 qê/­É{Ód§‘:emüùÏÎäGss/Lô7\­ùŸNì¿¡ı`pF>Ja9F°tYËœÚ’³vÖxà­Òår]ˆ¦Ë:îlÉŸ&×>î´­äSV%25îÿÿó@Ää1¦œ,`Ä]Aó—5Ã¼ëj_ÿ×_äqº›/ğÂöán#İøßìÄ3ÿ3xÿí –Òé¶öáAVäÓÊ† áumÚçM]¼a·T:s¬CúnGcÍıÿÂ³Ï
+™=Òÿó@Äê[R˜Ôa†	–Nœˆˆpú"GGÚj‚c¥Èëëƒ¸±·Aîûj¶''}İóVq
+¿ÙSä”ïyÒ%25²-*ìµÿäcuüLEŠĞÑ8¡:J‹ ãÏò 1šE¦X¹À(·#aû[Xº–ÿóBÄã(’”%00yŒo8*r£ç#4¸›şÕ¤Á£C•wÙ[ƒ(úuÉ¤%25æÕ$NÈë­»³µæ)m[ıMoÛ¬ï2»2kE*Q”.û%25»l6\gˆKgª[sÊa¬O)Ÿü¬İÕ›ÿó@ÄêÉÂ^1†•KE˜ÕÓm_YÇ9÷-¿Èëö·ÎÎT`„SM˜ÙT™•;0\¨Æ›(2.³ÂµÙpä*LãÅÅ“=¸Ñ-ÕXÄ“–K¶ØU±ñŠæ‘C¨	ĞX_‡ñƒÿóBÄáQzÔöaĞ§^âh=|v’(Ùi)ÕU–Ô}çbò×‡oMè$­‚*W—
+ta-]o:Û`­’Ş}hc­í‰£åNjö5ĞB}3îóbÊªf¦rë¶ûq->4µùÆÕpÿó@ÄÓ™Æö>[ÅY·ê¿pø''şHs»¼zJşnµT}>È¥Öp$è''»3Ò!ç@N:³2§Ùp,*ph0p¹ò`ˆàÆ7ìê"íp¾´	Ä/8c*(9#ƒvñOüµ@ÿóBÄÏ™zñ¾;DëJğ¡Õ_–Âtğ|ÚşM¦íMb7Ñ+ÛÃ9‚ïïiR–%25Tq-<“à\UçÖÔŞ9Âc«ÔX”ĞGş›°é1ÇbÂTU&
+Ke¶Ñ¶(5+£„®«ÿó@ÄÈŠş^BÄÎ’¢®å’Úƒ¢ohÊíß¡Ò¾¬óa1¬Iÿãçwqdñ÷ÉÄw3û.MLßÍÕ<ü)w¸ş½‡•ë~«¥—Ö“ÌÓs:Å>Fä@P·aa²[âß)[ÿóBÄÆ‰ªÔş@EF¹pœşæ‰ È/yqF¤U''¨©w[xú«±ˆµ¦Kˆˆ7 ïdÈê”e¢ËKÑH§U¾U]CH¤eéEÁ»}ÿüRdDbñvÅb,H>½Oš±‹Š!ÿó@ÄÇ¸¦æ^J''ù£°Lœ¢€.ÓBãğøå%00Ôó†¢tò±°²W²ÕO4ñF7õh0ó4=-J‡ªn°[rí¶Ûa66p°-¡["˜*("Á#Dò¢ªŸh¨s„yVŒœkÌÿóBÄËh’ÕŒxIñWŒ¬Q‡¶­`²•U¦ÚTX8)`Ïsb›ÀÉiÓ¬¬Plí•%00	í¶Ûq‘@â ±4ØYZ—±iøÌ4rØ)3w®¾l_à®JğöÎ±ëIúl|s‚îÿó@ÄÕHvÑ¾Œ ÷%25–e2bJi™ÜæSTÌˆÄo˜˜ÈÚÊQzV·I9H§+_û=ŠqjNGÅ	)É%25•*xx§Š.$%00%00x@áyj¶û¶Šåëî«â§¯ÿ‘{JŠ PÈŞàÉyÿóBÄâ.ú^1D"tS0nMhÒ¹Õ„%25â‚Mœ««ö7æ¢¸²ÕSl¤9ó!Èá­¡üæµÊ	ä=«èˆÏ¶ÆU™HèP^“°T1D´Q†¼€ºVµ2«ï¿4B”RóIYRÿó@Äíc&Â^GÉÇ‰h¨“ cÔØo¬…ÓNÉÕœc?÷ò›:é°¾ôâ_ı-¿z››Ò…ËEM7*A­´b}â±súÌ|1„u:ş0JcûDÎUŠã‹‹ú°%25?à=*ÿóBÄæ“2¸>@E•!oÛimRC}v…®RõãŸçH %00F07Aÿ¿k(jõûv×¥¶‚ğ:‡÷Ì{˜ÒsUi†#zÜ5Œg7ØXçâ’9®‰¼`åùvü³~L*?:ş@0œÙ8¿§ÿó@Äç‰Ê¼xÒÌŒA	À×”(%00wÀèEM%25\^ú°[a”¿õÌ£ ‘„,P²iA+vÜ75¦Üí›÷/òY©î	ß):ö‹}*
+azM½­ê?Ğ›‹8çL!3ÿòŞÿóBÄß™²ÈzF¸RD÷ªÚ™»³µÏÿÿõÄ³ÛâÌÛ#''|Î„Ñ¤ÒJ‚^Èí²?‹_)Ò¡–UîÛ…WŒ~è9[_(6ÜjÌĞCpâyÍ¡Ez÷ëä|Æncw.…mEÿó@Äà©¦ív@EN>tä5¡íÿv[æ2Ù‘»º6Sí¿UïIV«Ù‹2º"sh—yè´tfe½*a`!òJæ0‰øöf›"Â‡®-3Fó‚Ôh!±ªW}z‹sø$yB)ƒZŸÿóBÄì»RávXMëöèËİ”Ê9ªc»^û6Èb»Ñ˜ú=sÚnŠ´f»¥æC¦”!&ÖçR"]f`ÉéÓ2*HB%00òHMÆë°-_	Íô%00r­ñ‡O"Ç^á.‚[õã>¤ÕÂè·ı?ìšÿó@Äás>õ*DÃoW½„ €3ûõ»şGÌ ½İwÁêŞ¡½…•³¿Yt?Íçù	>5jËy	Eäx[%009iWHK^Ğ›gÂ"Â°ÂUòOÊˆå-]a7¤(ÍnyÿóBÄæ6ÕvIDÓo™rOcÜš ï—˜b‚X¸ìJ¥˜j’ñ…›ä†¬NõÊZq B2ÆÊ€ê* BîØR1|Ï,úğ¡eùƒëL¢b“§i‡œş¤ëIì&¬xFÆÿ?”öÿó@Äáy²Õv@EÜ;7ç¨Æ åÿ«¹W1L$‘¯4äZz…•º{Axôèè6¶$,ğª~=ù—BG«0£#«òAÖÆcó?ò?*?TLóó2ş‚3˜Vs Qu2àºzcÉ—ÿóBÄæIºÔö2FbIiXxÜ¶Îû"¼İÁÃ«B+>_o™üH×.Ízú7ğ2å"r³4%00Î‘}ÕŞ¿‰7$¢5''A»ş|€}JHntuzÙïuŒÿ!İ¦¦jìí.Å$?ˆ«ùşÙPNáÿó@Ää²Èö`FĞe2¬“Q‚²¦‰Ş¿d¯Ò·=û³v­»£•ìKlºùÚ!â¨IªHFö»m`Ã°Gd5‘]¬Qáó%25ÿ…bl™TÖ–×/)õVã0«xûšƒÿóBÄï	ò¸Ö3ÆMLÎ³ıe­/ÿû6a—%003|õ§Ë|ée”Ï¥õVê«ßJ·U–?*coödµ%00–ù.ûqZ	$Á²èÎÈYİZ·õÛé2¤hŸŸÖ¬rjê–[ğõ¢uÿó@Äæ{.Øş0ÄûhiØ¿îPÃàïï=[hhåZ7&£VÃÿìû%25¿\Sİ®ó—o¿Ì¾©İÄFd#û­»mÃ%25!Uˆ.z%25Œm‡‹v|‰Xu?Ğ².Üçè¯	#SäÕ–Å¯+-…İóµÔÿóBÄçÙj¸VHÆ•”Û;>*¯uJ½.¨{I"•õêöoZ}“dºõJ)Y¤z1jşê¶s0i{€*½_X§ÎÉ‰UD»N%25Bm•xYÀqB#<•ŸU(”yæ–6²jI±çÿó@Äçá²Ê^ÄİÈ¦˜©ã¦‹”"´%25ëC2Œ]ŠL¿Ëhí“m#Ôn `Å«±9€A [cÆ$[ÀÑÒİ<%252#ên¼+³8Iu»J‚”%25Ï3_È¯¾ß2–şÅÿóBÄæ.¼ş0Ä½$Ú”*C”Êñã¿%25Ê•"¿ü">uïÚ~g˜#¤Ï*uK÷Ê®’—ä4ÜßKõªE«j°€KŒª2®‚‘­ÕlÖLäÑé%25%00†¯H…!«CVhTŠ	¾J9lšÿó@Äå :¬ÔCÒ%00^eëœ¹é%00
+9N1™KkŠ¼	\øb„1B”6Ö+\<`ğÊ*›Oîû	¡ìóûÉ¨ ı
+fu!hh-Ó5G»XäÖl)H”‘:ªFgt…LÁyÆ‰ÖŸÎå“ÿóBÄïK"¬şI†)È_ı9K«)¦_Jù’#¾e|‹Š;âX™²¿¢}˜år³ÜÕr%25Mí-œ•#«ŞI$n’ƒğ)ªˆÜ+ˆÌ8[üÛ•àCÆ{™¹åär-È÷ókF;ÿó@Äå¨T2F%00n».¦Œ¾§sÍ³b#ût–åºr’¤×ô¥¿6ş÷Ÿş¾L¿3§ïSĞòÏò''ŠP_/Íuiä“_¶Úğ@ „ùÑ\İr™Î/¡¾õ•{¼XñÙßƒepF‡‹ÿóBÄíš†¥”`FA¦	ˆÖ,ğp!¡T­-"/Y¶°%00Â¥cM®÷½æ	¶ sY­*WyÆ ©0Q€*Ü1DJª«‰BÕ¼Ú²«9iÒcÒKjVCÌYI˜e&ÙøŸÖ6YnjÇè‡Öê^Óô’ÿó@Äæc6­`†ÚU,ÛÿgfµízTıcG¬ÒokFÿ€Gısõ”òš®Âu}`¥ŠXsu`JGXe§âØmœú¼H&™ø·õØ»ÛGBõFœ%253<’	ˆŒŠKw:ßÙÿóBÄßxşÆ^E@!é©ùÓ¶cäé›±ù§!ÿå«6Q<ÿ?ËóHvÜ”ìc2ÿ‘Êœ_ÿ/¤~Ä|ÍB''mÌ<Ææzíl“mvÖàd‰Í›0¡°Š¢|GÔÇ%25f4J4ÌÖs+ZºÕ2ÿó@ÄåX¦¥”`Ä=Ó»—2¬®ï;´ç[³®Êš˜’Lo;Ëé•Ñ?ı¾Ï‘ÿy÷³òWus¥¨¢˜İµaÖÜjİ®ÖĞaÂ„†¨ùÃÎœĞè(jŞL«va®Ú%25WÖ¢;l‘éZ¶2ÿóBÄæƒ"”y†=Ïû2Ö½\ÊÊs%25#f÷ûuMâŞ1 ÎçûŞÿøÇ…üæ_YÎw§7¯Ï}âúıª‰É &ìâƒšªG2_zÁC€€ş""(bÌÒ®Ô‹‹ÃûôâóË¾ñ²v«ÿó@Äà32î^0D?ÚNá¯„`VÂğ¯ûTRû1-VH†õ³·5ßd/»<¦Fı>ôLvv[¤kƒOE"j5ö˜S`1Ù6Î­İÒ)ÅH7a,Æde×ÿ·´ÇW0§ƒ8S¾oÿóBÄâÈªÂ^FáSK8˜û_üà³ªìü„b,IrV»Ú!ÿú×ë´ï÷íaox ÊNÎ[Í
+ùd³ÿwÿqXH‚¾,ØÌÌÇË#»Å
+Ø„²º@n×S:hÇ8„Òš™!›òìŒpÿó@Äæi”
+x†æ——Ì»’A³ĞÓ¿ºóÆÓ«lušNqXG)''[\eşMÑ''ìË‡Ø!rİ#‡‰Š9Èÿù$’HÇ"@	¾=Ç]Ì¯±@Å2J3ƒz]ÛQ=¡Å)V€öÄö‡^³ÿóBÄãp‚¨üHF)EFK­fH›kˆŞ¢¥R­á½ÌÉƒ‚Fn…¶´¬Búª>éÇ$Œ¡*>ª"D.G";á~80‡<@0E#ŸÊ{×`eg0i|¬¿sC+¼­Şÿó@ÄéùêÆ^G…‘ÊYÆ¥×bL“ĞßÊL‹ñUÌü·¯K¹µe›ï²öß>NLä·ş÷¶~á;R:Åw“ÕV‚§ş4ÀBŠe¹Íu¡¼÷½Íä€ÁRw®ø‚¼I''şÿúÿóBÄäæÚ>0D²·E2(½÷w¾÷Ä¯÷U$ï<Ãiçê~ı¬ìşOı¤³Xö±şï=#|êË.–ÿößğâ%00‡Ö¶¹K­Šr™~[)Åëèó@F¦ìEğçH+‘†%25dj¨Îÿó@ÄïK^­zF	V‘t"ğ¢å<Gû(SNb
+pÊØ_&,¤vîõ_bßîœÛ|fsß2C½íµº5’¯ÆbÔH¶¶%25ÌùÕkş&¢f¹*ª¶*˜§½‹;U)ïµ‘Y\ÈUéİŞªÿóBÄàØ¬üHÄ«Èêí"µô»Ï¦”İ¯e¢.õB¡Ô¯½è}ö{^Î›"ÿwß»jêş¯¥‚Ä@„kÀ‡¿,İEÌÍWÛ«Áƒ1aá`ìBY.äã@ó…–ä)Böqÿó@Äèû6Æ^G©ç—MVæ™(±†(4k’ÇÊÌÀñÒ"±Lİãˆ^m-”¹“ŠD-ñÊ5jw5åTı©)êHÍ<QUÈ.•ù¡›9ç«»İÚŞèF‹l†1n5Ş±Î<pÈ-¾ÿóBÄããœOÿÿÿÿh”ÿÿÿñbÈ‡Ñ"%00‚´Ğ‰%25UUUS3332ÌÌİU?UU€Ñ2ì¬ ª êpTp‰@Ğ5úƒ¼°4@¨*ï®TÖ
+Ê»ÿó@Äç&»Ú”õ@%00ò ¨*
+‚Ç–•pˆ;LAMEUULAME3.98.2UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUÿóBÄ§8¶x?Æ%00UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUÿó@Äª%00%00H%00%00%00%00UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU')[0m
+Redirected to actionindex
+Completed in 206ms (DB: 1) | 302 Found [http://localhost/card_sounds]
+
+
+Processing CardSoundsController#index (for 127.0.0.1 at 2010-04-17 14:29:10) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'ee2ba24571b8710d1a334ae9fb76772dea3ebc8d729d09b6927aa368802d689896b90b349695b3bf2478a95e203c8f461a999531cf811660b5294d68d4a88060') LIMIT 1[0m
+  [4;35;1mCardSound Load (0.5ms)[0m   [0mSELECT * FROM "card_sounds" [0m
+Rendering template within layouts/card_sounds
+Rendering card_sounds/index
+Completed in 36ms (View: 15, DB: 1) | 200 OK [http://localhost/card_sounds]
+
+
+Processing CardSoundsController#show (for 127.0.0.1 at 2010-04-17 14:29:13) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'ee2ba24571b8710d1a334ae9fb76772dea3ebc8d729d09b6927aa368802d689896b90b349695b3bf2478a95e203c8f461a999531cf811660b5294d68d4a88060') LIMIT 1[0m
+  [4;35;1mCardSound Load (0.4ms)[0m   [0mSELECT * FROM "card_sounds" WHERE ("card_sounds"."id" = 1) [0m
+Sending data gor-gai.mp3
+
+
+ActionController::DoubleRenderError (Can only render or redirect once per action):
+    /vendor/rails/actionpack/lib/action_controller/base.rb:865:in `render_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    /vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `custom'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    /app/controllers/card_sounds_controller.rb:20:in `show'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (27.7ms)
+Rendered /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (61.6ms)
+Rendering /home/rob/code/flashcards/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing CardSoundsController#show (for 127.0.0.1 at 2010-04-17 14:29:46) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'ee2ba24571b8710d1a334ae9fb76772dea3ebc8d729d09b6927aa368802d689896b90b349695b3bf2478a95e203c8f461a999531cf811660b5294d68d4a88060') LIMIT 1[0m
+  [4;35;1mCardSound Load (0.3ms)[0m   [0mSELECT * FROM "card_sounds" WHERE ("card_sounds"."id" = 1) [0m
+Sending data gor-gai.mp3
+Completed in 26ms (View: 0, DB: 1) | 200 OK [http://localhost/card_sounds/1]
+
+
+Processing CardSoundsController#show (for 127.0.0.1 at 2010-04-17 14:29:47) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'ee2ba24571b8710d1a334ae9fb76772dea3ebc8d729d09b6927aa368802d689896b90b349695b3bf2478a95e203c8f461a999531cf811660b5294d68d4a88060') LIMIT 1[0m
+  [4;35;1mCardSound Load (0.3ms)[0m   [0mSELECT * FROM "card_sounds" WHERE ("card_sounds"."id" = 1) [0m
+Sending data gor-gai.mp3
+Completed in 24ms (View: 0, DB: 1) | 200 OK [http://localhost/card_sounds/1]
+
+
+Processing CardSoundsController#index (for 127.0.0.1 at 2010-04-17 14:30:07) [GET]
+  Session ID: b2d88e950e326d8a3ba71bfda0230354
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'ee2ba24571b8710d1a334ae9fb76772dea3ebc8d729d09b6927aa368802d689896b90b349695b3bf2478a95e203c8f461a999531cf811660b5294d68d4a88060') LIMIT 1[0m
+  [4;35;1mCardSound Load (0.5ms)[0m   [0mSELECT * FROM "card_sounds" [0m
+Rendering template within layouts/card_sounds
+Rendering card_sounds/index
+Completed in 39ms (View: 18, DB: 1) | 200 OK [http://localhost/card_sounds]

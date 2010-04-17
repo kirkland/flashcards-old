@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  filename: MyString
+  type: MyString
+  sound_data: 
+  card_id: 9.99
+
+two:
+  filename: MyString
+  type: MyString
+  sound_data: 
+  card_id: 9.99
