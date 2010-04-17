@@ -4,6 +4,11 @@
 	Card: 
         <%= f.text_field :front, :size => 20, :index => nil %>
         <%= f.text_field :back, :size => 20, :index => nil %>
+
+	<% fields_for card.card_sound, card.card_sound do |s| %>
+          <%= s.file_field :file, :index => nil %>
+	<% end %>
+
 	<% if card.new_record? %>
   	  <%= link_to_function "remove", "$(this).up('.edit-card').remove()" %>
 	<% else %>
