@@ -14,6 +14,6 @@ function reveal_back(new_text) {
 		});
 }
 
-function play_sound() {
-    $('sound').insert( { after: '<embed src="/sounds/gor-gai.mp3" type="application/x-mplayer2" autostart="true" height="0" width="0">' } )
+function play_sound(sound_id) {
+    $('sound').insert( { after: '<embed src="/card_sounds/'+sound_id+'" type="application/x-mplayer2" autostart="true" height="0" width="0">' } )
 }
