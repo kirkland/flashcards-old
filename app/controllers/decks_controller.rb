@@ -27,6 +27,10 @@ class DecksController < ApplicationController
     @deck = Deck.new(params[:deck])
     @deck.user_id = current_user.id
 
+    # @deck.cards.each do |card|
+    #   card.sound_file = 
+    # end
+
     respond_to do |format|
       if @deck.save
         flash[:notice] = 'Deck was successfully created.'

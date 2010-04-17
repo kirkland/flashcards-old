@@ -11,6 +11,7 @@
 	  <%= f.hidden_field :id, :index => nil %>
 	  <%= f.hidden_field :should_destroy, :index => nil, :class => 'should_destroy' %>
 	<% end %>
+        <p>Add a sound: <%= f.file_field :sound_upload, :index => nil %></p>
     </p>
   <% end %>
 </div>
