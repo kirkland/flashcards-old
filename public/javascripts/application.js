@@ -13,3 +13,7 @@ function reveal_back(new_text) {
 	    visibility: 'hidden',
 		});
 }
+
+function play_sound() {
+    $('sound').insert( { after: '<embed src="/sounds/gor-gai.mp3" type="application/x-mplayer2" autostart="true" height="0" width="0">' } )
+}
