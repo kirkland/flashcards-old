@@ -74,11 +74,13 @@
 ** TODO make about page 					       :comp:
 ** DONE reverse engineer answers.com				 :comp:today:
 * Bugs 2010-04-19
-** TODO cards should not be able to be blank			       :comp:
-** TODO decks should not be blank				       :comp:
+** DONE cards should not be able to be blank			       :comp:
+** DONE decks should not be blank				       :comp:
 ** TODO sounds should be optional add-on for card		       :comp:
-** TODO cards should have max length				       :comp:
+** DONE cards should have max length				       :comp:
 ** TODO fix quiz font size 					       :comp:
 ** TODO refreshing quiz gives next card (should not) 		       :comp:
 ** TODO uploaded audio maximum size 				       :comp:
 ** TODO disallow white-space-only decks/cards 			       :comp:
+* More Bugs
+** TODO decks cannot have 0 cards 				       :comp:

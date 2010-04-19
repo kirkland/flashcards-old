@@ -28,6 +28,11 @@ class DecksController < ApplicationController
     @deck.user_id = current_user.id
 
     respond_to do |format|
+      # remove cards where both sides are blank
+      @deck.cards = @deck.cards.delete_if { |card|
+        card.front == "" && card.back == ""
+      }
+
       if @deck.save
         flash[:notice] = 'Deck was successfully created.'
         format.html { redirect_to(@deck) }
@@ -43,6 +48,13 @@ class DecksController < ApplicationController
     @deck = Deck.find(params[:id])
 
     respond_to do |format|
+      # remove cards where both sides are blank
+      unless params[:deck][:card_attributes].nil?
+        params[:deck][:card_attributes].delete_if { |card|
+          card[:front] == "" && card[:back] == ""
+        }
+      end
+
       if @deck.update_attributes(params[:deck])
         flash[:notice] = 'Deck was successfully updated.'
         format.html { redirect_to(@deck) }
