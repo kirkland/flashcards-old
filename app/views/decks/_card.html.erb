@@ -15,5 +15,14 @@
 	  <%= f.hidden_field :should_destroy, :index => nil, :class => 'should_destroy' %>
 	<% end %>
     </p>
+    <% unless card.errors.empty? %>
+      <div class="card-error">
+	<ul>
+	  <% card.errors.each do |attr,msg| %>
+	    <li><%= msg %></li>
+	  <% end %>
+	</ul>
+      </div>
+    <% end %>
   <% end %>
 </div>

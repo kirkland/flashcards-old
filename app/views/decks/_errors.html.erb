@@ -1,0 +1,18 @@
+<% unless @deck.errors.empty? %>
+<div id="errors">
+  <span class="error-header">Problem Saving Deck</span>
+  <ul>
+  <% card_problem = 0 %>
+  <% @deck.errors.each do |attr,msg| %>
+    <% if attr == "cards" %> <!-- individual card errors are reported elsewhere -->
+      <% card_problem = 1 %>
+    <% else %>
+      <li><%= msg %></li>
+    <% end %>
+  <% end %>
+  <% if card_problem == 1 %>
+    <li>Problem with one or more cards</li>
+  <% end %>
+  </ul>
+</div>
+<% end %>

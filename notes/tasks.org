@@ -80,3 +80,5 @@
 ** TODO cards should have max length				       :comp:
 ** TODO fix quiz font size 					       :comp:
 ** TODO refreshing quiz gives next card (should not) 		       :comp:
+** TODO uploaded audio maximum size 				       :comp:
+** TODO disallow white-space-only decks/cards 			       :comp:

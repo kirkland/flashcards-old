@@ -3,6 +3,7 @@ class Deck < ActiveRecord::Base
   belongs_to :user
   after_update :save_cards
   validates_associated :cards
+  validates_length_of :name, :within => 1..30, :too_long => "Deck name must be 30 or fewer letters.", :too_short => "Deck name cannot be blank."
 
   def card_attributes=(card_attributes)
     card_attributes.each do |attributes|

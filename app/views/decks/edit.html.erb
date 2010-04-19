@@ -1,8 +1,8 @@
 <h1>Editing deck</h1>
 
-<% form_for(@deck) do |f| %>
-  <%= f.error_messages %>
+<%= render :partial => 'errors' %>
 
+<% form_for(@deck) do |f| %>
   <%= render :partial => 'fields', :locals => { :f => f } %>
   <p><%= f.submit "Update" %></p>
 <% end %>
