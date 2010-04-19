@@ -40,9 +40,6 @@
 
 <div id="content">
   <p style="color: green"><%= flash[:notice] %></p>
-  <% if not current_user %>
-    <p>Log in to create your own decks!</p>
-  <% end %>
   <%= yield  %>
 </div>
 
