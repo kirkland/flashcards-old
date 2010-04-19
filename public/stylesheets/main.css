@@ -1,5 +1,5 @@
 html, body {
-    background-color:#013A62;
+    background-color:#192852;
     padding:0;
     width:750px;
     margin:auto;
@@ -19,8 +19,15 @@ div#header {
     padding-top:15px;
     float:left;
     width:733px;
-    background-color:#FFD328;
+    background-color:#F7D751;
     height:60px;
+}
+
+div#header2 {
+    min-height:10px;
+    width:100%;
+    background-color:#192852;
+    float:left;
 }
 
 div#user-nav {
@@ -30,7 +37,7 @@ div#user-nav {
     padding:15px;
     width:100px;
     float:left;
-    background-color:#f3db65;
+    background-color:#F7D751;
     height:700px;   /* testing only, need to get user-nav and content actually lined up */
 }
 

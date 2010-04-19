@@ -2,10 +2,11 @@
 ** DONE record some sounds					       :comp:
 ** DONE how to get sounds in db?				       :comp:
 ** DONE migration to add sounds/etc.				       :comp:
-** TODO update card new/edit to upload sounds			 :comp:today:
+** DONE update card new/edit to upload sounds			 :comp:today:
 ** DONE 'play sound' button in quiz should look up sound from db, not just point at one file :comp:
 
 
+** TODO refactor card.rb 					       :comp:
 * Functionality
 ** DONE users							       :comp:
 ** DONE users own a deck					       :comp:

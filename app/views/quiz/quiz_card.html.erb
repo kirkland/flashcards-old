@@ -4,6 +4,6 @@
 <span id="reveal-button"><%= button_to_function 'Reveal Answer', "reveal_back('#{h(@card.back)}')" %></span>
 <%= button_to 'Next' %>
 
-<% unless @card.card_sound.nil? %>
-<span id="sound"><%= button_to_function 'Play Sound', "play_sound(#{@card.card_sound.id})" %></span>
+<% unless @card.card_sound_id.nil? %>
+<span id="sound"><%= button_to_function 'Play Sound', "play_sound(#{@card.card_sound_id})" %></span>
 <% end %>
