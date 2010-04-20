@@ -76,11 +76,12 @@
 * Bugs 2010-04-19
 ** DONE cards should not be able to be blank			       :comp:
 ** DONE decks should not be blank				       :comp:
+** DONE fix quiz font size					       :comp:
 ** TODO sounds should be optional add-on for card		       :comp:
 ** DONE cards should have max length				       :comp:
-** TODO fix quiz font size 					       :comp:
 ** TODO refreshing quiz gives next card (should not) 		       :comp:
 ** TODO uploaded audio maximum size 				       :comp:
 ** TODO disallow white-space-only decks/cards 			       :comp:
 * More Bugs
 ** TODO decks cannot have 0 cards 				       :comp:
+** TODO allow longer than 30 chars, and wrapping 		       :comp:

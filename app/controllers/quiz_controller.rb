@@ -19,13 +19,18 @@ class QuizController < ApplicationController
     if session[:quiz].has_more?
       @card = session[:quiz].next
 
-      if @card.back.length < 5
+      if @card.back.length < 7
+        @backsize = "80px"
+      elsif @card.back.length < 11
         @backsize = "50px"
       else
         @backsize = "20px"
       end
-      if @card.front.length < 10
+
+      if @card.front.length < 7
         @frontsize = "80px"
+      elsif @card.front.length < 11
+        @backsize = "50px"
       else
         @frontsize = "20px"
       end
