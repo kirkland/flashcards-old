@@ -7,6 +7,8 @@
 
 
 ** TODO refactor card.rb 					       :comp:
+
+** TODO everyone should be authorized to hear sounds		      :today: :comp:
 * Functionality
 ** DONE users							       :comp:
 ** DONE users own a deck					       :comp:
@@ -69,9 +71,9 @@
 ** DONE play with an emacs rails package			       :comp:
 ** TODO ask ben: why does my find only work w/ true and 0? 	       :comp:
 ** DONE register domain						       :comp:
-** TODO make news page 						       :comp:
+** TODO make news page						 :comp:today:
 ** TODO resources page to learningthai.com: pronounciation	       :comp:
-** TODO make about page 					       :comp:
+** TODO make about page						 :comp:today:
 ** DONE reverse engineer answers.com				 :comp:today:
 * Bugs 2010-04-19
 ** DONE cards should not be able to be blank			       :comp:
@@ -85,3 +87,19 @@
 * More Bugs
 ** TODO decks cannot have 0 cards 				       :comp:
 ** TODO allow longer than 30 chars, and wrapping 		       :comp:
+** TODO fix card size for thai characters 			       :comp:
+** TODO quiz index.html need to get deck.share filter out of there, in to controller								       :comp:
+* Ben Changes
+** TODO switch card and card_sound foreign keys			       :comp:
+You have a foreign key in the wrong place.  Whichever class has the belongs_to gets the foreign key.  So, you should have a card_id in your card_sounds table, not a card_sounds_id in your cards table.  For reference, you did this correctly with the association between Decks and Users.
+
+You can see a symptom of this brokenness by starting script/console and doing something like Card.last.card_sound
+
+That should work, showing you the last Card's CardSound.  Instead, you get this:
+ActiveRecord::StatementInvalid: SQLite3::SQLException: no such column: card_sounds.card_id: SELECT * FROM "card_sounds" WHERE ("card_sounds".card_id = 1)  LIMIT 1
+
+See?  It's expecting a card_id in card_sounds, not a card_sound_id in cards.
+
+I imagine you had to do some other workarounds to actually get this to work, so make sure to do some thorough testing after changing this; it's likely that other stuff is broken.
+** TODO decks_controller.rb: L32 and L52: I'd move this logic into the model, probably something like before_save :remove_blank_cards , then def remove_blank_cards ... end :comp:
+** TODO quiz_controller.rb move card size calc to model or helper      :comp:

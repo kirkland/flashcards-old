@@ -2,11 +2,11 @@ class QuizController < ApplicationController
   skip_before_filter :authorized
 
   def index
-    @decks = Deck.find(:all, :conditions => { :share => true })  # for some reason, only true and 0 work
-    @users = User.find(:all)
+    @users = User.all.select { |user| user.decks.present? }
 
+    # only users with 1 or more shared decks
     @users = @users.find_all do |user|
-      user.decks.size > 0
+      user.decks.delete_if { |deck| deck.share == false }.length > 0
     end
   end
 

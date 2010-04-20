@@ -1,5 +1,5 @@
 class DecksController < ApplicationController
-  before_filter :is_owner?, :except => [:index, :show, :new, :create]
+  before_filter :redirect_unless_owner, :except => [:index, :show, :new, :create]
 
   def index
     @decks = Deck.find(:all, :conditions => { :user_id => current_user.id })
@@ -76,8 +76,8 @@ class DecksController < ApplicationController
     end
   end
   
-  def is_owner?
-    if Deck.find(params[:id]).user_id != current_user.id
+  def redirect_unless_owner
+    if Deck.find(params[:id]).user != current_user
       flash[:notice] = "Not Authorized"
       redirect_to :decks
     end

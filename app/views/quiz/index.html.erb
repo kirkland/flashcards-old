@@ -3,7 +3,7 @@
 <% for user in @users %>
 <p>Decks by <%= user.username %>:
 <ul>
-<% for deck in user.decks %>
+<% for deck in user.decks.delete_if { |deck| deck.share == false }  %>
   <li><%= link_to h(deck.name), :id => deck, :action => 'quiz' %></li>
 <% end %>
 </ul>
