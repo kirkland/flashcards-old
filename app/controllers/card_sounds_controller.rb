@@ -1,4 +1,5 @@
 class CardSoundsController < ApplicationController
+  skip_before_filter :authorized, :only => :show
   # GET /card_sounds
   # GET /card_sounds.xml
   def index

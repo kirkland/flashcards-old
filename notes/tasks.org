@@ -8,7 +8,7 @@
 
 ** TODO refactor card.rb 					       :comp:
 
-** TODO everyone should be authorized to hear sounds		      :today: :comp:
+** TODO everyone should be authorized to hear sounds		 :comp:today:
 * Functionality
 ** DONE users							       :comp:
 ** DONE users own a deck					       :comp:
@@ -69,7 +69,7 @@
 ** DONE how to embed audio? talk to anne			       :comp:
 ** DONE add thai consonants part 2/3/4				       :comp:
 ** DONE play with an emacs rails package			       :comp:
-** TODO ask ben: why does my find only work w/ true and 0? 	       :comp:
+** DONE ask ben: why does my find only work w/ true and 0?	       :comp:
 ** DONE register domain						       :comp:
 ** TODO make news page						 :comp:today:
 ** TODO resources page to learningthai.com: pronounciation	       :comp:
