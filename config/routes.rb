@@ -14,6 +14,9 @@ ActionController::Routing::Routes.draw do |map|
 
   map.connect 'quiz/:id', :controller => 'quiz', :action => 'quiz'
 
+  map.connect 'about', :controller => 'meta_pages', :action => 'action'
+#  map.connect 'news', :controller => 'meta_pages', :action => 'news' # not yet implemented
+
   map.root :controller => 'quiz', :action => 'index'
 
   map.connect ':controller/:action/:id'

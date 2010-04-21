@@ -33,9 +33,9 @@
   <% else %>
     <%= link_to 'Home', root_url %>
   <% end %>
-  <li><%= link_to 'Resources', root_url %></li> <!-- need to make a page for this -->
-  <li><%= link_to 'About', root_url %></li> <!-- need to make a page for this -->
-  <li><%= link_to 'News', root_url %></li> <!-- need to make a page for this -->
+  <li><%= link_to 'About', :controller => 'meta_pages', :action => 'about' %></li>
+  <!-- <li><%= link_to 'News', :controller => 'meta_pages', :action => 'news' %></li>  -->
+
 </div>
 
 <div id="content">

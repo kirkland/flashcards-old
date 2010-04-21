@@ -8,7 +8,7 @@
 
 ** TODO refactor card.rb 					       :comp:
 
-** TODO everyone should be authorized to hear sounds		 :comp:today:
+** DONE everyone should be authorized to hear sounds		 :comp:today:
 * Functionality
 ** DONE users							       :comp:
 ** DONE users own a deck					       :comp:
