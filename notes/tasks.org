@@ -1,80 +1,3 @@
-* Sounds
-** DONE record some sounds					       :comp:
-** DONE how to get sounds in db?				       :comp:
-** DONE migration to add sounds/etc.				       :comp:
-** DONE update card new/edit to upload sounds			 :comp:today:
-** DONE 'play sound' button in quiz should look up sound from db, not just point at one file :comp:
-
-
-** TODO refactor card.rb 					       :comp:
-
-** DONE everyone should be authorized to hear sounds		 :comp:today:
-* Functionality
-** DONE users							       :comp:
-** DONE users own a deck					       :comp:
-** DONE login/logout links on every page (application layout)	       :comp:
-** DONE destroy cards on destroy deck				       :comp:
-** DONE in users/#/decks show only owned decks			       :comp:
-** DONE page to show all decks					       :comp:
-** DONE only logged in can create edit anything			       :comp:
-** DONE view for 'my' decks					       :comp:
-** DONE users view to each of their decks			       :comp:
-** DONE in quiz, a way to escape				       :comp:
-** DONE escape user html					       :comp:
-** DONE front page should link to quiz controller		       :comp:
-** DONE fix up quiz controller, need to create new quiz more often     :comp:
-** DONE home page should show quiz/index			       :comp:
-** DONE revert deck index action				       :comp:
-** DONE differentiate between admin(me)/non-admin users		       :comp:
-** DONE authorization for users to edit their own decks only	       :comp:
-** DONE make sure no one can edit cards model directly 		       :comp:
-** DONE quiz: refreshing page should not go to next card	       :comp:
-** DONE let users opt to share or not share their decks		       :comp:
-** TODO quiz view update should be AJAX 			       :comp:
-** DONE front page lists decks BY user, first 5 or so only, and a link to more :comp:
-** DONE fix 'remove' options on edit/create deck		       :comp:
-** DONE fix quiz view with sidebar layout			       :comp:
-* Pretty
-** DONE quiz: bigger font, make buttons not move		       :comp:
-
-** DONE both cols. should be same height			       :comp:
-
-** DONE make user-nav nicer					       :comp:
-
-** DONE quiz: reveal answer button should disappear after click	       :comp:
-
-
-** DONE quiz: size of font should depend on length		       :comp:
-
-** DONE center text inside of card div				       :comp:
-
-** DONE play w/ various length cards, see how well they work	       :comp:
-
-** DONE title and navigation don't seem to be centered together	       :comp:
-
-** DONE fix deck editing view					       :comp:
-
-** DONE more dynamic card text size				       :comp:
-
-** DONE make nicer navigation buttons (click on cards?)		  :comp:wait:
-** DONE register/login/etc. in upper right, small		       :comp:
-** DONE sidebar navigation					       :comp:
-** DONE graphical logo (talk to wife)				  :comp:wait:
-* Data
-** TODO fix vowels: part 1 add or ang, fix double little b's	       :comp:
-** TODO automate database creation, data import 		       :comp:
-
-* Other
-** DONE enter vowels						       :comp:
-** DONE how to embed audio? talk to anne			       :comp:
-** DONE add thai consonants part 2/3/4				       :comp:
-** DONE play with an emacs rails package			       :comp:
-** DONE ask ben: why does my find only work w/ true and 0?	       :comp:
-** DONE register domain						       :comp:
-** TODO make news page						 :comp:today:
-** TODO resources page to learningthai.com: pronounciation	       :comp:
-** TODO make about page						 :comp:today:
-** DONE reverse engineer answers.com				 :comp:today:
 * Bugs 2010-04-19
 ** DONE cards should not be able to be blank			       :comp:
 ** DONE decks should not be blank				       :comp:
@@ -84,13 +7,8 @@
 ** TODO refreshing quiz gives next card (should not) 		       :comp:
 ** TODO uploaded audio maximum size 				       :comp:
 ** TODO disallow white-space-only decks/cards 			       :comp:
-* More Bugs
-** TODO decks cannot have 0 cards 				       :comp:
-** TODO allow longer than 30 chars, and wrapping 		       :comp:
-** TODO fix card size for thai characters 			       :comp:
-** TODO quiz index.html need to get deck.share filter out of there, in to controller								       :comp:
-* Ben Changes
-** TODO switch card and card_sound foreign keys			       :comp:
+* Ben Changes 2010-04-20
+** DONE switch card and card_sound foreign keys			       :comp:
 You have a foreign key in the wrong place.  Whichever class has the belongs_to gets the foreign key.  So, you should have a card_id in your card_sounds table, not a card_sounds_id in your cards table.  For reference, you did this correctly with the association between Decks and Users.
 
 You can see a symptom of this brokenness by starting script/console and doing something like Card.last.card_sound
@@ -103,3 +21,14 @@ See?  It's expecting a card_id in card_sounds, not a card_sound_id in cards.
 I imagine you had to do some other workarounds to actually get this to work, so make sure to do some thorough testing after changing this; it's likely that other stuff is broken.
 ** TODO decks_controller.rb: L32 and L52: I'd move this logic into the model, probably something like before_save :remove_blank_cards , then def remove_blank_cards ... end :comp:
 ** TODO quiz_controller.rb move card size calc to model or helper      :comp:
+* Misc
+** TODO quiz view update should be AJAX 			       :comp:
+** TODO fix vowels: part 1 add or ang, fix double little b's	       :comp:
+** TODO automate database creation, data import 		       :comp:
+** TODO make news page						 :comp:today:
+** TODO resources page to learningthai.com: pronounciation	       :comp:
+** TODO decks cannot have 0 cards 				       :comp:
+** TODO allow longer than 30 chars, and wrapping 		       :comp:
+** TODO fix card size for thai characters 			       :comp:
+** TODO quiz index.html need to get deck.share filter out of there, in to controller								       :comp:
+** TODO how to edit (trim) sound files 				       :comp:

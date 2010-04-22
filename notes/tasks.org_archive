@@ -62,6 +62,104 @@ Archived entries from file /home/rob/code/flashcards/notes/tasks.org
   :END:
 ** DONE quiz.rb in lib
 ** DONE github
+* Pretty
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2010-04-20 Tue 20:50
+  :ARCHIVE_FILE: ~/code/flashcards/notes/tasks.org
+  :ARCHIVE_CATEGORY: tasks
+  :END:
+** DONE quiz: bigger font, make buttons not move		       :comp:
+
+** DONE both cols. should be same height			       :comp:
+
+** DONE make user-nav nicer					       :comp:
+
+** DONE quiz: reveal answer button should disappear after click	       :comp:
+
+
+** DONE quiz: size of font should depend on length		       :comp:
+
+** DONE center text inside of card div				       :comp:
+
+** DONE play w/ various length cards, see how well they work	       :comp:
+
+** DONE title and navigation don't seem to be centered together	       :comp:
+
+** DONE fix deck editing view					       :comp:
+
+** DONE more dynamic card text size				       :comp:
+
+** DONE make nicer navigation buttons (click on cards?)		  :comp:wait:
+** DONE register/login/etc. in upper right, small		       :comp:
+** DONE sidebar navigation					       :comp:
+** DONE graphical logo (talk to wife)				  :comp:wait:
+* Sounds
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2010-04-20 Tue 20:51
+  :ARCHIVE_FILE: ~/code/flashcards/notes/tasks.org
+  :ARCHIVE_CATEGORY: tasks
+  :END:
+** DONE record some sounds					       :comp:
+** DONE how to get sounds in db?				       :comp:
+** DONE migration to add sounds/etc.				       :comp:
+** DONE update card new/edit to upload sounds			 :comp:today:
+** DONE 'play sound' button in quiz should look up sound from db, not just point at one file :comp:
+
+
+** DONE refactor card.rb					       :comp:
+
+** DONE everyone should be authorized to hear sounds		 :comp:today:
+
+* Functionality
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2010-04-20 Tue 20:52
+  :ARCHIVE_FILE: ~/code/flashcards/notes/tasks.org
+  :ARCHIVE_CATEGORY: tasks
+  :END:
+** DONE users							       :comp:
+** DONE users own a deck					       :comp:
+** DONE login/logout links on every page (application layout)	       :comp:
+** DONE destroy cards on destroy deck				       :comp:
+** DONE in users/#/decks show only owned decks			       :comp:
+** DONE page to show all decks					       :comp:
+** DONE only logged in can create edit anything			       :comp:
+** DONE view for 'my' decks					       :comp:
+** DONE users view to each of their decks			       :comp:
+** DONE in quiz, a way to escape				       :comp:
+** DONE escape user html					       :comp:
+** DONE front page should link to quiz controller		       :comp:
+** DONE fix up quiz controller, need to create new quiz more often     :comp:
+** DONE home page should show quiz/index			       :comp:
+** DONE revert deck index action				       :comp:
+** DONE differentiate between admin(me)/non-admin users		       :comp:
+** DONE authorization for users to edit their own decks only	       :comp:
+** DONE make sure no one can edit cards model directly 		       :comp:
+** DONE quiz: refreshing page should not go to next card	       :comp:
+** DONE let users opt to share or not share their decks		       :comp:
+
+** DONE front page lists decks BY user, first 5 or so only, and a link to more :comp:
+** DONE fix 'remove' options on edit/create deck		       :comp:
+** DONE fix quiz view with sidebar layout			       :comp:
+
+
+* Other
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2010-04-20 Tue 20:53
+  :ARCHIVE_FILE: ~/code/flashcards/notes/tasks.org
+  :ARCHIVE_CATEGORY: tasks
+  :END:
+** DONE enter vowels						       :comp:
+** DONE how to embed audio? talk to anne			       :comp:
+** DONE add thai consonants part 2/3/4				       :comp:
+** DONE play with an emacs rails package			       :comp:
+** DONE ask ben: why does my find only work w/ true and 0?	       :comp:
+** DONE register domain						       :comp:
+** DONE make about page						 :comp:today:
+** DONE reverse engineer answers.com				 :comp:today:
+
+
+
+
 
 
 

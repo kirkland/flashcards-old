@@ -13,7 +13,6 @@ class Card < ActiveRecord::Base
     unless input == ""
       new_card_sound = build_card_sound
       new_card_sound.file = input
-      self.card_sound_id = new_card_sound.id   # won't need this after card/card_sound keys switched; use build_card_sound instead
     end
   end
 end
