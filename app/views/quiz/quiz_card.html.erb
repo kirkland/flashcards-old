@@ -1,5 +1,5 @@
-<div class="outer-card"><div class="card" id="cardfront" style="font-size:<%=@frontsize %>"><%=h @card.front %></div></div>
-<div class="outer-card"><div class="card" id="cardback" style="font-size:<%= @backsize %>"></div></div>
+<div class="card" id="cardfront" style="font-size:<%=@frontsize %>"><%=h @card.front %></div>
+<div class="card" id="cardback" style="font-size:<%= @backsize %>"></div>
 
 <span id="reveal-button"><%= button_to_function 'Reveal Answer', "reveal_back('#{h(@card.back)}')" %></span>
 <%= button_to 'Next' %>

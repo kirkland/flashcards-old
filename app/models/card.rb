@@ -15,4 +15,18 @@ class Card < ActiveRecord::Base
       new_card_sound.file = input
     end
   end
+
+  def text_length(text)
+    text.scan(/./mu).size
+  end
+
+  def text_font_size(text)
+    if text_length(text) < 7
+      "80px"
+    elsif text_length(text) < 12
+      "50px"
+    else
+      "20px"
+    end
+  end
 end
