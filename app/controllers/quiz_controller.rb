@@ -11,7 +11,8 @@ class QuizController < ApplicationController
   end
 
   def quiz
-    session[:quiz] = Quiz.new(Deck.find(params[:id]))
+    @deck = Deck.find(params[:id])
+    session[:quiz] = @deck.quizzes.build
     redirect_to :action => "quiz_card"
   end
 
