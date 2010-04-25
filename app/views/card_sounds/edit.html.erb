@@ -1,6 +1,6 @@
 <h1>Editing card_sound</h1>
 
-<% form_for(@card_sound) do |f| %>
+<% form_for(@card_sound, :html => {:multipart => true }) do |f| %>
   <%= f.error_messages %>
 
   <p>

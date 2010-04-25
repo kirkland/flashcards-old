@@ -20,7 +20,7 @@ See?  It's expecting a card_id in card_sounds, not a card_sound_id in cards.
 
 I imagine you had to do some other workarounds to actually get this to work, so make sure to do some thorough testing after changing this; it's likely that other stuff is broken.
 ** TODO decks_controller.rb: L32 and L52: I'd move this logic into the model, probably something like before_save :remove_blank_cards , then def remove_blank_cards ... end :comp:
-** TODO quiz_controller.rb move card size calc to model or helper      :comp:
+** DONE quiz_controller.rb move card size calc to model or helper      :comp:
 * Misc
 ** TODO quiz view update should be AJAX 			       :comp:
 ** TODO fix vowels: part 1 add or ang, fix double little b's	       :comp:
@@ -29,6 +29,7 @@ I imagine you had to do some other workarounds to actually get this to work, so 
 ** TODO resources page to learningthai.com: pronounciation	       :comp:
 ** TODO decks cannot have 0 cards 				       :comp:
 ** TODO allow longer than 30 chars, and wrapping 		       :comp:
-** TODO fix card size for thai characters 			       :comp:
+** DONE fix card size for thai characters			       :comp:
 ** TODO quiz index.html need to get deck.share filter out of there, in to controller								       :comp:
-** TODO how to edit (trim) sound files 				       :comp:
+** DONE how to edit (trim) sound files				       :comp:
+** TODO edit deck won't save sound files 			       :comp:

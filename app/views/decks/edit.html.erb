@@ -2,7 +2,7 @@
 
 <%= render :partial => 'errors' %>
 
-<% form_for(@deck) do |f| %>
+<% form_for @deck, :html => { :multipart => true } do |f| %>
   <%= render :partial => 'fields', :locals => { :f => f } %>
   <p><%= f.submit "Update" %></p>
 <% end %>
