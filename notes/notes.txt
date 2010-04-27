@@ -57,4 +57,26 @@ If not logged in, should have navigation area with:
 The basic functionality is in good shape now. The next steps should focus on
 making things look nice. This includes both the page layout/colors/etc., and 
 the way the quiz works.
-/
+
+2010-040-27
+==========
+
+I've been challenged by Digital Advisor to implement a multiple-choice game 
+based on the flashcards. Here are some notes about what I'll do:
+
+mulitple choice...
+
+So, for each card, gather up correct answer, plus four random answers
+   (it would be a problem if some cards have the same answers, because there could be both a right and wrong with the same text)
+
+User must select answer. how?
+  radio buttons?
+  plain link?
+  
+What happens if wrong?
+  tell user or no? (probably yes)
+  don't let them fix it, since we'll keep score
+
+keeping score:
+  do it, give running tally, and final score at the end
+

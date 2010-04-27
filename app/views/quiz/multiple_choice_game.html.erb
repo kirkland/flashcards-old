@@ -1,0 +1,8 @@
+<div class="card" id="cardfront" style="font-size:<%=@frontsize %>"><%=h @card.front %></div>
+
+<% @choices.each do |choice| %>
+<p>
+  <%= h choice %>
+</p>
+<% end %>
+

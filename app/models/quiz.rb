@@ -11,4 +11,11 @@ class Quiz < ActiveRecord::Base
     deck.cards.delete_at(random_choice)
   end
 
+  def answer_choices
+    choices = Array.new
+    choices << deck.cards[0].back
+    choices << deck.cards[1].back
+    return choices
+  end
+
 end

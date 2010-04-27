@@ -156,6 +156,26 @@ Archived entries from file /home/rob/code/flashcards/notes/tasks.org
 ** DONE register domain						       :comp:
 ** DONE make about page						 :comp:today:
 ** DONE reverse engineer answers.com				 :comp:today:
+* Ben Changes 2010-04-20
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2010-04-25 Sun 09:26
+  :ARCHIVE_FILE: ~/code/flashcards/notes/tasks.org
+  :ARCHIVE_CATEGORY: tasks
+  :END:
+** DONE switch card and card_sound foreign keys			       :comp:
+You have a foreign key in the wrong place.  Whichever class has the belongs_to gets the foreign key.  So, you should have a card_id in your card_sounds table, not a card_sounds_id in your cards table.  For reference, you did this correctly with the association between Decks and Users.
+
+You can see a symptom of this brokenness by starting script/console and doing something like Card.last.card_sound
+
+That should work, showing you the last Card's CardSound.  Instead, you get this:
+ActiveRecord::StatementInvalid: SQLite3::SQLException: no such column: card_sounds.card_id: SELECT * FROM "card_sounds" WHERE ("card_sounds".card_id = 1)  LIMIT 1
+
+See?  It's expecting a card_id in card_sounds, not a card_sound_id in cards.
+
+I imagine you had to do some other workarounds to actually get this to work, so make sure to do some thorough testing after changing this; it's likely that other stuff is broken.
+** DONE decks_controller.rb: L32 and L52: I'd move this logic into the model, probably something like before_save :remove_blank_cards , then def remove_blank_cards ... end :comp:
+** DONE quiz_controller.rb move card size calc to model or helper      :comp:
+
 
 
 
