@@ -23,7 +23,7 @@ class Quiz < ActiveRecord::Base
     choices << correct_card
     correct_id = correct_card.id
 
-    wrong_choices = deck.cards.sort_by { rand }[0..3]
+    wrong_choices = deck.cards.reject { |c| c.id == correct_id }.sort_by { rand }[0..3]
 
     choices.concat(wrong_choices)
     choices = choices.sort_by { rand }
