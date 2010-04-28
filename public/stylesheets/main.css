@@ -80,3 +80,8 @@ div#content {
 .card-error {
     color:red;
 }
+
+#choices {
+    float:left;
+    width:500px;
+}

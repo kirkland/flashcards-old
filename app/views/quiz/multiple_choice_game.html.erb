@@ -1,8 +1,9 @@
 <div class="card" id="cardfront" style="font-size:<%=@frontsize %>"><%=h @card.front %></div>
 
+<div id="choices">
 <% @choices.each do |choice| %>
 <p>
-  <%= h choice %>
+  <%= link_to "#{h choice}", :answer => 'what' %>
 </p>
 <% end %>
-
+</div>

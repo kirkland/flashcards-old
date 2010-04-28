@@ -1,5 +1,7 @@
 * Multiple Choice
-** TODO choices are not properly randomized (correct answer always first)  :comp:
+** DONE choices are not properly randomized (correct answer always first) :comp:
+** TODO correct answer can show up twice			       :comp:
+** TODO choice links need to pass answer=id of some sort 	       :comp:
 * Bugs 2010-04-19
 ** DONE cards should not be able to be blank			       :comp:
 ** DONE decks should not be blank				       :comp:

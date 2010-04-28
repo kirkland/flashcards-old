@@ -26,7 +26,5 @@ class Quiz < ActiveRecord::Base
 
     choices.concat(wrong_choices)
     choices.sort_by { rand }
-
-    return choices
   end
 end
