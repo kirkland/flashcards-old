@@ -1,6 +1,6 @@
 class Card < ActiveRecord::Base
   belongs_to :deck
-  attr_accessor :should_destroy, :used_in_game
+  attr_accessor :should_destroy
   has_one :card_sound
   validates_length_of :front, :within => 1..30, :too_long => "Card must be 30 or fewer letters", :too_short => "Card front cannot be blank."
   validates_length_of :back, :within => 1..30, :too_long => "Card back must be 30 or fewer letters.", :too_short => "Card back cannot be blank."
@@ -30,9 +30,8 @@ class Card < ActiveRecord::Base
     end
   end
 
-  def used_in_game?
-    # should return false normally, true if already been used (set by game)
-    @used_in_game == true
+  def used_in_game
+    @used_in_game || false
   end
 
   def used_in_game=(value)
