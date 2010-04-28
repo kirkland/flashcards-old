@@ -29,6 +29,9 @@ class QuizController < ApplicationController
   def multiple_choice
     @deck = Deck.find(params[:id])
     session[:correct_answers] = 0
+    session[:cards_answered] = -1
+    session[:cards_remaining] = @deck.cards.length + 1 # because we subtract one immediately in multiple_choice_game
+
     session[:quiz] = @deck.quizzes.build
     redirect_to :action => "multiple_choice_game"
   end
@@ -37,13 +40,17 @@ class QuizController < ApplicationController
     if params[:user_answer].to_i == session[:correct_answer]
       session[:correct_answers] = session[:correct_answers] + 1
     end
-    
-    flash[:notice] = "#{session[:correct_answers]} correct"
+
+    session[:cards_remaining] -= 1
+    session[:cards_answered] += 1
 
     if session[:quiz].has_more?
       @card = session[:quiz].next
       @frontsize = @card.text_font_size(@card.front)
       @choices = session[:quiz].answer_choices(@card)
+      @cards_remaining = session[:cards_remaining]
+      @cards_answered = session[:cards_answered]
+      @correct_answers = session[:correct_answers]
       session[:correct_answer] = @card.id
     else
       redirect_to root_url
