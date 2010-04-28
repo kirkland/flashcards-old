@@ -34,7 +34,7 @@ class QuizController < ApplicationController
   end
 
   def multiple_choice_game
-    if params[:answer].to_i == session[:correct_answer]
+    if params[:user_answer].to_i == session[:correct_answer]
       session[:correct_answers] = session[:correct_answers] + 1
     end
     
