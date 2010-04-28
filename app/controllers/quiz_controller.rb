@@ -28,35 +28,21 @@ class QuizController < ApplicationController
 
   def multiple_choice
     @deck = Deck.find(params[:id])
-
-    session[:correct_answers] = 0
-    session[:cards_answered] = 0
-    session[:cards_remaining] = @deck.cards.length
-    session[:new_game] = true
-
     session[:quiz] = @deck.quizzes.build
     redirect_to :action => "multiple_choice_game"
   end
 
   def multiple_choice_game
+    @quiz = session[:quiz]
+
     if params[:user_answer].to_i == session[:correct_answer]
-      session[:correct_answers] = session[:correct_answers] + 1
+      @quiz.cards_correct += 1
     end
 
-    # only start counting after first round
-    unless session[:new_game]
-      session[:cards_remaining] -= 1
-      session[:cards_answered] += 1
-    end
-    session[:new_game] = false
-
-    if session[:quiz].has_more?
-      @card = session[:quiz].next
+    if @quiz.has_more?
+      @card = @quiz.next
       @frontsize = @card.text_font_size(@card.front)
-      @choices = session[:quiz].answer_choices(@card)
-      @cards_remaining = session[:cards_remaining]
-      @cards_answered = session[:cards_answered]
-      @correct_answers = session[:correct_answers]
+      @choices = @quiz.answer_choices(@card)
       session[:correct_answer] = @card.id
     else
       redirect_to root_url

@@ -1,6 +1,6 @@
 <div class="game-status">
-  <p>Correct: <%= "#{ @correct_answers}" %> out of <%= "#{@cards_answered}" %>
-  <br />Remaining: <%= "#{ @cards_remaining}" %></p>
+  <p>Correct: <%= @quiz.cards_correct %> out of <%= @quiz.cards_answered %>
+  <br />Remaining: <%= @quiz.cards_remaining %></p>
 </div>
 
 <div class="card" id="cardfront" style="font-size:<%=@frontsize %>"><%=h @card.front %></div>
