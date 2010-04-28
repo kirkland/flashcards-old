@@ -44,7 +44,7 @@ class QuizController < ApplicationController
       @card = session[:quiz].next
       @frontsize = @card.text_font_size(@card.front)
       @choices = session[:quiz].answer_choices(@card)
-      session[:correct_answer] = @choices['correct_id']
+      session[:correct_answer] = @card.id
     else
       redirect_to root_url
     end    

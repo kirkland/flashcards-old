@@ -1,7 +1,7 @@
 <div class="card" id="cardfront" style="font-size:<%=@frontsize %>"><%=h @card.front %></div>
 
 <div id="choices">
-<% @choices['choices'].each do |choice| %>
+<% @choices.each do |choice| %>
 <p>
   <%= link_to "#{h choice.back}", :answer => choice.id %>
 </p>

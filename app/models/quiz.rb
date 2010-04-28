@@ -18,18 +18,15 @@ class Quiz < ActiveRecord::Base
     deck.cards[choice_index]
   end
 
-  def answer_choices(correct_card)
-    choices = Array.new
-    choices << correct_card
-    correct_id = correct_card.id
+  def answer_choices(correct_answer_card)
+    possible_choices = Array.new
+    possible_choices << correct_answer_card
+    correct_id = correct_answer_card.id
 
+    # pick 4 other random cards, other than the correct one
     wrong_choices = deck.cards.reject { |c| c.id == correct_id }.sort_by { rand }[0..3]
 
-    choices.concat(wrong_choices)
-    choices = choices.sort_by { rand }
-    rv = Hash.new
-    rv['choices'] = choices
-    rv['correct_id'] = correct_id
-    rv
+    possible_choices.concat(wrong_choices)
+    possible_choices.sort_by { rand }
   end
 end
