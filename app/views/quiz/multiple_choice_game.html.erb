@@ -1,9 +1,13 @@
 <div class="card" id="cardfront" style="font-size:<%=@frontsize %>"><%=h @card.front %></div>
 
 <div id="choices">
-<% @choices.each do |choice| %>
+<% @choices['choices'].each do |choice| %>
 <p>
-  <%= link_to "#{h choice}", :answer => 'what' %>
+  <%= link_to "#{h choice.back}", :answer => choice.id %>
 </p>
 <% end %>
 </div>
+
+<p><%= debug params %></p>
+<p><%= debug session %></p>
+

@@ -20,11 +20,16 @@ class Quiz < ActiveRecord::Base
 
   def answer_choices(correct_card)
     choices = Array.new
-    choices << correct_card.back
+    choices << correct_card
+    correct_id = correct_card.id
 
-    wrong_choices = deck.cards.collect { |card| card.back }.sort_by { rand }[0..3]
+    wrong_choices = deck.cards.sort_by { rand }[0..3]
 
     choices.concat(wrong_choices)
-    choices.sort_by { rand }
+    choices = choices.sort_by { rand }
+    rv = Hash.new
+    rv['choices'] = choices
+    rv['correct_id'] = correct_id
+    rv
   end
 end

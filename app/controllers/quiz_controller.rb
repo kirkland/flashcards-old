@@ -28,15 +28,23 @@ class QuizController < ApplicationController
 
   def multiple_choice
     @deck = Deck.find(params[:id])
+    session[:correct_answers] = 0
     session[:quiz] = @deck.quizzes.build
     redirect_to :action => "multiple_choice_game"
   end
 
   def multiple_choice_game
+    if params[:answer].to_i == session[:correct_answer]
+      session[:correct_answers] = session[:correct_answers] + 1
+    end
+    
+    flash[:notice] = "#{session[:correct_answers]} correct"
+
     if session[:quiz].has_more?
       @card = session[:quiz].next
       @frontsize = @card.text_font_size(@card.front)
       @choices = session[:quiz].answer_choices(@card)
+      session[:correct_answer] = @choices['correct_id']
     else
       redirect_to root_url
     end    
