@@ -3,12 +3,23 @@ class Quiz < ActiveRecord::Base
   belongs_to :deck
 
   def has_more?
-    deck.cards.length > 0
+    deck.cards.delete_if { |card| card.used_in_game? == true }.length > 0
   end
 
   def next
-    random_choice = rand(deck.cards.length)
-    deck.cards.delete_at(random_choice)
+    available_card_indexes = Array.new
+
+    deck.cards.each_index { |index|
+      if deck.cards[index].used_in_game? == false
+        available_card_indexes << index
+      end
+    }
+
+    choice_index = available_card_indexes.sort_by { rand }[0]
+
+    deck.cards[choice_index].used_in_game = true
+    deck.cards[choice_index]
+
   end
 
   def answer_choices
