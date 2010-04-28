@@ -36,7 +36,7 @@ class QuizController < ApplicationController
     if session[:quiz].has_more?
       @card = session[:quiz].next
       @frontsize = @card.text_font_size(@card.front)
-      @choices = session[:quiz].answer_choices
+      @choices = session[:quiz].answer_choices(@card)
     else
       redirect_to root_url
     end    
