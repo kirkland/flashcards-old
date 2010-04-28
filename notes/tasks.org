@@ -2,7 +2,7 @@
 ** DONE choices are not properly randomized (correct answer always first) :comp:
 ** DONE correct answer can show up twice			       :comp:
 ** DONE choice links need to pass answer=id of some sort	       :comp:
-** TODO clean up game, var names, session var names 		       :comp:
+** DONE clean up game, var names, session var names		       :comp:
 ** TODO inform user of progress, and how many total 		       :comp:
 * Bugs 2010-04-19
 ** DONE cards should not be able to be blank			       :comp:
