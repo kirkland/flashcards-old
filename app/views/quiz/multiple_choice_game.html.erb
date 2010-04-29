@@ -12,3 +12,11 @@
 </p>
 <% end %>
 </div>
+
+<% if @last_front %>
+<div id="last-answer">
+<p>Last Card: 
+<div style="font-size:<%=@last_size %>"><%= @last_front %></div></p>
+<p>Correct Answer: <%= @last_back %></p>
+</div>
+<% end %>

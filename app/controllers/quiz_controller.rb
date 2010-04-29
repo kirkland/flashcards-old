@@ -38,6 +38,10 @@ class QuizController < ApplicationController
 
     if params[:user_answer].to_i == session[:correct_answer]
       @quiz.cards_correct += 1
+    elsif params[:user_answer] # make sure we didn't just start a game
+      @last_front = Card.find(session[:correct_answer]).front
+      @last_back = Card.find(session[:correct_answer]).back
+      @last_size = Card.find(session[:correct_answer]).text_font_size(@last_front)
     end
 
     if @quiz.has_more?
@@ -46,7 +50,7 @@ class QuizController < ApplicationController
       @choices = @quiz.answer_choices(@card)
       session[:correct_answer] = @card.id
     else
-      redirect_to root_url
+      render :action => 'end_game'
     end    
   end
 end

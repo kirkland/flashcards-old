@@ -85,3 +85,12 @@ div#content {
     float:left;
     width:500px;
 }
+
+#last-answer {
+    float:left;
+    width:330px;
+    border:1px solid;
+    color:red;
+    padding:5px;
+    text-align:center;
+}
