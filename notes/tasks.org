@@ -4,8 +4,9 @@
 ** DONE choice links need to pass answer=id of some sort	       :comp:
 ** DONE clean up game, var names, session var names		       :comp:
 ** DONE inform user of progress, and how many total		       :comp:
-** TODO if wrong, tell user what was correct 			       :comp:
+** DONE if wrong, tell user what was correct			       :comp:
 ** DONE tell user end results					       :comp:
+** TODO put wrong answer correction in partial 			       :comp:
 * Bugs 2010-04-19
 ** DONE cards should not be able to be blank			       :comp:
 ** DONE decks should not be blank				       :comp:
