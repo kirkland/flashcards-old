@@ -1,0 +1,9 @@
+<h1>Game Over</h1>
+
+<p>You answered <%= @quiz.cards_correct %> out of <%= @quiz.cards_answered %> cards correctly!</p>
+
+<p><%= link_to 'Go Home', :action => 'index' %></p>
+
+<% if @last_front %>
+  <%= render :partial => 'correction' %>
+<% end %>

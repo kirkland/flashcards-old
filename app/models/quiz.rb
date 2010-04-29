@@ -1,7 +1,7 @@
 class Quiz < ActiveRecord::Base
 #  belongs_to :user
   belongs_to :deck
-  attr_accessor :cards_remaining, :cards_answered, :cards_correct
+  attr_accessor :cards_answered, :cards_remaining, :cards_correct
 
   def has_more?
     deck.cards.select { |card| card.used_in_game == false }.length > 0
@@ -14,9 +14,9 @@ class Quiz < ActiveRecord::Base
       available_card_indices << index unless deck.cards[index].used_in_game
     }
 
-    @cards_correct ||= 0
     @cards_remaining = available_card_indices.length
     @cards_answered = deck.cards.length - @cards_remaining
+    @cards_correct ||= 0
 
     choice_index = available_card_indices.sort_by { rand }[0]
     deck.cards[choice_index].used_in_game = true
