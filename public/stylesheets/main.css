@@ -15,12 +15,12 @@ div#wrapper {
 
 div#header {
     font-size:30px;
-    padding-left:15px;
-    padding-top:15px;
+    /* padding-left:15px; */
+    /* padding-top:15px; */
     float:left;
     width:733px;
     background-color:#F7D751;
-    height:60px;
+    height:180px;
 }
 
 div#header2 {

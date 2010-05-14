@@ -58,7 +58,7 @@ The basic functionality is in good shape now. The next steps should focus on
 making things look nice. This includes both the page layout/colors/etc., and 
 the way the quiz works.
 
-2010-040-27
+2010-04-27
 ==========
 
 I've been challenged by Digital Advisor to implement a multiple-choice game 

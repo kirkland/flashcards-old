@@ -1,3 +1,8 @@
+* Pretty
+** TODO get anne's title layed out correctly 			       :comp:
+* Server Stuff
+** TODO switch to mysql						       :comp:
+** TODO do not run production in 'dev' mode 			       :comp:
 * Multiple Choice
 ** DONE choices are not properly randomized (correct answer always first) :comp:
 ** DONE correct answer can show up twice			       :comp:
