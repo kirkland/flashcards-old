@@ -36,7 +36,8 @@
 ** TODO in edit view, populate sound file box if it has a sound	       :comp:
 ** DONE missing sounds: thor thong				       :comp:
 ** DONE record vowels						       :comp:
-** TODO decks have 'categories', sort by them 			       :comp:
+** DONE decks have 'categories', sort by them			       :comp:
 ** DONE record thor thong and vowels				       :comp:
 ** TODO fix rails plugin C-c C-c to C-c C-d or something	       :comp:
-** TODO separate pages for multiple choice / basic flashcards 	       :comp:
+** DONE separate pages for multiple choice / basic flashcards	       :comp:
+** TODO seperate page for basic flashcards 			       :comp:
