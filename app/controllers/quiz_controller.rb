@@ -10,6 +10,10 @@ class QuizController < ApplicationController
     end
   end
 
+  def multiple_choice_index
+    @decks = Deck.find(:all, :conditions => {:share => true})
+  end
+
   def quiz
     @deck = Deck.find(params[:id])
     session[:quiz] = @deck.quizzes.build

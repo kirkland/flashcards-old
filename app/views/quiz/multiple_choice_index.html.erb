@@ -1,0 +1,7 @@
+<p>Mulitple Choice Quiz</p>
+
+<ul>
+<% @decks.each do |deck| %>
+  <li><%= link_to h(deck.name), :id => deck, :action => 'multiple_choice' %></li>
+<% end %>
+</ul>

@@ -25,7 +25,7 @@
 ** TODO quiz view update should be AJAX 			       :comp:
 ** DONE fix vowels: part 1 add or ang, fix double little b's	       :comp:
 ** TODO automate database creation, data import 		       :comp:
-** TODO make news page						 :comp:today:
+** TODO make news page						       :comp:
 ** TODO resources page to learningthai.com: pronounciation	       :comp:
 ** TODO decks cannot have 0 cards 				       :comp:
 ** TODO allow longer than 30 chars, and wrapping 		       :comp:
@@ -34,7 +34,9 @@
 ** DONE how to edit (trim) sound files				       :comp:
 ** DONE edit deck won't save sound files			       :comp:
 ** TODO in edit view, populate sound file box if it has a sound	       :comp:
-** TODO missing sounds: thor thong				       :comp:
-** TODO record vowels						       :comp:
+** DONE missing sounds: thor thong				       :comp:
+** DONE record vowels						       :comp:
 ** TODO decks have 'categories', sort by them 			       :comp:
-** TODO record thor thong and vowels 				       :comp:
+** DONE record thor thong and vowels				       :comp:
+** TODO fix rails plugin C-c C-c to C-c C-d or something	       :comp:
+** TODO separate pages for multiple choice / basic flashcards 	       :comp:

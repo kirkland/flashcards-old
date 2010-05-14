@@ -22,6 +22,8 @@ ActionController::Routing::Routes.draw do |map|
 
   map.root :controller => 'quiz', :action => 'index'
 
+  map.connect 'games/:action', :controller => 'quiz'
+
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
 end
