@@ -2,6 +2,7 @@
   <b>Name:</b>
   <%=h @deck.name %>
 </p>
+<p><b>Category:</b> <%= h @deck.category %></p>
 <p><b>Owner:</b> <%=h @deck.user.username %></p>
 <p><b>Sharing:</b> <%= @deck.share %></p>
 <% for card in @deck.cards %>

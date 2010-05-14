@@ -1,4 +1,5 @@
 <p>Name: <%= f.text_field :name %></p>
+<p>Category: <%= f.text_field :category %></p>
 <p>Share: <%= f.check_box :share %></p>
 <div id="cards">
   <%= render :partial => 'card', :collection => @deck.cards %>

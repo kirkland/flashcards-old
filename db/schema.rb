@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100423002912) do
+ActiveRecord::Schema.define(:version => 20100514002903) do
 
   create_table "card_sounds", :force => true do |t|
     t.string   "filename"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(:version => 20100423002912) do
     t.datetime "updated_at"
     t.integer  "user_id"
     t.boolean  "share",      :default => false
+    t.string   "category"
   end
 
   create_table "quizzes", :force => true do |t|

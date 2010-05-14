@@ -27,4 +27,8 @@ class Deck < ActiveRecord::Base
       end
     end
   end
+
+  def clean_category
+    category || "No Category Assigned"
+  end
 end
