@@ -1,0 +1,10 @@
+<p>Basic Flashcards Quiz</p>
+
+<% @decks_with_categories.each do |key, value| %>
+  <p><%= h key %></p>
+  <ul>
+  <% value.each do |deck| %>
+      <li><%= link_to h(deck.name), :id => deck, :action => 'quiz' %></li>
+  <% end %>
+  </ul>
+<% end %>

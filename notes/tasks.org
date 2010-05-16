@@ -1,5 +1,8 @@
+* Layout / Navigation
+** TODO front page should be list of types of games 		       :comp:
+** TODO rework left navigation 					       :comp:
 * Pretty
-** TODO get anne's title layed out correctly 			       :comp:
+** DONE get anne's title layed out correctly			       :comp:
 * Server Stuff
 ** DONE switch to mysql						       :comp:
 ** DONE do not run production in 'dev' mode			       :comp:
@@ -20,7 +23,7 @@
 ** DONE fix quiz font size					       :comp:
 ** TODO sounds should be optional add-on for card		       :comp:
 ** DONE cards should have max length				       :comp:
-** TODO refreshing quiz gives next card (should not) 		       :comp:
+** DONE refreshing quiz gives next card (should not)		       :comp:
 ** TODO uploaded audio maximum size 				       :comp:
 ** TODO disallow white-space-only decks/cards 			       :comp:
 * Misc

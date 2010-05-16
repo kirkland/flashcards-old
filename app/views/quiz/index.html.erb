@@ -1,21 +1,3 @@
-<p>Mulitple Choice Quiz</p>
-
-<% for user in @users %>
-<p>Decks by <%= user.username %>:
-<ul>
-<% for deck in user.decks.delete_if { |deck| deck.share == false }  %>
-  <li><%= link_to h(deck.name), :id => deck, :action => 'multiple_choice' %></li>
-<% end %>
-</ul>
-<% end %>
-
-<p>Honor System Quiz</p>
-
-<% for user in @users %>
-<p>Decks by <%= user.username %>:
-<ul>
-<% for deck in user.decks.delete_if { |deck| deck.share == false }  %>
-  <li><%= link_to h(deck.name), :id => deck, :action => 'quiz' %></li>
-<% end %>
-</ul>
-<% end %>
+<p><b>Games</b></p>
+<p><%= link_to 'Multiple Choice', :controller => 'quiz', :action => 'multiple_choice_index' %></p>
+<p><%= link_to 'Basic Flashcards', :controller => 'quiz', :action => 'basic_flashcards_index' %></p>

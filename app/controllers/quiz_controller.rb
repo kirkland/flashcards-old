@@ -27,6 +27,23 @@ class QuizController < ApplicationController
     end
   end
 
+  def basic_flashcards_index
+    @decks = Deck.find(:all, :conditions => {:share => true})
+    @categories = @decks.collect do |deck|
+      deck.clean_category
+    end
+    @categories = @categories.sort.uniq
+
+    @decks_with_categories = Hash.new
+    @decks.each do |deck|
+      if @decks_with_categories[deck.clean_category]
+        @decks_with_categories[deck.clean_category] << deck
+      else
+        @decks_with_categories[deck.clean_category] = [deck]
+      end
+    end
+  end
+
   def quiz
     @deck = Deck.find(params[:id])
     session[:quiz] = @deck.quizzes.build
