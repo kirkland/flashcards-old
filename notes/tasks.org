@@ -1,8 +1,10 @@
 * Pretty
 ** TODO get anne's title layed out correctly 			       :comp:
 * Server Stuff
-** TODO switch to mysql						       :comp:
-** TODO do not run production in 'dev' mode 			       :comp:
+** DONE switch to mysql						       :comp:
+** DONE do not run production in 'dev' mode			       :comp:
+** TODO don't store so much in session ("marshal data too short")      :comp:
+** DONE load sounds... again					       :comp:
 * Multiple Choice
 ** DONE choices are not properly randomized (correct answer always first) :comp:
 ** DONE correct answer can show up twice			       :comp:

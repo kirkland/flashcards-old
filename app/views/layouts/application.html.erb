@@ -12,18 +12,8 @@
 <div id="wrapper">
 
 <div id="header">
-<div id="account">
-<% if current_user %>
-    <li><%= link_to "Edit Profile", edit_user_path(:current) %></li> | 
-    <li><%= link_to "Logout", logout_path %></li>
-  <% else %>
-    <%= link_to "Register", new_user_path %> |
-    <%= link_to "Login", login_path %>
-  <% end %>
-</div>
 <%= image_tag "Web-and-Devices-750and188Logo2.gif", :size => "750x170" %>
 </div>
-<div id="header2"> </div>
 <div id="user-nav">
   <% if current_user %>
     <li><%= link_to 'Home', root_url %></li>
@@ -36,6 +26,17 @@
 
   <li><p><b>Games</b></p></li>
   <li><%= link_to 'Multiple Choice', :controller => 'quiz', :action => 'multiple_choice_index' %></li>
+
+  <li><p><b>Admin</b></p></li>
+  <% if current_user %>
+    <li><%= link_to "Edit Profile", edit_user_path(:current) %></li>
+    <li><%= link_to "Logout", logout_path %></li>
+  <% else %>
+    <%= link_to "Register", new_user_path %>
+    <%= link_to "Login", login_path %>
+  <% end %>
+
+
 </div>
 
 <div id="content">
